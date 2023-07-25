@@ -7,8 +7,13 @@
 
 import Foundation
 
+let YOASOBI_Channel_ID = "UCvpredjG93ifbCP1Y77JyFA"
 let API_KEY = "AIzaSyAh14rDuPfiszCq0Dnn8VYia1oML4pd0UA"
 let base_url = "https://www.googleapis.com/youtube/v3/"
+
+enum DecodeError : Error{
+    case KindNotMatch
+}
 
 enum Api_type: String{
     case playListItem = "playlistItems"

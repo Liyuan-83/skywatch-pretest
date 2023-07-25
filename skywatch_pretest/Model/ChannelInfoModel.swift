@@ -17,7 +17,8 @@ struct ChannelInfo: Codable {
     var subscriberCount : Int
     var viewCount : Int
     
-    init(with res: YoutubeApiResponse) {
+    init(with res: YoutubeApiResponse) throws {
+        guard res.kind == .channel else { throw DecodeError.KindNotMatch }
         self.name = res.items.first?.snippet?.title
         self.description = res.items.first?.snippet?.description
         if let thumbnails = res.items.first?.snippet?.thumbnails,

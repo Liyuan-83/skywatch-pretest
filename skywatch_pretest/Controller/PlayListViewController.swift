@@ -13,13 +13,8 @@ class PlayListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    lazy var refreshControl : UIRefreshControl = {
-        var refresh = UIRefreshControl()
-        return refresh
-    }()
     var cancelables : Set<AnyCancellable> = []
-    @Published var channelInfo : ChannelInfo?
-    @Published var playList : PlayList?
+    @Published var viewmodel : PlayListViewModel = PlayListViewModel()
 //    @IBOutlet weak var player: YTPlayerView!
     
     override func viewDidLoad() {
@@ -33,37 +28,36 @@ class PlayListViewController: UIViewController {
     
     func initPara() {
         Task {
-            channelInfo = try? await HttpMeneger.shared.getChannelInfo("UCvpredjG93ifbCP1Y77JyFA")
-            guard let playListID = channelInfo?.uploadID else { return }
-            playList = try? await HttpMeneger.shared.getPlayList(playListID)
-            print(channelInfo?.uploadID)
-            print(playList?.list?.count)
+            viewmodel.channelInfo = try? await HttpMeneger.shared.getChannelInfo(YOASOBI_Channel_ID)
+            guard let playListID = viewmodel.channelInfo?.uploadID,
+                  let playList = try? await HttpMeneger.shared.getPlayList(playListID),
+                  let list = playList.list else { return }
+            viewmodel.allList = list
+            viewmodel.nextPageToken = playList.nextPageToken
         }
     }
     
     func setupUI(){
         setupNavigation()
+        searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(PlayListTableViewCell.self, forCellReuseIdentifier: "playListCell")
         tableView.mj_footer = MJRefreshAutoNormalFooter{ [unowned self] in
-            guard let id = channelInfo?.uploadID,
-            let token = playList?.nextPageToken else {
+            guard let id = viewmodel.channelInfo?.uploadID,
+                  let token = viewmodel.nextPageToken else {
                 DispatchQueue.main.async { [unowned self] in
                     tableView.mj_footer?.endRefreshingWithNoMoreData()
                 }
                 return
             }
             Task {
-                let nextPageList = try? await HttpMeneger.shared.getPlayList(id,20,token)
-                guard let list = nextPageList?.list else { return }
-                playList?.nextPageToken = nextPageList?.nextPageToken
-                for info in list{
-                    playList?.list?.append(info)
-                }
+                guard let nextPageList = try? await HttpMeneger.shared.getPlayList(id,20,token),
+                      let list = nextPageList.list else { return }
+                viewmodel.nextPageToken = nextPageList.nextPageToken
+                viewmodel.allList += list
                 DispatchQueue.main.async { [unowned self] in
                     tableView.mj_footer?.endRefreshing()
-                    tableView.reloadData()
                 }
             }
         }
@@ -77,16 +71,9 @@ class PlayListViewController: UIViewController {
 
     
     func setDataBinding(){
-        $channelInfo.sink{ [unowned self] info in
+        $viewmodel.sink{ [unowned self] info in
 //            print(info?.uploadID)
             DispatchQueue.main.async { [unowned self] in
-                tableView.reloadData()
-            }
-        }.store(in: &cancelables)
-        
-        $playList.sink{  list in
-            DispatchQueue.main.async { [unowned self] in
-//                print(list?.list?.count)
                 tableView.reloadData()
             }
         }.store(in: &cancelables)
@@ -100,27 +87,25 @@ extension PlayListViewController {
     }
 }
 
+extension PlayListViewController : UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        viewmodel.searchKeyword = searchText
+    }
+}
+
 
 extension PlayListViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return playList?.list?.filter({
-            guard let keyword = searchBar.text,
-                  !keyword.isEmpty else { return true }
-            return $0.name?.contains(keyword) ?? false
-        }).count ?? 0
+        return viewmodel.showList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playListCell", for: indexPath) as? PlayListTableViewCell
         
-        if let channelInfo = channelInfo {
+        if let channelInfo = viewmodel.channelInfo {
             cell?.setChannelInfo(channelInfo)
         }
-        
-        if let videoInfo = playList?.list?[indexPath.row] {
-            cell?.setVideoInfo(videoInfo)
-        }
-        
+        cell?.setVideoInfo(viewmodel.showList[indexPath.row])
         return cell ?? PlayListTableViewCell()
     }
 }

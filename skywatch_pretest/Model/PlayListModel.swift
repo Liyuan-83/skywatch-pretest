@@ -11,7 +11,8 @@ import Foundation
 struct PlayList: Codable {
     var list : [VideoInfo]?
     var nextPageToken : String?
-    init(with res: YoutubeApiResponse) {
+    init(with res: YoutubeApiResponse) throws {
+        guard res.kind == .playItem else { throw DecodeError.KindNotMatch }
         self.nextPageToken = res.nextPageToken
         var arr:[VideoInfo] = []
         for item in res.items{

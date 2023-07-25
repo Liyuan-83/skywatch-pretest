@@ -8,6 +8,14 @@
 import Foundation
 
 struct PlayListViewModel: Codable {
-    var list : [VideoInfo]
-    var showList : [VideoInfo]
+    var channelInfo : ChannelInfo?
+    var allList : [VideoInfo] = []
+    var showList : [VideoInfo] {
+        return allList.filter({
+            guard !searchKeyword.isEmpty else { return true }
+            return $0.name?.contains(searchKeyword) ?? false
+        })
+    }
+    var nextPageToken : String?
+    var searchKeyword : String = ""
 }

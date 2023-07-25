@@ -16,7 +16,7 @@ class HttpMeneger {
     func getChannelInfo(_ channelID:String,_ part: [ChannelsPart] = [.contentDetails, .snippet, .statistics]) async throws -> ChannelInfo{
         let partStr = part.map({$0.rawValue}).joined(separator: ",")
         let data = try await sendHttpRequest(.channals, ["id":channelID, "part":partStr])
-        return ChannelInfo(with: data)
+        return try ChannelInfo(with: data)
     }
     
     func getPlayList(_ listID:String, _ counts: Int = 30, _ nextPageToken:String? = nil,_ part: [PlayListItemPart] = [.snippet]) async throws -> PlayList{
@@ -26,7 +26,7 @@ class HttpMeneger {
             para["pageToken"] = token
         }
         let data = try await sendHttpRequest(.playListItem, para)
-        return PlayList(with: data)
+        return try PlayList(with: data)
     }
     
 //    func getVideoInfo(_ videoID:String,_ part: [VideosPart] = [.snippet]) async throws -> VideoInfo {
