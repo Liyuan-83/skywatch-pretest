@@ -6,20 +6,120 @@
 //
 
 import UIKit
+import SnapKit
 
 class PlayListTableViewCell: UITableViewCell {
-    var thumbnailView : UIImageView!
-    var channelImg : UIImageView!
+    lazy var thumbnailView: UIImageView = {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFit
+        view.adjustsImageSizeForAccessibilityContentSizeCategory = false
+        return view
+    }()
+    
+    lazy var channelImg: UIImageView = {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFit
+        view.adjustsImageSizeForAccessibilityContentSizeCategory = false
+        view.layer.masksToBounds = true
+        return view
+    }()
+    
+    lazy var videoTitleLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 20)
+        label.numberOfLines = 2
+        label.lineBreakMode = .byTruncatingTail
+        return label
+    }()
+    
+    lazy var ownerLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 12)
+        label.numberOfLines = 1
+        label.textAlignment = .left
+        return label
+    }()
+    
+    lazy var uploadDateLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 12)
+        label.numberOfLines = 1
+        label.textAlignment = .right
+        return label
+    }()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        setupUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupUI()
+    }
+    
+    override func layoutSublayers(of layer: CALayer) {
+        channelImg.layer.cornerRadius = channelImg.bounds.midX
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
+    func setupUI(){
+        contentView.addSubview(thumbnailView)
+        let rate = Double(4)/3
+        thumbnailView.snp.makeConstraints{ make in
+            make.centerX.width.equalToSuperview()
+            make.top.left.equalTo(contentView)
+            make.height.equalTo(contentView.snp.width).dividedBy(rate)
+        }
+        
+        contentView.addSubview(channelImg)
+        channelImg.snp.makeConstraints{ make in
+            make.width.height.equalTo(50)
+            make.left.equalTo(contentView).offset(5)
+            make.top.equalTo(thumbnailView.snp.bottom).offset(5)
+        }
+        
+        contentView.addSubview(videoTitleLabel)
+        videoTitleLabel.snp.makeConstraints{ make in
+            make.centerY.top.equalTo(channelImg)
+            make.left.equalTo(channelImg.snp.right).offset(10)
+            make.right.equalTo(contentView).offset(-5)
+        }
+        
+        contentView.addSubview(ownerLabel)
+        ownerLabel.snp.makeConstraints{ make in
+            make.top.equalTo(videoTitleLabel.snp.bottom).offset(5)
+            make.left.equalTo(videoTitleLabel)
+            make.bottom.equalTo(contentView).offset(-15)
+        }
+        
+        contentView.addSubview(uploadDateLabel)
+        uploadDateLabel.snp.makeConstraints{ make in
+            make.top.equalTo(ownerLabel)
+            make.left.equalTo(ownerLabel.snp.right).offset(5)
+            make.right.equalTo(videoTitleLabel)
+        }
+    }
+    
+    func setVideoInfo(_ info:VideoInfo){
+        if let url = info.thumbnails{
+            thumbnailView.load(url: url)
+        }
+        videoTitleLabel.text = info.name
+        uploadDateLabel.text = info.createDate?.stringWith("YYYY-MM-dd HH:mm:ss")
+    }
+    
+    func setChannelInfo(_ info:ChannelInfo){
+        if let url = info.thumbnails{
+            channelImg.load(url: url)
+        }
+        ownerLabel.text = info.name
+    }
 }

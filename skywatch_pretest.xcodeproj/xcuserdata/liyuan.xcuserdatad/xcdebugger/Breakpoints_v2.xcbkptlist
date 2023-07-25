@@ -3,4 +3,70 @@
    uuid = "E02FEFF0-F202-41BF-85B3-AE1A6194D1B5"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FD43A9B9-DCCF-4BE8-A438-9219F8415EC5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "skywatch_pretest/Controller/PlayListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0BA7600B-9951-400A-A4FE-192CD724BE06"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "skywatch_pretest/Controller/PlayListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "setupUI()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0BA7600B-9951-400A-A4FE-192CD724BE06 - bdea47b4feca36fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in skywatch_pretest.PlayListViewController.setupUI() -&gt; ()"
+                  moduleName = "skywatch_pretest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liyuan/Desktop/skywatch_pretest/skywatch_pretest/Controller/PlayListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "1276">
+               </Location>
+               <Location
+                  uuid = "0BA7600B-9951-400A-A4FE-192CD724BE06 - 552f5538c310aa05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 () -&gt; () in skywatch_pretest.PlayListViewController.setupUI() -&gt; ()"
+                  moduleName = "skywatch_pretest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liyuan/Desktop/skywatch_pretest/skywatch_pretest/Controller/PlayListViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -27,6 +27,11 @@
 		7A7986322A6C0E1B00077E24 /* YoutubeAPIPartEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986312A6C0E1B00077E24 /* YoutubeAPIPartEnum.swift */; };
 		7A7986372A6D1FD300077E24 /* PublishExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986362A6D1FD300077E24 /* PublishExtension.swift */; };
 		7A79863E2A6D2AE500077E24 /* PlayListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79863D2A6D2AE500077E24 /* PlayListTableViewCell.swift */; };
+		7AA9661E2A6E562200F02E00 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA9661D2A6E562200F02E00 /* SnapKit */; };
+		7AA966202A6E59E200F02E00 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9661F2A6E59E200F02E00 /* UIImageExtension.swift */; };
+		7AA966232A6E82CB00F02E00 /* MJRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA966222A6E82CB00F02E00 /* MJRefresh */; };
+		7AA966252A6FCD6100F02E00 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966242A6FCD6100F02E00 /* DateExtension.swift */; };
+		7AA966272A6FD33B00F02E00 /* PlayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966262A6FD33B00F02E00 /* PlayListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,9 @@
 		7A7986312A6C0E1B00077E24 /* YoutubeAPIPartEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeAPIPartEnum.swift; sourceTree = "<group>"; };
 		7A7986362A6D1FD300077E24 /* PublishExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishExtension.swift; sourceTree = "<group>"; };
 		7A79863D2A6D2AE500077E24 /* PlayListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListTableViewCell.swift; sourceTree = "<group>"; };
+		7AA9661F2A6E59E200F02E00 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		7AA966242A6FCD6100F02E00 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		7AA966262A6FD33B00F02E00 /* PlayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A79861B2A6B79CC00077E24 /* YouTubeiOSPlayerHelper in Frameworks */,
+				7AA966232A6E82CB00F02E00 /* MJRefresh in Frameworks */,
+				7AA9661E2A6E562200F02E00 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +168,9 @@
 		7A79861C2A6B7DC900077E24 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7A7986272A6BDFBC00077E24 /* PlayListModel.swift */,
+				7A79862B2A6BE64000077E24 /* VideoInfoModel.swift */,
+				7A7986292A6BE29300077E24 /* ChannelInfoModel.swift */,
 				7A79862F2A6BF15500077E24 /* YoutubeApiResponseModel.swift */,
 			);
 			path = Model;
@@ -184,9 +197,7 @@
 		7A7986332A6D1BE700077E24 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7A7986272A6BDFBC00077E24 /* PlayListModel.swift */,
-				7A79862B2A6BE64000077E24 /* VideoInfoModel.swift */,
-				7A7986292A6BE29300077E24 /* ChannelInfoModel.swift */,
+				7AA966262A6FD33B00F02E00 /* PlayListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -203,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				7A7986362A6D1FD300077E24 /* PublishExtension.swift */,
+				7AA9661F2A6E59E200F02E00 /* UIImageExtension.swift */,
+				7AA966242A6FCD6100F02E00 /* DateExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -249,6 +262,8 @@
 			name = skywatch_pretest;
 			packageProductDependencies = (
 				7A79861A2A6B79CC00077E24 /* YouTubeiOSPlayerHelper */,
+				7AA9661D2A6E562200F02E00 /* SnapKit */,
+				7AA966222A6E82CB00F02E00 /* MJRefresh */,
 			);
 			productName = skywatch_pretest;
 			productReference = 7A7985E62A6B78AD00077E24 /* skywatch_pretest.app */;
@@ -324,6 +339,8 @@
 			mainGroup = 7A7985DD2A6B78AD00077E24;
 			packageReferences = (
 				7A7986192A6B79CC00077E24 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+				7AA9661C2A6E562200F02E00 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7AA966212A6E82CB00F02E00 /* XCRemoteSwiftPackageReference "MJRefresh" */,
 			);
 			productRefGroup = 7A7985E72A6B78AD00077E24 /* Products */;
 			projectDirPath = "";
@@ -368,8 +385,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AA966272A6FD33B00F02E00 /* PlayListViewModel.swift in Sources */,
 				7A7986322A6C0E1B00077E24 /* YoutubeAPIPartEnum.swift in Sources */,
+				7AA966252A6FCD6100F02E00 /* DateExtension.swift in Sources */,
 				7A7986242A6B7FE100077E24 /* HttpMeneger.swift in Sources */,
+				7AA966202A6E59E200F02E00 /* UIImageExtension.swift in Sources */,
 				7A7985EE2A6B78AD00077E24 /* PlayListViewController.swift in Sources */,
 				7A7985EA2A6B78AD00077E24 /* AppDelegate.swift in Sources */,
 				7A79862C2A6BE64000077E24 /* VideoInfoModel.swift in Sources */,
@@ -734,6 +754,22 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		7AA9661C2A6E562200F02E00 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		7AA966212A6E82CB00F02E00 /* XCRemoteSwiftPackageReference "MJRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CoderMJLee/MJRefresh";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -741,6 +777,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7A7986192A6B79CC00077E24 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
 			productName = YouTubeiOSPlayerHelper;
+		};
+		7AA9661D2A6E562200F02E00 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AA9661C2A6E562200F02E00 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		7AA966222A6E82CB00F02E00 /* MJRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AA966212A6E82CB00F02E00 /* XCRemoteSwiftPackageReference "MJRefresh" */;
+			productName = MJRefresh;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

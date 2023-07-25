@@ -27,7 +27,8 @@ struct VideoInfo: Codable {
         
         self.name = item.snippet?.title
         self.description = item.snippet?.description
-        if let urlStr = item.snippet?.thumbnails?.thumbnailsDefault?.url{
+        if let thumbnails = item.snippet?.thumbnails,
+           let urlStr = thumbnails.standard?.url ?? thumbnails.thumbnailsDefault?.url{
             self.thumbnails = URL(string: urlStr)
         }
     }
