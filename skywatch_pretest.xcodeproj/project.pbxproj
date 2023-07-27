@@ -13,7 +13,6 @@
 		7A7985F12A6B78AD00077E24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A7985EF2A6B78AD00077E24 /* Main.storyboard */; };
 		7A7985F32A6B78AD00077E24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A7985F22A6B78AD00077E24 /* Assets.xcassets */; };
 		7A7985F62A6B78AD00077E24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A7985F42A6B78AD00077E24 /* LaunchScreen.storyboard */; };
-		7A7986012A6B78AE00077E24 /* skywatch_pretestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986002A6B78AE00077E24 /* skywatch_pretestTests.swift */; };
 		7A79860B2A6B78AE00077E24 /* skywatch_pretestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79860A2A6B78AE00077E24 /* skywatch_pretestUITests.swift */; };
 		7A79860D2A6B78AE00077E24 /* skywatch_pretestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79860C2A6B78AE00077E24 /* skywatch_pretestUITestsLaunchTests.swift */; };
 		7A79861B2A6B79CC00077E24 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 7A79861A2A6B79CC00077E24 /* YouTubeiOSPlayerHelper */; };
@@ -29,11 +28,13 @@
 		7A79863E2A6D2AE500077E24 /* PlayListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79863D2A6D2AE500077E24 /* PlayListTableViewCell.swift */; };
 		7AA9661E2A6E562200F02E00 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA9661D2A6E562200F02E00 /* SnapKit */; };
 		7AA966202A6E59E200F02E00 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9661F2A6E59E200F02E00 /* UIImageExtension.swift */; };
-		7AA966232A6E82CB00F02E00 /* MJRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA966222A6E82CB00F02E00 /* MJRefresh */; };
+		7AA966232A6E82CB00F02E00 /* MJRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA966222A6E82CB00F02E00 /* MJRefresh */; settings = {ATTRIBUTES = (Required, ); }; };
 		7AA966252A6FCD6100F02E00 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966242A6FCD6100F02E00 /* DateExtension.swift */; };
 		7AA966272A6FD33B00F02E00 /* PlayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966262A6FD33B00F02E00 /* PlayListViewModel.swift */; };
 		7AA9662C2A712B1300F02E00 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9662B2A712B1300F02E00 /* ViewModelProtocol.swift */; };
 		7AA9662E2A712F7500F02E00 /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9662D2A712F7500F02E00 /* UserDefaultExtension.swift */; };
+		7AA966322A72811D00F02E00 /* PlayListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966312A72811D00F02E00 /* PlayListViewModelTests.swift */; };
+		7AA966352A72836400F02E00 /* MJRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA966342A72836400F02E00 /* MJRefresh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +64,6 @@
 		7A7985F52A6B78AD00077E24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A7985F72A6B78AD00077E24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A7985FC2A6B78AE00077E24 /* skywatch_pretestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = skywatch_pretestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A7986002A6B78AE00077E24 /* skywatch_pretestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skywatch_pretestTests.swift; sourceTree = "<group>"; };
 		7A7986062A6B78AE00077E24 /* skywatch_pretestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = skywatch_pretestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A79860A2A6B78AE00077E24 /* skywatch_pretestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skywatch_pretestUITests.swift; sourceTree = "<group>"; };
 		7A79860C2A6B78AE00077E24 /* skywatch_pretestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skywatch_pretestUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -82,6 +82,7 @@
 		7AA966262A6FD33B00F02E00 /* PlayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListViewModel.swift; sourceTree = "<group>"; };
 		7AA9662B2A712B1300F02E00 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		7AA9662D2A712F7500F02E00 /* UserDefaultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtension.swift; sourceTree = "<group>"; };
+		7AA966312A72811D00F02E00 /* PlayListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AA966352A72836400F02E00 /* MJRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +121,7 @@
 				7A7985FF2A6B78AE00077E24 /* skywatch_pretestTests */,
 				7A7986092A6B78AE00077E24 /* skywatch_pretestUITests */,
 				7A7985E72A6B78AD00077E24 /* Products */,
+				7AA966332A72836400F02E00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,8 +157,8 @@
 		7A7985FF2A6B78AE00077E24 /* skywatch_pretestTests */ = {
 			isa = PBXGroup;
 			children = (
-				7A7986002A6B78AE00077E24 /* skywatch_pretestTests.swift */,
 				7A7986252A6BDBEC00077E24 /* HttpMenegerTest.swift */,
+				7AA966312A72811D00F02E00 /* PlayListViewModelTests.swift */,
 			);
 			path = skywatch_pretestTests;
 			sourceTree = "<group>";
@@ -258,6 +261,13 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		7AA966332A72836400F02E00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -297,6 +307,9 @@
 				7A7985FE2A6B78AE00077E24 /* PBXTargetDependency */,
 			);
 			name = skywatch_pretestTests;
+			packageProductDependencies = (
+				7AA966342A72836400F02E00 /* MJRefresh */,
+			);
 			productName = skywatch_pretestTests;
 			productReference = 7A7985FC2A6B78AE00077E24 /* skywatch_pretestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -423,7 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A7986012A6B78AE00077E24 /* skywatch_pretestTests.swift in Sources */,
+				7AA966322A72811D00F02E00 /* PlayListViewModelTests.swift in Sources */,
 				7A7986262A6BDBEC00077E24 /* HttpMenegerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -800,6 +813,11 @@
 			productName = SnapKit;
 		};
 		7AA966222A6E82CB00F02E00 /* MJRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AA966212A6E82CB00F02E00 /* XCRemoteSwiftPackageReference "MJRefresh" */;
+			productName = MJRefresh;
+		};
+		7AA966342A72836400F02E00 /* MJRefresh */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7AA966212A6E82CB00F02E00 /* XCRemoteSwiftPackageReference "MJRefresh" */;
 			productName = MJRefresh;
