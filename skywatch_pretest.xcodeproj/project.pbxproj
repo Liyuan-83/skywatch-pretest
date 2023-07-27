@@ -32,6 +32,8 @@
 		7AA966232A6E82CB00F02E00 /* MJRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA966222A6E82CB00F02E00 /* MJRefresh */; };
 		7AA966252A6FCD6100F02E00 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966242A6FCD6100F02E00 /* DateExtension.swift */; };
 		7AA966272A6FD33B00F02E00 /* PlayListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966262A6FD33B00F02E00 /* PlayListViewModel.swift */; };
+		7AA9662C2A712B1300F02E00 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9662B2A712B1300F02E00 /* ViewModelProtocol.swift */; };
+		7AA9662E2A712F7500F02E00 /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9662D2A712F7500F02E00 /* UserDefaultExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		7AA9661F2A6E59E200F02E00 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		7AA966242A6FCD6100F02E00 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		7AA966262A6FD33B00F02E00 /* PlayListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListViewModel.swift; sourceTree = "<group>"; };
+		7AA9662B2A712B1300F02E00 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		7AA9662D2A712F7500F02E00 /* UserDefaultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 		7A79861D2A6B7E6500077E24 /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				7AA9662A2A712AEE00F02E00 /* Protocol */,
 				7A7986352A6D1FC000077E24 /* Extension */,
 				7A79861E2A6B7E9C00077E24 /* Constent.swift */,
 				7A7986312A6C0E1B00077E24 /* YoutubeAPIPartEnum.swift */,
@@ -216,6 +221,7 @@
 				7A7986362A6D1FD300077E24 /* PublishExtension.swift */,
 				7AA9661F2A6E59E200F02E00 /* UIImageExtension.swift */,
 				7AA966242A6FCD6100F02E00 /* DateExtension.swift */,
+				7AA9662D2A712F7500F02E00 /* UserDefaultExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -242,6 +248,14 @@
 			children = (
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		7AA9662A2A712AEE00F02E00 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				7AA9662B2A712B1300F02E00 /* ViewModelProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +406,7 @@
 				7AA966202A6E59E200F02E00 /* UIImageExtension.swift in Sources */,
 				7A7985EE2A6B78AD00077E24 /* PlayListViewController.swift in Sources */,
 				7A7985EA2A6B78AD00077E24 /* AppDelegate.swift in Sources */,
+				7AA9662E2A712F7500F02E00 /* UserDefaultExtension.swift in Sources */,
 				7A79862C2A6BE64000077E24 /* VideoInfoModel.swift in Sources */,
 				7A7986302A6BF15500077E24 /* YoutubeApiResponseModel.swift in Sources */,
 				7A79862A2A6BE29300077E24 /* ChannelInfoModel.swift in Sources */,
@@ -399,6 +414,7 @@
 				7A7986372A6D1FD300077E24 /* PublishExtension.swift in Sources */,
 				7A7985EC2A6B78AD00077E24 /* SceneDelegate.swift in Sources */,
 				7A79861F2A6B7E9C00077E24 /* Constent.swift in Sources */,
+				7AA9662C2A712B1300F02E00 /* ViewModelProtocol.swift in Sources */,
 				7A79863E2A6D2AE500077E24 /* PlayListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

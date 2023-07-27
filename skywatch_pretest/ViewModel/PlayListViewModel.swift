@@ -7,15 +7,16 @@
 
 import Foundation
 
-struct PlayListViewModel: Codable {
+struct PlayListViewModel: ViewModelProtocol {
     var channelInfo : ChannelInfo?
     var allList : [VideoInfo] = []
+    var nextPageToken : String?
+    var searchKeyword : String = ""
+    
     var showList : [VideoInfo] {
         return allList.filter({
             guard !searchKeyword.isEmpty else { return true }
             return $0.name?.contains(searchKeyword) ?? false
         })
     }
-    var nextPageToken : String?
-    var searchKeyword : String = ""
 }

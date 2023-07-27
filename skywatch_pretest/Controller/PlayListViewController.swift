@@ -27,6 +27,8 @@ class PlayListViewController: UIViewController {
     }
     
     func initPara() {
+        //讀取看看是否有本地資料，沒有才需要去要Api
+        guard !viewmodel.loadFromLocal() else { return }
         Task {
             viewmodel.channelInfo = try? await HttpMeneger.shared.getChannelInfo(YOASOBI_Channel_ID)
             guard let playListID = viewmodel.channelInfo?.uploadID,
@@ -34,15 +36,36 @@ class PlayListViewController: UIViewController {
                   let list = playList.list else { return }
             viewmodel.allList = list
             viewmodel.nextPageToken = playList.nextPageToken
+            //儲存至本地
+            viewmodel.saveToLocal()
+            DispatchQueue.main.async { [unowned self] in
+                tableView.mj_header?.endRefreshing()
+            }
         }
     }
     
     func setupUI(){
         setupNavigation()
+        setupTableView()
         searchBar.delegate = self
+    }
+    
+    func setupNavigation(){
+        navigationItem.title = "YOASOBI Channel"
+        let btn = UIBarButtonItem(image: UIImage(named: "search"), style: .plain, target: self, action: #selector(searchClick))
+        navigationItem.rightBarButtonItem =  btn
+    }
+    
+    func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(PlayListTableViewCell.self, forCellReuseIdentifier: "playListCell")
+        //下拉刷新，清除本地資料重新讀取線上資料
+        tableView.mj_header = MJRefreshNormalHeader{ [unowned self] in
+            viewmodel.clearFromLocal()
+            initPara()
+        }
+        //滑到底自動加載
         tableView.mj_footer = MJRefreshAutoNormalFooter{ [unowned self] in
             guard let id = viewmodel.channelInfo?.uploadID,
                   let token = viewmodel.nextPageToken else {
@@ -56,6 +79,8 @@ class PlayListViewController: UIViewController {
                       let list = nextPageList.list else { return }
                 viewmodel.nextPageToken = nextPageList.nextPageToken
                 viewmodel.allList += list
+                //更新本地資料
+                viewmodel.saveToLocal()
                 DispatchQueue.main.async { [unowned self] in
                     tableView.mj_footer?.endRefreshing()
                 }
@@ -63,17 +88,12 @@ class PlayListViewController: UIViewController {
         }
     }
     
-    func setupNavigation(){
-        navigationItem.title = "YOASOBI Channel"
-        let btn = UIBarButtonItem(image: UIImage(named: "search"), style: .plain, target: self, action: #selector(searchClick))
-        navigationItem.rightBarButtonItem =  btn
-    }
-
-    
     func setDataBinding(){
         $viewmodel.sink{ [unowned self] info in
 //            print(info?.uploadID)
             DispatchQueue.main.async { [unowned self] in
+                searchBar.text = viewmodel.searchKeyword
+                searchBar.isHidden = !searchBar.isFirstResponder && viewmodel.searchKeyword.isEmpty
                 tableView.reloadData()
             }
         }.store(in: &cancelables)
@@ -90,6 +110,7 @@ extension PlayListViewController {
 extension PlayListViewController : UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
         viewmodel.searchKeyword = searchText
+        viewmodel.saveToLocal()
     }
 }
 
@@ -107,5 +128,9 @@ extension PlayListViewController : UITableViewDelegate, UITableViewDataSource{
         }
         cell?.setVideoInfo(viewmodel.showList[indexPath.row])
         return cell ?? PlayListTableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
