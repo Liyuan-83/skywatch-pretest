@@ -14,7 +14,7 @@ enum ChannelsPart : String, CaseIterable{
 }
 
 enum PlayListItemPart : String, CaseIterable{
-    case contentDetails,id,snippet,status
+    case contentDetails,id,snippet,status,replies
 }
 
 enum VideosPart : String, CaseIterable{

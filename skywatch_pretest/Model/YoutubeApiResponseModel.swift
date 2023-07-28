@@ -21,58 +21,65 @@ struct YoutubeApiResponse: Codable {
 struct Item: Codable {
     var kind: Kind
     var etag, id: String
-    var snippet: Snippet?
+    var snippet: ItemSnippet?
     var contentDetails: ContentDetails?
-    var status: Status?
     var statistics: Statistics?
+    var replies: Replies?
 }
 
 // MARK: - ContentDetails
 struct ContentDetails: Codable {
-    var videoID: String?
-    var videoPublishedAt: Date?
     var relatedPlaylists: RelatedPlaylists?
-
-    enum CodingKeys: String, CodingKey {
-        case videoID = "videoId"
-        case videoPublishedAt, relatedPlaylists
-    }
 }
 
 // MARK: - RelatedPlaylists
 struct RelatedPlaylists: Codable {
-    var likes: String
-    var uploads: String
+    var likes, uploads: String?
 }
 
-// MARK: - Snippet
-struct Snippet: Codable {
+// MARK: - ItemSnippet
+struct ItemSnippet: Codable {
+    var title, description, customURL: String?
     var publishedAt: String?
-    var channelID: String?
-    var title, description: String?
     var thumbnails: Thumbnails?
-    var channelTitle: String?
-    var categoryID, liveBroadcastContent: String?
     var localized: Localized?
-    var defaultAudioLanguage: String?
-    var playlistID: String?
+    var country, channelID, channelTitle, playlistID: String?
     var position: Int?
     var resourceID: ResourceID?
-    var videoOwnerChannelTitle: String?
-    var videoOwnerChannelID: String?
+    var videoOwnerChannelTitle, videoOwnerChannelID, categoryID, liveBroadcastContent: String?
+    var defaultAudioLanguage, videoID: String?
+    var topLevelComment: TopLevelComment?
+    var canReply: Bool?
+    var totalReplyCount: Int?
+    var isPublic: Bool?
 
     enum CodingKeys: String, CodingKey {
-        case publishedAt
+        case title, description
+        case customURL = "customUrl"
+        case publishedAt, thumbnails, localized, country
         case channelID = "channelId"
-        case title, description, thumbnails, channelTitle
-        case categoryID = "categoryId"
-        case liveBroadcastContent, localized, defaultAudioLanguage
+        case channelTitle
         case playlistID = "playlistId"
         case position
         case resourceID = "resourceId"
         case videoOwnerChannelTitle
         case videoOwnerChannelID = "videoOwnerChannelId"
+        case categoryID = "categoryId"
+        case liveBroadcastContent, defaultAudioLanguage
+        case videoID = "videoId"
+        case topLevelComment, canReply, totalReplyCount, isPublic
     }
+}
+
+// MARK: - Replies
+struct Replies: Codable {
+    var comments: [Comment]
+}
+
+// MARK: - Comment
+struct Comment: Codable {
+    var kind, etag, id: String
+    var snippet: TopLevelCommentSnippet
 }
 
 // MARK: - Localized
@@ -82,8 +89,7 @@ struct Localized: Codable {
 
 // MARK: - ResourceID
 struct ResourceID: Codable {
-    var kind: Kind?
-    var videoID: String?
+    var kind, videoID: String?
 
     enum CodingKeys: String, CodingKey {
         case kind
@@ -93,8 +99,7 @@ struct ResourceID: Codable {
 
 // MARK: - Thumbnails
 struct Thumbnails: Codable {
-    var thumbnailsDefault, medium, high, standard, maxres: ImageInfo?
-
+    var thumbnailsDefault, medium, high, standard, maxres: Default?
     enum CodingKeys: String, CodingKey {
         case thumbnailsDefault = "default"
         case medium, high, standard, maxres
@@ -102,23 +107,41 @@ struct Thumbnails: Codable {
 }
 
 // MARK: - Default
-struct ImageInfo: Codable {
+struct Default: Codable {
     var url: String
-    var width, height: Double
+    var width, height: Int
 }
 
-// MARK: - Status
-struct Status: Codable {
-    var privacyStatus: PrivacyStatus
+// MARK: - TopLevelComment
+struct TopLevelComment: Codable {
+    var kind, etag, id: String
+    var snippet: TopLevelCommentSnippet
 }
 
-enum PrivacyStatus: String, Codable {
-    case pub = "public"
+// MARK: - TopLevelCommentSnippet
+struct TopLevelCommentSnippet: Codable {
+    var videoID, textDisplay, textOriginal, authorDisplayName: String
+    var authorProfileImageURL: String
+    var authorChannelURL: String
+    var authorChannelID: AuthorChannelID
+    var canRate: Bool
+    var viewerRating: String
+    var likeCount: Int
+    var publishedAt, updatedAt: String
+
+    enum CodingKeys: String, CodingKey {
+        case videoID = "videoId"
+        case textDisplay, textOriginal, authorDisplayName
+        case authorProfileImageURL = "authorProfileImageUrl"
+        case authorChannelURL = "authorChannelUrl"
+        case authorChannelID = "authorChannelId"
+        case canRate, viewerRating, likeCount, publishedAt, updatedAt
+    }
 }
 
-// MARK: - PageInfo
-struct PageInfo: Codable {
-    var totalResults, resultsPerPage: Double
+// MARK: - AuthorChannelID
+struct AuthorChannelID: Codable {
+    var value: String
 }
 
 // MARK: - Statistics
@@ -126,4 +149,9 @@ struct Statistics: Codable {
     var viewCount, subscriberCount: String
     var hiddenSubscriberCount: Bool
     var videoCount: String
+}
+
+// MARK: - PageInfo
+struct PageInfo: Codable {
+    var totalResults, resultsPerPage: Int
 }

@@ -89,13 +89,10 @@ class PlayListViewController: UIViewController {
     }
     
     func setDataBinding(){
-        $viewmodel.sink{ [unowned self] info in
-//            print(info?.uploadID)
-            DispatchQueue.main.async { [unowned self] in
-                searchBar.text = viewmodel.searchKeyword
-                searchBar.isHidden = !searchBar.isFirstResponder && viewmodel.searchKeyword.isEmpty
-                tableView.reloadData()
-            }
+        $viewmodel.receive(on: DispatchQueue.main).sink{ [unowned self] model in
+            searchBar.text = model.searchKeyword
+            searchBar.isHidden = !searchBar.isFirstResponder && model.searchKeyword.isEmpty
+            tableView.reloadData()
         }.store(in: &cancelables)
     }
 

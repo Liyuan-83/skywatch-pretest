@@ -35,6 +35,10 @@
 		7AA9662E2A712F7500F02E00 /* UserDefaultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9662D2A712F7500F02E00 /* UserDefaultExtension.swift */; };
 		7AA966322A72811D00F02E00 /* PlayListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966312A72811D00F02E00 /* PlayListViewModelTests.swift */; };
 		7AA966352A72836400F02E00 /* MJRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA966342A72836400F02E00 /* MJRefresh */; };
+		7AA966372A728F3600F02E00 /* PlayerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966362A728F3600F02E00 /* PlayerViewModelTests.swift */; };
+		7AA966392A72901800F02E00 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966382A72901800F02E00 /* PlayerViewModel.swift */; };
+		7AA9663B2A73936D00F02E00 /* CommentListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9663A2A73936D00F02E00 /* CommentListModel.swift */; };
+		7AA966462A73C67000F02E00 /* TestConstent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966452A73C67000F02E00 /* TestConstent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		7AA9662B2A712B1300F02E00 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		7AA9662D2A712F7500F02E00 /* UserDefaultExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultExtension.swift; sourceTree = "<group>"; };
 		7AA966312A72811D00F02E00 /* PlayListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListViewModelTests.swift; sourceTree = "<group>"; };
+		7AA966362A728F3600F02E00 /* PlayerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModelTests.swift; sourceTree = "<group>"; };
+		7AA966382A72901800F02E00 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		7AA9663A2A73936D00F02E00 /* CommentListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListModel.swift; sourceTree = "<group>"; };
+		7AA966452A73C67000F02E00 /* TestConstent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +165,8 @@
 		7A7985FF2A6B78AE00077E24 /* skywatch_pretestTests */ = {
 			isa = PBXGroup;
 			children = (
-				7A7986252A6BDBEC00077E24 /* HttpMenegerTest.swift */,
-				7AA966312A72811D00F02E00 /* PlayListViewModelTests.swift */,
+				7AA966472A73C76100F02E00 /* TestCase */,
+				7AA966452A73C67000F02E00 /* TestConstent.swift */,
 			);
 			path = skywatch_pretestTests;
 			sourceTree = "<group>";
@@ -178,6 +186,7 @@
 				7A7986272A6BDFBC00077E24 /* PlayListModel.swift */,
 				7A79862B2A6BE64000077E24 /* VideoInfoModel.swift */,
 				7A7986292A6BE29300077E24 /* ChannelInfoModel.swift */,
+				7AA9663A2A73936D00F02E00 /* CommentListModel.swift */,
 				7A79862F2A6BF15500077E24 /* YoutubeApiResponseModel.swift */,
 			);
 			path = Model;
@@ -206,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				7AA966262A6FD33B00F02E00 /* PlayListViewModel.swift */,
+				7AA966382A72901800F02E00 /* PlayerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -266,6 +276,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AA966472A73C76100F02E00 /* TestCase */ = {
+			isa = PBXGroup;
+			children = (
+				7A7986252A6BDBEC00077E24 /* HttpMenegerTest.swift */,
+				7AA966312A72811D00F02E00 /* PlayListViewModelTests.swift */,
+				7AA966362A728F3600F02E00 /* PlayerViewModelTests.swift */,
+			);
+			path = TestCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,11 +436,13 @@
 				7A7986322A6C0E1B00077E24 /* YoutubeAPIPartEnum.swift in Sources */,
 				7AA966252A6FCD6100F02E00 /* DateExtension.swift in Sources */,
 				7A7986242A6B7FE100077E24 /* HttpMeneger.swift in Sources */,
+				7AA9663B2A73936D00F02E00 /* CommentListModel.swift in Sources */,
 				7AA966202A6E59E200F02E00 /* UIImageExtension.swift in Sources */,
 				7A7985EE2A6B78AD00077E24 /* PlayListViewController.swift in Sources */,
 				7A7985EA2A6B78AD00077E24 /* AppDelegate.swift in Sources */,
 				7AA9662E2A712F7500F02E00 /* UserDefaultExtension.swift in Sources */,
 				7A79862C2A6BE64000077E24 /* VideoInfoModel.swift in Sources */,
+				7AA966392A72901800F02E00 /* PlayerViewModel.swift in Sources */,
 				7A7986302A6BF15500077E24 /* YoutubeApiResponseModel.swift in Sources */,
 				7A79862A2A6BE29300077E24 /* ChannelInfoModel.swift in Sources */,
 				7A7986282A6BDFBC00077E24 /* PlayListModel.swift in Sources */,
@@ -437,7 +459,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AA966322A72811D00F02E00 /* PlayListViewModelTests.swift in Sources */,
+				7AA966372A728F3600F02E00 /* PlayerViewModelTests.swift in Sources */,
 				7A7986262A6BDBEC00077E24 /* HttpMenegerTest.swift in Sources */,
+				7AA966462A73C67000F02E00 /* TestConstent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
