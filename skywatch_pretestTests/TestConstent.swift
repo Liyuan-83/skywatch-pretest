@@ -11,3 +11,7 @@ import Foundation
 let test_playListID = "UUvpredjG93ifbCP1Y77JyFA"
 ///アイドル MV
 let test_vidoeID = "ZRtdQ81jPUQ"
+
+enum TestError : Error{
+    case InitFail
+}

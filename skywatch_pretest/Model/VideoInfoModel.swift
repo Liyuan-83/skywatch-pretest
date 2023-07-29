@@ -13,7 +13,7 @@ struct VideoInfo: Codable {
     var createDate : Date?
     var name : String?
     var description : String?
-    var thumbnails : URL?
+    var thumbnails : Thumbnails?
     
     
     init(with item:Item){
@@ -27,9 +27,8 @@ struct VideoInfo: Codable {
         
         self.name = item.snippet?.title
         self.description = item.snippet?.description
-        if let thumbnails = item.snippet?.thumbnails,
-           let urlStr = thumbnails.standard?.url ?? thumbnails.thumbnailsDefault?.url{
-            self.thumbnails = URL(string: urlStr)
+        if let thumbnails = item.snippet?.thumbnails{
+            self.thumbnails = thumbnails
         }
     }
     

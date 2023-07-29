@@ -21,8 +21,8 @@ struct ChannelInfo: Codable {
         guard res.kind == .channel else { throw DecodeError.KindNotMatch }
         self.name = res.items.first?.snippet?.title
         self.description = res.items.first?.snippet?.description
-        if let thumbnails = res.items.first?.snippet?.thumbnails,
-           let urlStr = thumbnails.standard?.url ?? thumbnails.thumbnailsDefault?.url{
+        if let thumbnails = res.items.first?.snippet?.thumbnails{
+            let urlStr = thumbnails.standard?.url ?? thumbnails.thumbnailsDefault.url
             self.thumbnails = URL(string: urlStr)
         }
         self.uploadID = res.items.first?.contentDetails?.relatedPlaylists?.uploads

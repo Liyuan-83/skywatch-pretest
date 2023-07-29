@@ -71,12 +71,28 @@ class PlayListTableViewCell: UITableViewCell {
     }
     
     func setupUI(){
+        var imgRate : Double = Double(4)/3
+        switch UIScreen.main.bounds.width{
+        case 641...1280:
+            imgRate = Double(1280)/720
+            break
+        case 481...640:
+            imgRate = Double(640)/480
+            break
+        case 321...480:
+            imgRate = Double(480)/360
+            break
+        case 121...320:
+            imgRate = Double(320)/180
+            break
+        default:
+            imgRate = Double(4)/3
+        }
         contentView.addSubview(thumbnailView)
-        let rate = Double(4)/3
         thumbnailView.snp.makeConstraints{ make in
             make.centerX.width.equalToSuperview()
             make.top.left.equalTo(contentView)
-            make.height.equalTo(contentView.snp.width).dividedBy(rate)
+            make.height.equalTo(contentView.snp.width).dividedBy(imgRate)
         }
         
         contentView.addSubview(channelImg)
@@ -109,8 +125,8 @@ class PlayListTableViewCell: UITableViewCell {
     }
     
     func setVideoInfo(_ info:VideoInfo){
-        if let url = info.thumbnails{
-            thumbnailView.load(url: url)
+        if let thumbnails = info.thumbnails{
+            thumbnailView.loadThumbnails(thumbnails)
         }
         videoTitleLabel.text = info.name
         uploadDateLabel.text = info.createDate?.stringWith("YYYY-MM-dd HH:mm:ss")

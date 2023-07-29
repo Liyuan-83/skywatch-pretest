@@ -19,8 +19,6 @@ class PlayListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-//        player.load(withVideoId: "M7lc1UVf-VE")
         setupUI()
         initPara()
         setDataBinding()
@@ -67,21 +65,18 @@ class PlayListViewController: UIViewController {
         }
         //滑到底自動加載
         tableView.mj_footer = MJRefreshAutoNormalFooter{ [unowned self] in
-            guard let id = viewmodel.channelInfo?.uploadID,
-                  let token = viewmodel.nextPageToken else {
-                DispatchQueue.main.async { [unowned self] in
-                    tableView.mj_footer?.endRefreshingWithNoMoreData()
-                }
-                return
-            }
             Task {
-                guard let nextPageList = try? await HttpMeneger.shared.getPlayList(id,20,token),
-                      let list = nextPageList.list else { return }
-                viewmodel.nextPageToken = nextPageList.nextPageToken
-                viewmodel.allList += list
-                //更新本地資料
-                viewmodel.saveToLocal()
+                var vm = viewmodel
+                let status = await vm.loadNextPage()
                 DispatchQueue.main.async { [unowned self] in
+                    if status == .noMoreData{
+                        tableView.mj_footer?.endRefreshingWithNoMoreData()
+                        return
+                    }
+                    if status == .success{
+                        viewmodel = vm
+                        viewmodel.saveToLocal()
+                    }
                     tableView.mj_footer?.endRefreshing()
                 }
             }

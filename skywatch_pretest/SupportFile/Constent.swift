@@ -15,6 +15,10 @@ enum DecodeError : Error{
     case KindNotMatch, CommentThreadFail, CommentFail
 }
 
+enum NextPageStatus {
+    case success,fail,noMoreData
+}
+
 enum Api_type: String{
     case playListItem = "playlistItems"
     case channals = "channels"

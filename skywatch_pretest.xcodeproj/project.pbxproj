@@ -147,14 +147,12 @@
 			isa = PBXGroup;
 			children = (
 				7A7986382A6D25E500077E24 /* View */,
-				7A7986342A6D1CD000077E24 /* Controller */,
 				7A79861C2A6B7DC900077E24 /* Model */,
 				7A7986332A6D1BE700077E24 /* ViewModel */,
 				7A7986202A6B7FBE00077E24 /* Meneger */,
 				7A79861D2A6B7E6500077E24 /* SupportFile */,
 				7A7985E92A6B78AD00077E24 /* AppDelegate.swift */,
 				7A7985EB2A6B78AD00077E24 /* SceneDelegate.swift */,
-				7A7985EF2A6B78AD00077E24 /* Main.storyboard */,
 				7A7985F22A6B78AD00077E24 /* Assets.xcassets */,
 				7A7985F42A6B78AD00077E24 /* LaunchScreen.storyboard */,
 				7A7985F72A6B78AD00077E24 /* Info.plist */,
@@ -242,8 +240,10 @@
 		7A7986382A6D25E500077E24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7A7985EF2A6B78AD00077E24 /* Main.storyboard */,
 				7A79863A2A6D25F600077E24 /* Header */,
 				7A7986392A6D25EE00077E24 /* Cell */,
+				7A7986342A6D1CD000077E24 /* Controller */,
 			);
 			path = View;
 			sourceTree = "<group>";

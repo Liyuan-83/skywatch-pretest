@@ -99,7 +99,8 @@ struct ResourceID: Codable {
 
 // MARK: - Thumbnails
 struct Thumbnails: Codable {
-    var thumbnailsDefault, medium, high, standard, maxres: Default?
+    var thumbnailsDefault, medium, high : Default
+    var standard, maxres: Default?
     enum CodingKeys: String, CodingKey {
         case thumbnailsDefault = "default"
         case medium, high, standard, maxres
@@ -109,7 +110,7 @@ struct Thumbnails: Codable {
 // MARK: - Default
 struct Default: Codable {
     var url: String
-    var width, height: Int
+    var width, height: Double
 }
 
 // MARK: - TopLevelComment
