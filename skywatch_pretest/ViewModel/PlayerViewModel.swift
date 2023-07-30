@@ -6,9 +6,15 @@
 //
 
 import Foundation
+import YouTubeiOSPlayerHelper
 
 struct PlayerViewModel: ViewModelProtocol {
+    var playstatus : YTPlayerState = .unknown
     var channelInfo : ChannelInfo
     var videoInfo : VideoInfo
 //    var commentList : [String]
+}
+
+extension YTPlayerState : Codable{
+    
 }

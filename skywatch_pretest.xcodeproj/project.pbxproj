@@ -249,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				7A7985EF2A6B78AD00077E24 /* Main.storyboard */,
-				7A79863A2A6D25F600077E24 /* Header */,
 				7A7986392A6D25EE00077E24 /* Cell */,
 				7A7986342A6D1CD000077E24 /* Controller */,
 			);
@@ -262,13 +261,6 @@
 				7A79863D2A6D2AE500077E24 /* PlayListTableViewCell.swift */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		7A79863A2A6D25F600077E24 /* Header */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Header;
 			sourceTree = "<group>";
 		};
 		7AA9662A2A712AEE00F02E00 /* Protocol */ = {
