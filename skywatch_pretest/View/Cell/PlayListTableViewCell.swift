@@ -13,6 +13,9 @@ class PlayListTableViewCell: UITableViewCell {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
         view.adjustsImageSizeForAccessibilityContentSizeCategory = false
+        let tapGes = UITapGestureRecognizer(target: self, action: #selector(tapThumbnailView))
+        view.addGestureRecognizer(tapGes)
+        view.isUserInteractionEnabled = true
         return view
     }()
     
@@ -47,6 +50,10 @@ class PlayListTableViewCell: UITableViewCell {
         label.textAlignment = .right
         return label
     }()
+    
+    var videoInfo : VideoInfo?
+    var channelInfo : ChannelInfo?
+    var clickThumbnail : ((ChannelInfo, VideoInfo) -> ())?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -125,6 +132,7 @@ class PlayListTableViewCell: UITableViewCell {
     }
     
     func setVideoInfo(_ info:VideoInfo){
+        videoInfo = info
         if let thumbnails = info.thumbnails{
             thumbnailView.loadThumbnails(thumbnails)
         }
@@ -133,9 +141,17 @@ class PlayListTableViewCell: UITableViewCell {
     }
     
     func setChannelInfo(_ info:ChannelInfo){
+        channelInfo = info
         if let url = info.thumbnails{
             channelImg.load(url: url)
         }
         ownerLabel.text = info.name
+    }
+    
+    @objc func tapThumbnailView(){
+        guard let action = clickThumbnail,
+              let channelInfo = channelInfo,
+              let videoInfo = videoInfo else { return }
+        action(channelInfo, videoInfo)
     }
 }

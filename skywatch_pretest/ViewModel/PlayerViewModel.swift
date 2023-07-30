@@ -8,6 +8,7 @@
 import Foundation
 
 struct PlayerViewModel: ViewModelProtocol {
-    var videoInfo : VideoInfo?
+    var channelInfo : ChannelInfo
+    var videoInfo : VideoInfo
 //    var commentList : [String]
 }

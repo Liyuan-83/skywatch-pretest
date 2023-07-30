@@ -13,6 +13,7 @@ class PlayListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    let interactor = Interactor()
     var cancelables : Set<AnyCancellable> = []
     @Published var viewmodel : PlayListViewModel = PlayListViewModel()
 //    @IBOutlet weak var player: YTPlayerView!
@@ -22,6 +23,14 @@ class PlayListViewController: UIViewController {
         setupUI()
         initPara()
         setDataBinding()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if UIDevice.current.userInterfaceIdiom != .pad{
+            AppDelegate.isLockScreenPortrait = true
+            UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+        }
     }
     
     func initPara() {
@@ -119,10 +128,31 @@ extension PlayListViewController : UITableViewDelegate, UITableViewDataSource{
             cell?.setChannelInfo(channelInfo)
         }
         cell?.setVideoInfo(viewmodel.showList[indexPath.row])
+        cell?.clickThumbnail = { [unowned self] channel, video in
+            let vc = PlayerViewController()
+            vc.viewmodel = PlayerViewModel(channelInfo: channel, videoInfo: video)
+            vc.interactor = interactor
+            vc.transitioningDelegate = self
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .coverVertical
+            DispatchQueue.main.async { [unowned self] in
+                present(vc, animated: true)
+            }
+        }
         return cell ?? PlayListTableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension PlayListViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DismissAnimator()
+    }
+    
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interactor.hasStarted ? interactor : nil
     }
 }

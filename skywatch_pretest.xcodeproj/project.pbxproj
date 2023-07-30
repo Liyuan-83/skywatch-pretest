@@ -39,6 +39,9 @@
 		7AA966392A72901800F02E00 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966382A72901800F02E00 /* PlayerViewModel.swift */; };
 		7AA9663B2A73936D00F02E00 /* CommentListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9663A2A73936D00F02E00 /* CommentListModel.swift */; };
 		7AA966462A73C67000F02E00 /* TestConstent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966452A73C67000F02E00 /* TestConstent.swift */; };
+		7AA966492A76207C00F02E00 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966482A76207C00F02E00 /* PlayerViewController.swift */; };
+		7AA9664D2A76283800F02E00 /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9664B2A76283800F02E00 /* DismissAnimator.swift */; };
+		7AA9664E2A76283800F02E00 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9664C2A76283800F02E00 /* Interactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		7AA966382A72901800F02E00 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		7AA9663A2A73936D00F02E00 /* CommentListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListModel.swift; sourceTree = "<group>"; };
 		7AA966452A73C67000F02E00 /* TestConstent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstent.swift; sourceTree = "<group>"; };
+		7AA966482A76207C00F02E00 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		7AA9664B2A76283800F02E00 /* DismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
+		7AA9664C2A76283800F02E00 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +199,7 @@
 		7A79861D2A6B7E6500077E24 /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				7AA9664A2A76281E00F02E00 /* Dismiss */,
 				7AA9662A2A712AEE00F02E00 /* Protocol */,
 				7A7986352A6D1FC000077E24 /* Extension */,
 				7A79861E2A6B7E9C00077E24 /* Constent.swift */,
@@ -222,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				7A7985ED2A6B78AD00077E24 /* PlayListViewController.swift */,
+				7AA966482A76207C00F02E00 /* PlayerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,6 +294,15 @@
 				7AA966362A728F3600F02E00 /* PlayerViewModelTests.swift */,
 			);
 			path = TestCase;
+			sourceTree = "<group>";
+		};
+		7AA9664A2A76281E00F02E00 /* Dismiss */ = {
+			isa = PBXGroup;
+			children = (
+				7AA9664B2A76283800F02E00 /* DismissAnimator.swift */,
+				7AA9664C2A76283800F02E00 /* Interactor.swift */,
+			);
+			path = Dismiss;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -434,6 +451,7 @@
 			files = (
 				7AA966272A6FD33B00F02E00 /* PlayListViewModel.swift in Sources */,
 				7A7986322A6C0E1B00077E24 /* YoutubeAPIPartEnum.swift in Sources */,
+				7AA9664E2A76283800F02E00 /* Interactor.swift in Sources */,
 				7AA966252A6FCD6100F02E00 /* DateExtension.swift in Sources */,
 				7A7986242A6B7FE100077E24 /* HttpMeneger.swift in Sources */,
 				7AA9663B2A73936D00F02E00 /* CommentListModel.swift in Sources */,
@@ -441,9 +459,11 @@
 				7A7985EE2A6B78AD00077E24 /* PlayListViewController.swift in Sources */,
 				7A7985EA2A6B78AD00077E24 /* AppDelegate.swift in Sources */,
 				7AA9662E2A712F7500F02E00 /* UserDefaultExtension.swift in Sources */,
+				7AA966492A76207C00F02E00 /* PlayerViewController.swift in Sources */,
 				7A79862C2A6BE64000077E24 /* VideoInfoModel.swift in Sources */,
 				7AA966392A72901800F02E00 /* PlayerViewModel.swift in Sources */,
 				7A7986302A6BF15500077E24 /* YoutubeApiResponseModel.swift in Sources */,
+				7AA9664D2A76283800F02E00 /* DismissAnimator.swift in Sources */,
 				7A79862A2A6BE29300077E24 /* ChannelInfoModel.swift in Sources */,
 				7A7986282A6BDFBC00077E24 /* PlayListModel.swift in Sources */,
 				7A7986372A6D1FD300077E24 /* PublishExtension.swift in Sources */,
