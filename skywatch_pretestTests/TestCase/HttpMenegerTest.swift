@@ -74,7 +74,7 @@ final class HttpMenegerTest: XCTestCase {
             //確保留言串ID可拿到
             XCTAssertNotNil(item.threadID)
             XCTAssertNotNil(item.thumbnail)
-            //最多好像只有五筆，在多要用comment api拿
+            //最多好像只有五筆，更多要用comment api拿
 //            XCTAssertEqual(item.subCommentCount > 5 ? 5 : item.subCommentCount, item.subComments.count )
             print("\(item.authorName):\(item.content) Like:\(item.likeCount)")
             guard item.subCommentCount > 0 else { continue }

@@ -10,9 +10,21 @@ import YouTubeiOSPlayerHelper
 
 struct PlayerViewModel: ViewModelProtocol {
     var playstatus : YTPlayerState = .unknown
-    var channelInfo : ChannelInfo
-    var videoInfo : VideoInfo
-//    var commentList : [String]
+    var channelInfo : ChannelInfo?
+    var videoInfo : VideoInfo?
+    var commentList : CommentThreadList?
+    
+    mutating func loadMoreComment() async -> NextPageStatus{
+        guard let id = videoInfo?.id,
+              let token = commentList?.nextPageToken else { return .noMoreData }
+        
+        guard let nextPagecomment = try? await HttpMeneger.shared.getCommentThreadList(id,20,token),
+              let list = nextPagecomment.list,
+              commentList?.list != nil else { return .fail }
+        commentList?.nextPageToken = nextPagecomment.nextPageToken
+        commentList?.list! += list
+        return .success
+    }
 }
 
 extension YTPlayerState : Codable{

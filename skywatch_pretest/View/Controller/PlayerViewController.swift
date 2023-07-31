@@ -8,10 +8,11 @@
 import UIKit
 import Combine
 import YouTubeiOSPlayerHelper
+import MJRefresh
 
 class PlayerViewController: UIViewController {
     
-    lazy var videoPlayView : YTPlayerView = {
+    lazy private var videoPlayView : YTPlayerView = {
         let view = YTPlayerView()
         view.delegate = self
         let ges = UIPanGestureRecognizer(target: self, action: #selector(handleGesture))
@@ -20,13 +21,15 @@ class PlayerViewController: UIViewController {
         return view
     }()
     
-    lazy var scrollView : UIScrollView = {
+    lazy private var scrollView : UIScrollView = {
         let view = UIScrollView()
+        view.delegate = self
+        view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    lazy var channelImg: UIImageView = {
+    lazy private var channelImg: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
         view.adjustsImageSizeForAccessibilityContentSizeCategory = false
@@ -35,7 +38,7 @@ class PlayerViewController: UIViewController {
         return view
     }()
     
-    lazy var videoTitleLabel: UILabel = {
+    lazy private var videoTitleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 20)
         label.numberOfLines = 2
@@ -44,7 +47,7 @@ class PlayerViewController: UIViewController {
         return label
     }()
     
-    lazy var ownerLabel: UILabel = {
+    lazy private var ownerLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 12)
         label.numberOfLines = 1
@@ -53,7 +56,7 @@ class PlayerViewController: UIViewController {
         return label
     }()
     
-    lazy var uploadDateLabel: UILabel = {
+    lazy private var uploadDateLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 12)
         label.numberOfLines = 1
@@ -62,19 +65,29 @@ class PlayerViewController: UIViewController {
         return label
     }()
     
-    lazy var descriptionLabel: UILabel = {
+    lazy private var descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 12)
         label.numberOfLines = 10
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = .white
+        let ges = UITapGestureRecognizer(target: self, action: #selector(showMoreDescription))
+        label.addGestureRecognizer(ges)
+        label.isUserInteractionEnabled = true
         return label
     }()
     
-    lazy var msgTableView : UITableView = {
+    lazy private var msgTableView : UITableView = {
         let view = UITableView()
+        view.delegate = self
+        view.dataSource = self
+        view.isScrollEnabled = false
         return view
     }()
+    
+    private var scrollViewOffset : CGPoint = .zero
+    private var tableViewOffset : CGPoint = .zero
     
     var interactor:Interactor? = nil
     var cancelables : Set<AnyCancellable> = []
@@ -128,30 +141,65 @@ class PlayerViewController: UIViewController {
         }
         
         scrollView.addSubview(descriptionLabel)
-        descriptionLabel.snp.makeConstraints{ make in
+        
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        stackView.spacing = 5
+        scrollView.addSubview(stackView)
+        stackView.snp.makeConstraints{ make in
             make.top.equalTo(uploadDateLabel.snp.bottom).offset(15)
             make.left.equalTo(channelImg)
             make.right.equalTo(videoTitleLabel)
-            make.bottom.equalToSuperview().offset(-15)
+            make.bottom.equalToSuperview().offset(-5)
+        }
+        stackView.addArrangedSubview(descriptionLabel)
+        stackView.addArrangedSubview(msgTableView)
+        let videoViewHeight = Double(view.safeAreaLayoutGuide.layoutFrame.width)/1920*1080+10
+        msgTableView.snp.makeConstraints{ make in
+            make.width.equalToSuperview()
+            make.height.equalTo(view.safeAreaLayoutGuide).offset(-videoViewHeight)
         }
         
-        scrollView.contentSize = CGSize(width: view.safeAreaLayoutGuide.layoutFrame.width, height: ownerLabel.frame.maxY + 15)
-        
+        scrollView.contentSize = CGSize(width: view.safeAreaLayoutGuide.layoutFrame.width, height: msgTableView.frame.maxY + 15)
+        setupTableView()
+    }
+    
+    func setupTableView(){
+        msgTableView.register(CommentTableViewCell.self, forCellReuseIdentifier: "CommentCell")
+        msgTableView.mj_footer = MJRefreshAutoNormalFooter{ [unowned self] in
+            Task {
+                var vm = viewmodel
+                let status = await vm?.loadMoreComment()
+                DispatchQueue.main.async { [unowned self] in
+                    if status == .noMoreData{
+                        msgTableView.mj_footer?.endRefreshingWithNoMoreData()
+                        return
+                    }
+                    if status == .success{
+                        viewmodel = vm
+                    }
+                    msgTableView.mj_footer?.endRefreshing()
+                }
+            }
+        }
     }
     
     func setDataBinding(){
         $viewmodel.receive(on: DispatchQueue.main).sink{ [unowned self] model in
             if model?.playstatus == .unknown {
-                videoPlayView.load(withVideoId: model?.videoInfo.id ?? "")
+                guard let id = model?.videoInfo?.id else { return }
+                videoPlayView.load(withVideoId: id)
             }
-            videoTitleLabel.text = model?.videoInfo.name
-            uploadDateLabel.text = model?.videoInfo.createDate?.stringWith("YYYY-MM-dd HH:mm:ss")
-            if let url = model?.channelInfo.thumbnails{
+            videoTitleLabel.text = model?.videoInfo?.name
+            uploadDateLabel.text = model?.videoInfo?.createDate?.stringWith("YYYY-MM-dd HH:mm:ss")
+            if let url = model?.channelInfo?.thumbnails{
                 channelImg.load(url: url)
             }
-            ownerLabel.text = model?.channelInfo.name
-            descriptionLabel.text = model?.videoInfo.description
+            ownerLabel.text = model?.channelInfo?.name
+            descriptionLabel.text = model?.videoInfo?.description
             channelImg.layer.cornerRadius = channelImg.bounds.midX
+            msgTableView.reloadData()
         }.store(in: &cancelables)
     }
 }
@@ -167,11 +215,72 @@ extension PlayerViewController : YTPlayerViewDelegate{
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
         //自動播放
         playerView.playVideo()
+        guard let id = viewmodel?.videoInfo?.id else { return }
+        Task{
+            viewmodel.commentList = try? await HttpMeneger.shared.getCommentThreadList(id)
+        }
     }
     
     func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
         print(state.rawValue)
         viewmodel.playstatus = state
+    }
+}
+
+extension PlayerViewController : UIScrollViewDelegate{
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let scrollViewOffsetY = scrollView.contentOffset.y
+        if !msgTableView.isScrollEnabled {
+            // 如果 scrollView 已經滾動到底部，就讓 tableView 捕捉滑動事件
+            if scrollViewOffsetY >= scrollView.contentSize.height - scrollView.bounds.height{
+                msgTableView.isScrollEnabled = true
+                scrollView.isScrollEnabled = false
+            } else {
+                msgTableView.isScrollEnabled = false
+            }
+        }else if !self.scrollView.isScrollEnabled{
+            // 如果 tableView 已經滾動到頂部，就讓 scrollView 捕捉滑動事件
+            if scrollViewOffsetY <= 0 {
+                self.scrollView.isScrollEnabled = true
+                scrollView.isScrollEnabled = false
+            } else {
+                self.scrollView.isScrollEnabled = false
+            }
+        }
+    }
+}
+
+extension PlayerViewController : UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewmodel.commentList?.list?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as? CommentTableViewCell
+        guard let comments = viewmodel.commentList?.list else { return CommentTableViewCell() }
+        cell?.setCommentInfo(comments[indexPath.row])
+        return cell ?? CommentTableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.borderColor = UIColor.black.cgColor
+        view.layer.borderWidth = 2
+        let label = UILabel()
+        label.text = "留言"
+        label.font = .systemFont(ofSize: 30)
+        label.textAlignment = .left
+        view.addSubview(label)
+        label.snp.makeConstraints{ make in
+            make.left.equalTo(view).offset(10)
+            make.centerY.right.equalTo(view)
+        }
+        return view
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 45
     }
 }
 
@@ -192,6 +301,7 @@ extension PlayerViewController{
         switch sender.state {
         case .began:
             interactor.hasStarted = true
+            view.backgroundColor = .clear
             dismiss(animated: true, completion: nil)
         case .changed:
             interactor.shouldFinish = progress > percentThreshold
@@ -201,11 +311,16 @@ extension PlayerViewController{
             interactor.cancel()
         case .ended:
             interactor.hasStarted = false
+            view.backgroundColor = interactor.shouldFinish ? .clear : .white
             interactor.shouldFinish
                 ? interactor.finish()
                 : interactor.cancel()
         default:
             break
         }
+    }
+    
+    @objc func showMoreDescription(){
+        descriptionLabel.numberOfLines = descriptionLabel.numberOfLines != 0 ? 0 : 10
     }
 }

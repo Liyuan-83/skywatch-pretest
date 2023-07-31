@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class PlayListTableViewCell: UITableViewCell {
-    lazy var thumbnailView: UIImageView = {
+    lazy private var thumbnailView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
         view.adjustsImageSizeForAccessibilityContentSizeCategory = false
@@ -19,7 +19,7 @@ class PlayListTableViewCell: UITableViewCell {
         return view
     }()
     
-    lazy var channelImg: UIImageView = {
+    lazy private var channelImg: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
         view.adjustsImageSizeForAccessibilityContentSizeCategory = false
@@ -27,7 +27,7 @@ class PlayListTableViewCell: UITableViewCell {
         return view
     }()
     
-    lazy var videoTitleLabel: UILabel = {
+    lazy private var videoTitleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 20)
         label.numberOfLines = 2
@@ -35,7 +35,7 @@ class PlayListTableViewCell: UITableViewCell {
         return label
     }()
     
-    lazy var ownerLabel: UILabel = {
+    lazy private var ownerLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 12)
         label.numberOfLines = 1
@@ -43,7 +43,7 @@ class PlayListTableViewCell: UITableViewCell {
         return label
     }()
     
-    lazy var uploadDateLabel: UILabel = {
+    lazy private var uploadDateLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 12)
         label.numberOfLines = 1
@@ -51,8 +51,8 @@ class PlayListTableViewCell: UITableViewCell {
         return label
     }()
     
-    var videoInfo : VideoInfo?
-    var channelInfo : ChannelInfo?
+    private var videoInfo : VideoInfo?
+    private var channelInfo : ChannelInfo?
     var clickThumbnail : ((ChannelInfo, VideoInfo) -> ())?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -77,7 +77,7 @@ class PlayListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setupUI(){
+    private func setupUI(){
         var imgRate : Double = Double(4)/3
         switch UIScreen.main.bounds.width{
         case 641...1280:
@@ -148,7 +148,7 @@ class PlayListTableViewCell: UITableViewCell {
         ownerLabel.text = info.name
     }
     
-    @objc func tapThumbnailView(){
+    @objc private func tapThumbnailView(){
         guard let action = clickThumbnail,
               let channelInfo = channelInfo,
               let videoInfo = videoInfo else { return }

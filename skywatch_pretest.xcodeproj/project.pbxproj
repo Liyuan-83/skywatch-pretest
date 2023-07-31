@@ -42,6 +42,8 @@
 		7AA966492A76207C00F02E00 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966482A76207C00F02E00 /* PlayerViewController.swift */; };
 		7AA9664D2A76283800F02E00 /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9664B2A76283800F02E00 /* DismissAnimator.swift */; };
 		7AA9664E2A76283800F02E00 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9664C2A76283800F02E00 /* Interactor.swift */; };
+		7AA966522A77569700F02E00 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA966512A77569700F02E00 /* YouTubeiOSPlayerHelper */; };
+		7AA966542A7777B200F02E00 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966532A7777B200F02E00 /* CommentTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,7 @@
 		7AA966482A76207C00F02E00 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		7AA9664B2A76283800F02E00 /* DismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
 		7AA9664C2A76283800F02E00 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		7AA966532A7777B200F02E00 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AA966352A72836400F02E00 /* MJRefresh in Frameworks */,
+				7AA966522A77569700F02E00 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				7A79863D2A6D2AE500077E24 /* PlayListTableViewCell.swift */,
+				7AA966532A7777B200F02E00 /* CommentTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 			name = skywatch_pretestTests;
 			packageProductDependencies = (
 				7AA966342A72836400F02E00 /* MJRefresh */,
+				7AA966512A77569700F02E00 /* YouTubeiOSPlayerHelper */,
 			);
 			productName = skywatch_pretestTests;
 			productReference = 7A7985FC2A6B78AE00077E24 /* skywatch_pretestTests.xctest */;
@@ -444,6 +450,7 @@
 				7AA966272A6FD33B00F02E00 /* PlayListViewModel.swift in Sources */,
 				7A7986322A6C0E1B00077E24 /* YoutubeAPIPartEnum.swift in Sources */,
 				7AA9664E2A76283800F02E00 /* Interactor.swift in Sources */,
+				7AA966542A7777B200F02E00 /* CommentTableViewCell.swift in Sources */,
 				7AA966252A6FCD6100F02E00 /* DateExtension.swift in Sources */,
 				7A7986242A6B7FE100077E24 /* HttpMeneger.swift in Sources */,
 				7AA9663B2A73936D00F02E00 /* CommentListModel.swift in Sources */,
@@ -857,6 +864,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7AA966212A6E82CB00F02E00 /* XCRemoteSwiftPackageReference "MJRefresh" */;
 			productName = MJRefresh;
+		};
+		7AA966512A77569700F02E00 /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A7986192A6B79CC00077E24 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
