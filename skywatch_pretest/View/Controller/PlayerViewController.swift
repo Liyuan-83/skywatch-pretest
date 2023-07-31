@@ -25,6 +25,7 @@ class PlayerViewController: UIViewController {
         let view = UIScrollView()
         view.delegate = self
         view.backgroundColor = .white
+        view.showsVerticalScrollIndicator = false
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -80,6 +81,7 @@ class PlayerViewController: UIViewController {
     
     lazy private var msgTableView : UITableView = {
         let view = UITableView()
+        view.showsVerticalScrollIndicator = false
         view.delegate = self
         view.dataSource = self
         view.isScrollEnabled = false
@@ -95,6 +97,7 @@ class PlayerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initPara()
         setupUI()
         setDataBinding()
     }
@@ -185,12 +188,18 @@ class PlayerViewController: UIViewController {
         }
     }
     
+    func initPara(){
+        guard let id = viewmodel?.videoInfo?.id else { return }
+        videoPlayView.load(withVideoId: id)
+        Task{
+            guard var vm = viewmodel,
+                  await vm.loadCommentList() else { return }
+            viewmodel = vm
+        }
+    }
+    
     func setDataBinding(){
         $viewmodel.receive(on: DispatchQueue.main).sink{ [unowned self] model in
-            if model?.playstatus == .unknown {
-                guard let id = model?.videoInfo?.id else { return }
-                videoPlayView.load(withVideoId: id)
-            }
             videoTitleLabel.text = model?.videoInfo?.name
             uploadDateLabel.text = model?.videoInfo?.createDate?.stringWith("YYYY-MM-dd HH:mm:ss")
             if let url = model?.channelInfo?.thumbnails{
@@ -215,10 +224,6 @@ extension PlayerViewController : YTPlayerViewDelegate{
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
         //自動播放
         playerView.playVideo()
-        guard let id = viewmodel?.videoInfo?.id else { return }
-        Task{
-            viewmodel.commentList = try? await HttpMeneger.shared.getCommentThreadList(id)
-        }
     }
     
     func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {

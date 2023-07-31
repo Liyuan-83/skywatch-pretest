@@ -14,6 +14,13 @@ struct PlayerViewModel: ViewModelProtocol {
     var videoInfo : VideoInfo?
     var commentList : CommentThreadList?
     
+    mutating func loadCommentList() async -> Bool{
+        guard let id = videoInfo?.id,
+              let list = try? await HttpMeneger.shared.getCommentThreadList(id) else { return false }
+        commentList = list
+        return true
+    }
+    
     mutating func loadMoreComment() async -> NextPageStatus{
         guard let id = videoInfo?.id,
               let token = commentList?.nextPageToken else { return .noMoreData }

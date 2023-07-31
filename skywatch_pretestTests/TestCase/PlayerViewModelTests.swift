@@ -18,7 +18,7 @@ final class PlayerViewModelTests: XCTestCase {
         guard let playListID = viewmodel.channelInfo?.uploadID,
               let playList = try? await HttpMeneger.shared.getPlayList(playListID),
               let list = playList.list else { throw TestError.InitFail }
-        viewmodel.videoInfo = list.first
+        viewmodel.videoInfo = list.first(where: {$0.id == test_vidoeID})
         viewmodel.saveToLocal()
     }
     
@@ -32,5 +32,31 @@ final class PlayerViewModelTests: XCTestCase {
         XCTAssertNotNil(viewmodel.videoInfo?.name)
         XCTAssertNotNil(viewmodel.videoInfo?.description)
         XCTAssertNotNil(viewmodel.videoInfo?.createDate)
+    }
+    
+    func testLoadComments() async throws {
+        let status = await viewmodel.loadCommentList()
+        XCTAssertTrue(status)
+        XCTAssertNotNil(viewmodel.commentList)
+        XCTAssertNotNil(viewmodel.commentList!.list)
+        XCTAssertTrue(viewmodel.commentList!.list!.count >= 30)
+        XCTAssertNotNil(viewmodel.commentList!.nextPageToken)
+        guard let list = viewmodel.commentList?.list else { return }
+        for comment in list{
+            XCTAssertNotNil(comment.thumbnail)
+        }
+        viewmodel.saveToLocal()
+    }
+    
+    func testLoadMoreComments() async throws {
+        guard let count = viewmodel.commentList?.list?.count else { throw TestError.InitFail }
+        let status = await viewmodel.loadMoreComment()
+        XCTAssertTrue(status == .success)
+        XCTAssertTrue(viewmodel.commentList!.list!.count == count + 20)
+        XCTAssertNotNil(viewmodel.commentList!.nextPageToken)
+        guard let list = viewmodel.commentList?.list else { return }
+        for comment in list{
+            XCTAssertNotNil(comment.thumbnail)
+        }
     }
 }
