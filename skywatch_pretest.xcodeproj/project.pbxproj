@@ -64,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A49BA9D2A77CB7600A3F2E7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7A7985E62A6B78AD00077E24 /* skywatch_pretest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skywatch_pretest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7985E92A6B78AD00077E24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A7985EB2A6B78AD00077E24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		7A7985DD2A6B78AD00077E24 = {
 			isa = PBXGroup;
 			children = (
+				7A49BA9D2A77CB7600A3F2E7 /* README.md */,
 				7A7985E82A6B78AD00077E24 /* skywatch_pretest */,
 				7A7985FF2A6B78AE00077E24 /* skywatch_pretestTests */,
 				7A7986092A6B78AE00077E24 /* skywatch_pretestUITests */,
@@ -709,7 +711,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WXL2529DMH;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skywatch-pretestTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -729,7 +731,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WXL2529DMH;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skywatch-pretestTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
