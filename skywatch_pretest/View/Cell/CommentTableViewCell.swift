@@ -122,7 +122,7 @@ class CommentTableViewCell: UITableViewCell {
         if let url = info.thumbnail{
             userImg.load(url: url)
         }
-        nameLabel.text = info.authorName
+        nameLabel.text = info.authorName.toProtectPersonalName()
         contentLabel.text = info.content
         likeLabel.text = "\(info.likeCount) like."
         uploadDateLabel.text = info.createDate.stringWith("YYYY-MM-dd HH:mm:ss")

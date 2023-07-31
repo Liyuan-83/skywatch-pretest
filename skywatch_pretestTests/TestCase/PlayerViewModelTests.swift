@@ -59,4 +59,13 @@ final class PlayerViewModelTests: XCTestCase {
             XCTAssertNotNil(comment.thumbnail)
         }
     }
+    
+    func testProtectPersonalName() async throws {
+        let status = await viewmodel.loadCommentList()
+        XCTAssertTrue(status)
+        guard let list = viewmodel.commentList?.list else { return }
+        for comment in list{
+            XCTAssertNotEqual(comment.authorName, comment.authorName.toProtectPersonalName())
+        }
+    }
 }

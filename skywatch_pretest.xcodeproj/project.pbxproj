@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A49BA9F2A781D6500A3F2E7 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49BA9E2A781D6500A3F2E7 /* StringExtension.swift */; };
 		7A7985EA2A6B78AD00077E24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7985E92A6B78AD00077E24 /* AppDelegate.swift */; };
 		7A7985EC2A6B78AD00077E24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7985EB2A6B78AD00077E24 /* SceneDelegate.swift */; };
 		7A7985EE2A6B78AD00077E24 /* PlayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7985ED2A6B78AD00077E24 /* PlayListViewController.swift */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		7A49BA9D2A77CB7600A3F2E7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7A49BA9E2A781D6500A3F2E7 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7A7985E62A6B78AD00077E24 /* skywatch_pretest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skywatch_pretest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7985E92A6B78AD00077E24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A7985EB2A6B78AD00077E24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				7AA9661F2A6E59E200F02E00 /* UIImageExtension.swift */,
 				7AA966242A6FCD6100F02E00 /* DateExtension.swift */,
 				7AA9662D2A712F7500F02E00 /* UserDefaultExtension.swift */,
+				7A49BA9E2A781D6500A3F2E7 /* StringExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				7A7986282A6BDFBC00077E24 /* PlayListModel.swift in Sources */,
 				7A7986372A6D1FD300077E24 /* PublishExtension.swift in Sources */,
 				7A7985EC2A6B78AD00077E24 /* SceneDelegate.swift in Sources */,
+				7A49BA9F2A781D6500A3F2E7 /* StringExtension.swift in Sources */,
 				7A79861F2A6B7E9C00077E24 /* Constent.swift in Sources */,
 				7AA9662C2A712B1300F02E00 /* ViewModelProtocol.swift in Sources */,
 				7A79863E2A6D2AE500077E24 /* PlayListTableViewCell.swift in Sources */,
