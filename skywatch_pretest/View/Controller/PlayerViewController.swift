@@ -209,6 +209,7 @@ class PlayerViewController: UIViewController {
             descriptionLabel.text = model?.videoInfo?.description
             channelImg.layer.cornerRadius = channelImg.bounds.midX
             msgTableView.reloadData()
+            viewmodel.saveToLocal()
         }.store(in: &cancelables)
     }
 }
@@ -320,6 +321,12 @@ extension PlayerViewController{
             interactor.shouldFinish
                 ? interactor.finish()
                 : interactor.cancel()
+            //確認離開此畫面後清除本地緩存
+            guard interactor.shouldFinish else { return }
+            for cancelable in cancelables {
+                cancelable.cancel()
+            }
+            viewmodel.clearFromLocal()
         default:
             break
         }

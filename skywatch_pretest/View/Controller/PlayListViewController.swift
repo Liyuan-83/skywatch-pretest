@@ -27,10 +27,16 @@ class PlayListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if UIDevice.current.userInterfaceIdiom != .pad{
-            AppDelegate.isLockScreenPortrait = true
-            UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
-        }
+        AppDelegate.isLockScreenPortrait = true
+        UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //判斷是否有在播放器的緩存，若有則跳至播放器頁面
+        var playerViewModel = PlayerViewModel()
+        guard playerViewModel.loadFromLocal() else { return }
+        showPlayerView(playerViewModel)
     }
     
     func initPara() {
@@ -128,15 +134,9 @@ extension PlayListViewController : UITableViewDelegate, UITableViewDataSource{
             cell?.setChannelInfo(channelInfo)
         }
         cell?.setVideoInfo(viewmodel.showList[indexPath.row])
-        cell?.clickThumbnail = { [unowned self] channel, video in
-            let vc = PlayerViewController()
-            vc.viewmodel = PlayerViewModel(channelInfo: channel, videoInfo: video)
-            vc.interactor = interactor
-            vc.transitioningDelegate = self
-            vc.modalPresentationStyle = .fullScreen
-            vc.modalTransitionStyle = .coverVertical
+        cell?.clickThumbnail = { channel, video in
             DispatchQueue.main.async { [unowned self] in
-                present(vc, animated: true)
+                showPlayerView(PlayerViewModel(channelInfo:channel, videoInfo: video))
             }
         }
         return cell ?? PlayListTableViewCell()
@@ -154,5 +154,17 @@ extension PlayListViewController: UIViewControllerTransitioningDelegate {
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         return interactor.hasStarted ? interactor : nil
+    }
+}
+
+extension PlayListViewController{
+    func showPlayerView(_ viewModel:PlayerViewModel){
+        let vc = PlayerViewController()
+        vc.viewmodel = viewModel
+        vc.interactor = interactor
+        vc.transitioningDelegate = self
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .coverVertical
+        present(vc, animated: true)
     }
 }
