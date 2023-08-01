@@ -119,6 +119,10 @@ extension PlayListViewController : UISearchBarDelegate{
         viewmodel.searchKeyword = searchText
         viewmodel.saveToLocal()
     }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+    }
 }
 
 
@@ -144,6 +148,10 @@ extension PlayListViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
     }
 }
 

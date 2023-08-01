@@ -18,13 +18,14 @@ class PlayerViewController: UIViewController {
         let ges = UIPanGestureRecognizer(target: self, action: #selector(handleGesture))
         ges.delegate = self
         view.addGestureRecognizer(ges)
+        view.backgroundColor = .systemBackground
         return view
     }()
     
     lazy private var scrollView : UIScrollView = {
         let view = UIScrollView()
         view.delegate = self
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         view.showsVerticalScrollIndicator = false
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -72,7 +73,7 @@ class PlayerViewController: UIViewController {
         label.numberOfLines = 10
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = .white
+        label.backgroundColor = .systemBackground
         let ges = UITapGestureRecognizer(target: self, action: #selector(showMoreDescription))
         label.addGestureRecognizer(ges)
         label.isUserInteractionEnabled = true
@@ -103,7 +104,7 @@ class PlayerViewController: UIViewController {
     }
     
     func setupUI(){
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         view.addSubview(videoPlayView)
         videoPlayView.snp.makeConstraints{ make in
             make.top.left.right.equalTo(view.safeAreaLayoutGuide)
@@ -270,7 +271,7 @@ extension PlayerViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         view.layer.borderColor = UIColor.black.cgColor
         view.layer.borderWidth = 2
         let label = UILabel()
@@ -317,7 +318,7 @@ extension PlayerViewController{
             interactor.cancel()
         case .ended:
             interactor.hasStarted = false
-            view.backgroundColor = interactor.shouldFinish ? .clear : .white
+            view.backgroundColor = interactor.shouldFinish ? .clear : .systemBackground
             interactor.shouldFinish
                 ? interactor.finish()
                 : interactor.cancel()
