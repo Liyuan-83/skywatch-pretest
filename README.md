@@ -15,8 +15,9 @@
 - 點擊影片縮圖可進入該影片的播放頁面。
 
 ### 影片播放器畫面
+| 播放列表 | 顯示更多描述 | 顯示留言 |
 | --- | --- | --- |
-| ![圖片1](screen_shot/Player_View.png)|![圖片2](screen_shot/more_detail.png)|![圖片3](screen_shot/show_comments.png)|
+| ![圖片1](screen_shot/Player_View.png) | ![圖片2](screen_shot/more_detail.png) | ![圖片3](screen_shot/show_comments.png) |
 
 
 
