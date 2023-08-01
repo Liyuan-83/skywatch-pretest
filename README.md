@@ -15,17 +15,9 @@
 - 點擊影片縮圖可進入該影片的播放頁面。
 
 ### 影片播放器畫面
-<div style="display: flex;">
-    <div style="flex: 33%; padding: 5px;">
-        <img src="screen_shot/Player_View.png" alt="圖片1">
-    </div>
-    <div style="flex: 33%; padding: 5px;">
-        <img src="screen_shot/more_detail.png" alt="圖片2">
-    </div>
-    <div style="flex: 33%; padding: 5px;">
-        <img src="screen_shot/show_comments.png" alt="圖片3">
-    </div>
-</div>
+| --- | --- | --- |
+| ![圖片1](screen_shot/Player_View.png)|![圖片2](screen_shot/more_detail.png)|![圖片3](screen_shot/show_comments.png)|
+
 
 
 
