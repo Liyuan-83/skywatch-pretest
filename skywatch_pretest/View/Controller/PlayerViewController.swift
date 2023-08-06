@@ -127,6 +127,7 @@ class PlayerViewController: UIViewController {
     }
     
     func setupTableView(){
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DetailCell")
         tableView.register(CommentTableViewCell.self, forCellReuseIdentifier: "CommentCell")
         tableView.mj_footer = MJRefreshAutoNormalFooter{ [unowned self] in
             Task {
@@ -201,7 +202,7 @@ extension PlayerViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0{
-            let cell = UITableViewCell(style: .default, reuseIdentifier: "DetailCell")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DetailCell", for: indexPath)
             cell.contentView.addSubview(descriptionLabel)
             descriptionLabel.snp.makeConstraints{ make in
                 make.top.bottom.equalToSuperview()
@@ -310,7 +311,7 @@ extension PlayerViewController{
     
     @objc func showMoreDescription(){
         descriptionLabel.numberOfLines = descriptionLabel.numberOfLines != 0 ? 0 : 10
-        tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        tableView.reloadSections(IndexSet(integer: 1), with: .automatic)
         tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
     }
 }
