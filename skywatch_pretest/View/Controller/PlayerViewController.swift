@@ -22,14 +22,24 @@ class PlayerViewController: UIViewController {
         return view
     }()
     
-    lazy private var scrollView : UIScrollView = {
-        let view = UIScrollView()
-        view.delegate = self
+    lazy private var channelInfoView : UIView = {
+       let view = UIView()
         view.backgroundColor = .systemBackground
-        view.showsVerticalScrollIndicator = false
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+//    lazy private var scrollView : UIScrollView = {
+//        let view = UIScrollView()
+//        let panGes = UIPanGestureRecognizer(target: self, action: #selector(handleScrollGesture))
+//        view.addGestureRecognizer(panGes)
+//        view.bounces = false
+////        view.delegate = self
+//        view.backgroundColor = .systemBackground
+//        view.showsVerticalScrollIndicator = false
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        return view
+//    }()
     
     lazy private var channelImg: UIImageView = {
         let view = UIImageView()
@@ -80,17 +90,13 @@ class PlayerViewController: UIViewController {
         return label
     }()
     
-    lazy private var msgTableView : UITableView = {
-        let view = UITableView()
+    lazy private var tableView : UITableView = {
+        let view = UITableView(frame: .zero, style: .plain)
         view.showsVerticalScrollIndicator = false
         view.delegate = self
         view.dataSource = self
-        view.isScrollEnabled = false
         return view
     }()
-    
-    private var scrollViewOffset : CGPoint = .zero
-    private var tableViewOffset : CGPoint = .zero
     
     var interactor:Interactor? = nil
     var cancelables : Set<AnyCancellable> = []
@@ -111,79 +117,30 @@ class PlayerViewController: UIViewController {
             make.height.equalTo(view.safeAreaLayoutGuide.snp.width).dividedBy(Double(1920)/1080)
         }
         
-        //設定Scroll view
-        view.addSubview(scrollView)
-        scrollView.snp.makeConstraints{ make in
+        
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints{ make in
             make.top.equalTo(videoPlayView.snp.bottom)
             make.left.right.bottom.equalTo(view.safeAreaLayoutGuide)
         }
-        
-        scrollView.addSubview(channelImg)
-        channelImg.snp.makeConstraints{ make in
-            make.width.height.equalTo(50)
-            make.left.top.equalToSuperview().offset(5)
-        }
-        
-        scrollView.addSubview(videoTitleLabel)
-        videoTitleLabel.snp.makeConstraints{ make in
-            make.centerY.top.equalTo(channelImg)
-            make.left.equalTo(channelImg.snp.right).offset(10)
-            make.right.equalTo(view.safeAreaLayoutGuide).offset(-5)
-        }
-        
-        scrollView.addSubview(ownerLabel)
-        ownerLabel.snp.makeConstraints{ make in
-            make.top.equalTo(videoTitleLabel.snp.bottom).offset(5)
-            make.left.equalTo(videoTitleLabel)
-        }
-        
-        scrollView.addSubview(uploadDateLabel)
-        uploadDateLabel.snp.makeConstraints{ make in
-            make.top.equalTo(ownerLabel)
-            make.left.equalTo(ownerLabel.snp.right).offset(5)
-            make.right.equalTo(videoTitleLabel)
-        }
-        
-        scrollView.addSubview(descriptionLabel)
-        
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.distribution = .fill
-        stackView.spacing = 5
-        scrollView.addSubview(stackView)
-        stackView.snp.makeConstraints{ make in
-            make.top.equalTo(uploadDateLabel.snp.bottom).offset(15)
-            make.left.equalTo(channelImg)
-            make.right.equalTo(videoTitleLabel)
-            make.bottom.equalToSuperview().offset(-5)
-        }
-        stackView.addArrangedSubview(descriptionLabel)
-        stackView.addArrangedSubview(msgTableView)
-        let videoViewHeight = Double(view.safeAreaLayoutGuide.layoutFrame.width)/1920*1080+10
-        msgTableView.snp.makeConstraints{ make in
-            make.width.equalToSuperview()
-            make.height.equalTo(view.safeAreaLayoutGuide).offset(-videoViewHeight)
-        }
-        
-        scrollView.contentSize = CGSize(width: view.safeAreaLayoutGuide.layoutFrame.width, height: msgTableView.frame.maxY + 15)
         setupTableView()
     }
     
     func setupTableView(){
-        msgTableView.register(CommentTableViewCell.self, forCellReuseIdentifier: "CommentCell")
-        msgTableView.mj_footer = MJRefreshAutoNormalFooter{ [unowned self] in
+        tableView.register(CommentTableViewCell.self, forCellReuseIdentifier: "CommentCell")
+        tableView.mj_footer = MJRefreshAutoNormalFooter{ [unowned self] in
             Task {
                 var vm = viewmodel
                 let status = await vm?.loadMoreComment()
                 DispatchQueue.main.async { [unowned self] in
                     if status == .noMoreData{
-                        msgTableView.mj_footer?.endRefreshingWithNoMoreData()
+                        tableView.mj_footer?.endRefreshingWithNoMoreData()
                         return
                     }
                     if status == .success{
                         viewmodel = vm
                     }
-                    msgTableView.mj_footer?.endRefreshing()
+                    tableView.mj_footer?.endRefreshing()
                 }
             }
         }
@@ -209,7 +166,7 @@ class PlayerViewController: UIViewController {
             ownerLabel.text = model?.channelInfo?.name
             descriptionLabel.text = model?.videoInfo?.description
             channelImg.layer.cornerRadius = channelImg.bounds.midX
-            msgTableView.reloadData()
+            tableView.reloadData()
             viewmodel.saveToLocal()
         }.store(in: &cancelables)
     }
@@ -234,35 +191,24 @@ extension PlayerViewController : YTPlayerViewDelegate{
     }
 }
 
-extension PlayerViewController : UIScrollViewDelegate{
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let scrollViewOffsetY = scrollView.contentOffset.y
-        if !msgTableView.isScrollEnabled {
-            // 如果 scrollView 已經滾動到底部，就讓 tableView 捕捉滑動事件
-            if scrollViewOffsetY >= scrollView.contentSize.height - scrollView.bounds.height{
-                msgTableView.isScrollEnabled = true
-                scrollView.isScrollEnabled = false
-            } else {
-                msgTableView.isScrollEnabled = false
-            }
-        }else if !self.scrollView.isScrollEnabled{
-            // 如果 tableView 已經滾動到頂部，就讓 scrollView 捕捉滑動事件
-            if scrollViewOffsetY <= 0 {
-                self.scrollView.isScrollEnabled = true
-                scrollView.isScrollEnabled = false
-            } else {
-                self.scrollView.isScrollEnabled = false
-            }
-        }
-    }
-}
-
 extension PlayerViewController : UITableViewDelegate, UITableViewDataSource{
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewmodel.commentList?.list?.count ?? 0
+        return section == 1 ? viewmodel.commentList?.list?.count ?? 0 : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 0{
+            let cell = UITableViewCell(style: .default, reuseIdentifier: "DetailCell")
+            cell.contentView.addSubview(descriptionLabel)
+            descriptionLabel.snp.makeConstraints{ make in
+                make.top.bottom.equalToSuperview()
+                make.right.left.equalToSuperview().offset(10)
+            }
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as? CommentTableViewCell
         guard let comments = viewmodel.commentList?.list else { return CommentTableViewCell() }
         cell?.setCommentInfo(comments[indexPath.row])
@@ -270,24 +216,53 @@ extension PlayerViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView()
-        view.backgroundColor = .systemBackground
-        view.layer.borderColor = UIColor.black.cgColor
-        view.layer.borderWidth = 2
-        let label = UILabel()
-        label.text = "留言"
-        label.font = .systemFont(ofSize: 30)
-        label.textAlignment = .left
-        view.addSubview(label)
-        label.snp.makeConstraints{ make in
-            make.left.equalTo(view).offset(10)
-            make.centerY.right.equalTo(view)
+        if section == 0{
+            let view = UIView()
+            view.backgroundColor = .systemBackground
+            view.addSubview(channelImg)
+            channelImg.snp.makeConstraints{ make in
+                make.width.height.equalTo(50)
+                make.left.top.equalToSuperview().offset(5)
+            }
+            
+            view.addSubview(videoTitleLabel)
+            videoTitleLabel.snp.makeConstraints{ make in
+                make.centerY.top.equalTo(channelImg)
+                make.left.equalTo(channelImg.snp.right).offset(10)
+                make.right.equalToSuperview().offset(-5)
+            }
+            
+            view.addSubview(ownerLabel)
+            ownerLabel.snp.makeConstraints{ make in
+                make.top.equalTo(videoTitleLabel.snp.bottom).offset(5)
+                make.left.equalTo(videoTitleLabel)
+            }
+            
+            view.addSubview(uploadDateLabel)
+            uploadDateLabel.snp.makeConstraints{ make in
+                make.top.equalTo(ownerLabel)
+                make.left.equalTo(ownerLabel.snp.right).offset(5)
+                make.right.equalTo(videoTitleLabel)
+                make.bottom.equalToSuperview().offset(-5)
+            }
+            return view
+        }else{
+            let view = UIView()
+            view.backgroundColor = .systemBackground
+            view.layer.borderColor = UIColor.black.cgColor
+            view.layer.borderWidth = 2
+            let label = UILabel()
+            label.text = "留言"
+            label.font = .systemFont(ofSize: 30)
+            label.textAlignment = .left
+            view.addSubview(label)
+            label.snp.makeConstraints{ make in
+                make.left.equalTo(view).offset(10)
+                make.centerY.right.equalTo(view)
+                make.top.equalTo(view).offset(5)
+            }
+            return view
         }
-        return view
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 45
     }
 }
 
@@ -295,7 +270,7 @@ extension PlayerViewController{
     ///下拉關閉手勢觸發
     @objc func handleGesture(_ sender: UIPanGestureRecognizer) {
         let percentThreshold:CGFloat = 0.3
-
+        
         // convert y-position to downward pull progress (percentage)
         let translation = sender.translation(in: view)
         let verticalMovement = translation.y / view.bounds.height
@@ -320,8 +295,8 @@ extension PlayerViewController{
             interactor.hasStarted = false
             view.backgroundColor = interactor.shouldFinish ? .clear : .systemBackground
             interactor.shouldFinish
-                ? interactor.finish()
-                : interactor.cancel()
+            ? interactor.finish()
+            : interactor.cancel()
             //確認離開此畫面後清除本地緩存
             guard interactor.shouldFinish else { return }
             for cancelable in cancelables {
@@ -335,5 +310,7 @@ extension PlayerViewController{
     
     @objc func showMoreDescription(){
         descriptionLabel.numberOfLines = descriptionLabel.numberOfLines != 0 ? 0 : 10
+        tableView.reloadRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
     }
 }
