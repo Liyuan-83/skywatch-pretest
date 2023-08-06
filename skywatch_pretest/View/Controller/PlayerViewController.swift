@@ -29,18 +29,6 @@ class PlayerViewController: UIViewController {
         return view
     }()
     
-//    lazy private var scrollView : UIScrollView = {
-//        let view = UIScrollView()
-//        let panGes = UIPanGestureRecognizer(target: self, action: #selector(handleScrollGesture))
-//        view.addGestureRecognizer(panGes)
-//        view.bounces = false
-////        view.delegate = self
-//        view.backgroundColor = .systemBackground
-//        view.showsVerticalScrollIndicator = false
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        return view
-//    }()
-    
     lazy private var channelImg: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit
@@ -148,8 +136,13 @@ class PlayerViewController: UIViewController {
     }
     
     func initPara(){
-        guard let id = viewmodel?.videoInfo?.id else { return }
-        videoPlayView.load(withVideoId: id)
+        guard let id = viewmodel.videoInfo?.id else { return }
+        videoPlayView.load(withVideoId: id, playerVars: ["fs" : 1,
+                                                         "controls" : 1,
+                                                         "autoplay": 1,
+                                                         "loop" : 1,
+                                                         "start" : Int(viewmodel.currentTime),
+                                                         "modestbranding" : 1])
         Task{
             guard var vm = viewmodel,
                   await vm.loadCommentList() else { return }
@@ -181,14 +174,18 @@ extension PlayerViewController : UIGestureRecognizerDelegate{
 }
 
 extension PlayerViewController : YTPlayerViewDelegate{
-    func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
-        //自動播放
-        playerView.playVideo()
-    }
-    
     func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
         print(state.rawValue)
         viewmodel.playstatus = state
+        //循環播放
+        guard viewmodel.playstatus == .ended else { return }
+        videoPlayView.playVideo()
+    }
+    
+    func playerView(_ playerView: YTPlayerView, didPlayTime playTime: Float) {
+        print(playTime)
+        guard viewmodel != nil else { return }
+        viewmodel.currentTime = playTime
     }
 }
 
@@ -283,6 +280,7 @@ extension PlayerViewController{
         
         switch sender.state {
         case .began:
+            videoPlayView.pauseVideo()
             interactor.hasStarted = true
             view.backgroundColor = .clear
             dismiss(animated: true, completion: nil)
@@ -299,11 +297,15 @@ extension PlayerViewController{
             ? interactor.finish()
             : interactor.cancel()
             //確認離開此畫面後清除本地緩存
-            guard interactor.shouldFinish else { return }
+            guard interactor.shouldFinish else {
+                videoPlayView.playVideo()
+                return
+            }
             for cancelable in cancelables {
                 cancelable.cancel()
             }
             viewmodel.clearFromLocal()
+            viewmodel = nil
         default:
             break
         }

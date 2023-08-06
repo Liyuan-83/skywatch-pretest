@@ -13,6 +13,7 @@ struct PlayerViewModel: ViewModelProtocol {
     var channelInfo : ChannelInfo?
     var videoInfo : VideoInfo?
     var commentList : CommentThreadList?
+    var currentTime : Float = 0
     
     mutating func loadCommentList() async -> Bool{
         guard let id = videoInfo?.id,
