@@ -10,40 +10,19 @@ enum HttpMenegerError : Error{
     case httpError, decodeError
 }
 
-class HttpMeneger {
-    static var shared = HttpMeneger()
-    
-    func getChannelInfo(_ channelID:String,_ part:[ChannelsPart] = [.contentDetails, .snippet, .statistics]) async throws -> ChannelInfo{
+class HttpMeneger<ResModel: ModelProtocol> : ServiceProtocol{
+    func fetchData(_ para:[String:Any],_ part:[APIPart]) async -> Result<ResModel.ModelType, Error>{
+        var paraDic = para
         let partStr = part.map({$0.rawValue}).joined(separator: ",")
-        let data = try await sendHttpRequest(.channals, ["id":channelID, "part":partStr])
-        return try ChannelInfo(with: data)
-    }
-    
-    func getPlayList(_ listID:String, _ counts:Int = 30, _ nextPageToken:String? = nil,_ part: [PlayListItemPart] = [.snippet]) async throws -> PlayList{
-        let partStr = part.map({$0.rawValue}).joined(separator: ",")
-        var para : [String : Any] = ["playlistId":listID, "part":partStr, "maxResults":counts]
-        if let token = nextPageToken{
-            para["pageToken"] = token
+        paraDic["part"] = partStr
+        do{
+            let data = try await sendHttpRequest(ResModel.apiType, paraDic)
+            guard let model = try ResModel(with: data) as? ResModel.ModelType else { throw DecodeError.TypeNoMatch }
+            return .success(model)
+        }catch{
+            return .failure(error)
         }
-        let data = try await sendHttpRequest(.playListItem, para)
-        return try PlayList(with: data)
     }
-
-    func getCommentThreadList(_ videoID:String, _ counts:Int = 30, _ nextPageToken:String? = nil, _ part: [PlayListItemPart] = [.snippet,.replies]) async throws -> CommentThreadList {
-        let partStr = part.map({$0.rawValue}).joined(separator: ",")
-        var para : [String : Any] = ["videoId":videoID, "part":partStr, "maxResults":counts, "order":"relevance"] //按照熱門度排序
-        if let token = nextPageToken{
-            para["pageToken"] = token
-        }
-        let data = try await sendHttpRequest(.commentThreads, para)
-        return try CommentThreadList(with: data)
-    }
-    
-//    func getVideoInfo(_ videoID:String,_ part: [VideosPart] = [.snippet]) async throws -> VideoInfo {
-//        let partStr = part.map({$0.rawValue}).joined(separator: ",")
-//        var para = ["id":videoID, "part":partStr]
-//        let data = try await sendHttpRequest(.videos, para)
-//    }
 }
 
 extension HttpMeneger{

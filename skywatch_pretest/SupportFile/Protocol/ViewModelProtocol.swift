@@ -13,6 +13,7 @@ protocol ViewModelProtocol : Codable{
     
     func saveToLocal()
     func clearFromLocal()
+    mutating func fetchData() async -> Bool
     mutating func loadFromLocal() -> Bool
 }
 

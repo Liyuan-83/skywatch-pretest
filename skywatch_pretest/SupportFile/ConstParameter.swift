@@ -20,7 +20,7 @@ var API_KEY : String{
 let base_url = "https://www.googleapis.com/youtube/v3/"
 
 enum DecodeError : Error{
-    case KindNotMatch, CommentThreadFail, CommentFail
+    case KindNotMatch, TypeNoMatch, CommentThreadFail, CommentFail
 }
 
 enum NextPageStatus {

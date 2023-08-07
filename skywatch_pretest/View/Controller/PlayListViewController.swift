@@ -43,14 +43,9 @@ class PlayListViewController: UIViewController {
         //讀取看看是否有本地資料，沒有才需要去要Api
         guard !viewmodel.loadFromLocal() else { return }
         Task {
-            viewmodel.channelInfo = try? await HttpMeneger.shared.getChannelInfo(YOASOBI_Channel_ID)
-            guard let playListID = viewmodel.channelInfo?.uploadID,
-                  let playList = try? await HttpMeneger.shared.getPlayList(playListID),
-                  let list = playList.list else { return }
-            viewmodel.allList = list
-            viewmodel.nextPageToken = playList.nextPageToken
-            //儲存至本地
-            viewmodel.saveToLocal()
+            var vm = viewmodel
+            guard await vm.fetchData() else { return }
+            viewmodel = vm
             DispatchQueue.main.async { [unowned self] in
                 tableView.mj_header?.endRefreshing()
             }
@@ -66,6 +61,7 @@ class PlayListViewController: UIViewController {
     func setupNavigation(){
         navigationItem.title = "YOASOBI Channel"
         let btn = UIBarButtonItem(image: UIImage(named: "search"), style: .plain, target: self, action: #selector(searchClick))
+        btn.accessibilityIdentifier = "searchBtn"
         navigationItem.rightBarButtonItem =  btn
     }
     

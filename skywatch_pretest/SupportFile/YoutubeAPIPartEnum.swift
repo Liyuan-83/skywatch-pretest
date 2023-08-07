@@ -7,14 +7,10 @@
 
 import Foundation
 
-enum ChannelsPart : String, CaseIterable{
+enum APIPart : String, CaseIterable{
     case auditDetails,brandingSettings,contentDetails,
          contentOwnerDetails,id,localizations,
-         snippet,statistics,status,opicDetails
-}
-
-enum PlayListItemPart : String, CaseIterable{
-    case contentDetails,id,snippet,status,replies
+         snippet,statistics,status,opicDetails,replies
 }
 
 enum VideosPart : String, CaseIterable{

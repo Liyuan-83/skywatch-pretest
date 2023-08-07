@@ -8,7 +8,8 @@
 import Foundation
 
 // MARK: - ChannelInfo
-struct ChannelInfo: Codable {
+struct ChannelInfo: ModelProtocol, Codable {
+    typealias ModelType = ChannelInfo
     var name : String?
     var description : String?
     var thumbnails : URL?
@@ -29,6 +30,10 @@ struct ChannelInfo: Codable {
         self.videoCount = Int(res.items.first?.statistics?.videoCount ?? "") ?? 0
         self.subscriberCount = Int(res.items.first?.statistics?.subscriberCount ?? "") ?? 0
         self.viewCount = Int(res.items.first?.statistics?.viewCount ?? "") ?? 0
+    }
+    
+    static var apiType: Api_type{
+        return .channals
     }
 }
 

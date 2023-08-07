@@ -1,0 +1,46 @@
+{
+  "configurations" : [
+    {
+      "id" : "4302C1FE-5E02-4D67-905B-A02FE4AAE48D",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:skywatch_pretest.xcodeproj",
+          "identifier" : "7A7985E52A6B78AD00077E24",
+          "name" : "skywatch_pretest"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:skywatch_pretest.xcodeproj",
+      "identifier" : "7A7985E52A6B78AD00077E24",
+      "name" : "skywatch_pretest"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:skywatch_pretest.xcodeproj",
+        "identifier" : "7A7985FB2A6B78AE00077E24",
+        "name" : "skywatch_pretestTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:skywatch_pretest.xcodeproj",
+        "identifier" : "7A7986052A6B78AE00077E24",
+        "name" : "skywatch_pretestUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

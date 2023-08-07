@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct CommentThreadList : Codable{
+struct CommentThreadList : ModelProtocol, Codable{
+    typealias ModelType = CommentThreadList
     var videoID : String?
     var list : [CommentThread]?
     var nextPageToken : String?
@@ -21,6 +22,10 @@ struct CommentThreadList : Codable{
             arr.append(commentThread)
         }
         self.list = arr
+    }
+    
+    static var apiType: Api_type{
+        return .commentThreads
     }
 }
 

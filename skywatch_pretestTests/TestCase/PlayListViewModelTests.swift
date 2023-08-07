@@ -14,13 +14,7 @@ final class PlayListViewModelTests: XCTestCase {
         print("-----setUp-----")
         //本地端讀值
         guard !viewmodel.loadFromLocal() else { return }
-        viewmodel.channelInfo = try? await HttpMeneger.shared.getChannelInfo(YOASOBI_Channel_ID)
-        guard let playListID = viewmodel.channelInfo?.uploadID,
-              let playList = try? await HttpMeneger.shared.getPlayList(playListID),
-              let list = playList.list else { throw TestError.InitFail }
-        viewmodel.allList = list
-        viewmodel.nextPageToken = playList.nextPageToken
-        viewmodel.saveToLocal()
+        guard await viewmodel.fetchData() else { throw TestError.InitFail }
     }
     
     func testInitViewModel() async throws {
@@ -31,8 +25,7 @@ final class PlayListViewModelTests: XCTestCase {
         XCTAssertNotNil(viewmodel.channelInfo?.thumbnails)
         
         //確認必要的列表資訊
-        XCTAssertTrue(viewmodel.allList.count >= 30)
-        XCTAssertNotNil(viewmodel.nextPageToken)
+        XCTAssertTrue(viewmodel.showList.count >= 30)
         for videoInfo in viewmodel.showList{
             XCTAssertNotNil(videoInfo.id)
             XCTAssertNotNil(videoInfo.name)
@@ -51,17 +44,20 @@ final class PlayListViewModelTests: XCTestCase {
     }
     
     func testLoadNextPage() async throws {
-        let listCount = viewmodel.allList.count
-        let token = viewmodel.nextPageToken
+        let listCount = viewmodel.showList.count
         let status = await viewmodel.loadNextPage()
         XCTAssertTrue(status == .success)
-        XCTAssertTrue(token != viewmodel.nextPageToken)
-        XCTAssertTrue(viewmodel.allList.count == listCount + 20)
+        XCTAssertTrue(viewmodel.showList.count == listCount + 20)
         for videoInfo in viewmodel.showList{
             XCTAssertNotNil(videoInfo.id)
             XCTAssertNotNil(videoInfo.name)
             XCTAssertNotNil(videoInfo.thumbnails)
             XCTAssertNotNil(videoInfo.createDate)
         }
+    }
+    
+    func testClearViewModelFromLocal() async throws {
+        viewmodel.clearFromLocal()
+        XCTAssertFalse(viewmodel.loadFromLocal())
     }
 }

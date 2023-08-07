@@ -136,7 +136,7 @@ class PlayerViewController: UIViewController {
     }
     
     func initPara(){
-        guard let id = viewmodel.videoInfo?.id else { return }
+        guard let id = viewmodel.videoID else { return }
         videoPlayView.load(withVideoId: id, playerVars: ["fs" : 1,
                                                          "controls" : 1,
                                                          "autoplay": 1,
@@ -145,20 +145,20 @@ class PlayerViewController: UIViewController {
                                                          "modestbranding" : 1])
         Task{
             guard var vm = viewmodel,
-                  await vm.loadCommentList() else { return }
+                  await vm.fetchData() else { return }
             viewmodel = vm
         }
     }
     
     func setDataBinding(){
         $viewmodel.receive(on: DispatchQueue.main).sink{ [unowned self] model in
-            videoTitleLabel.text = model?.videoInfo?.name
-            uploadDateLabel.text = model?.videoInfo?.createDate?.stringWith("YYYY-MM-dd HH:mm:ss")
+            videoTitleLabel.text = model?.videoName
+            uploadDateLabel.text = model?.videoCreatDate?.stringWith("YYYY-MM-dd HH:mm:ss")
             if let url = model?.channelInfo?.thumbnails{
                 channelImg.load(url: url)
             }
             ownerLabel.text = model?.channelInfo?.name
-            descriptionLabel.text = model?.videoInfo?.description
+            descriptionLabel.text = model?.videoDescription
             channelImg.layer.cornerRadius = channelImg.bounds.midX
             tableView.reloadData()
             viewmodel.saveToLocal()
@@ -194,7 +194,7 @@ extension PlayerViewController : UITableViewDelegate, UITableViewDataSource{
         return 2
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 1 ? viewmodel.commentList?.list?.count ?? 0 : 1
+        return section == 1 ? viewmodel.comments?.count ?? 0 : 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -208,7 +208,7 @@ extension PlayerViewController : UITableViewDelegate, UITableViewDataSource{
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath) as? CommentTableViewCell
-        guard let comments = viewmodel.commentList?.list else { return CommentTableViewCell() }
+        guard let comments = viewmodel.comments else { return CommentTableViewCell() }
         cell?.setCommentInfo(comments[indexPath.row])
         return cell ?? CommentTableViewCell()
     }
