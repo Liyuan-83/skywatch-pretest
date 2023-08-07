@@ -1,5 +1,5 @@
 //
-//  HttpMenegerTest.swift
+//  HttpManagerTest.swift
 //  skywatch_pretestTests
 //
 //  Created by liyuan chang on 2023/7/22.
@@ -8,11 +8,11 @@
 import XCTest
 @testable import skywatch_pretest
 
-final class HttpMenegerTest: XCTestCase {
+final class HttpManagerTest: XCTestCase {
 
     func testToGetChannelInfo() async throws {
-        let meneger = HttpMeneger<ChannelInfo>()
-        let res = await meneger.fetchData(["id":YOASOBI_Channel_ID], [.contentDetails, .snippet, .statistics])
+        let manager = HttpManager<ChannelInfo>()
+        let res = await manager.fetchData(["id":YOASOBI_Channel_ID], [.contentDetails, .snippet, .statistics])
         switch res{
         case .success(let channelInfo):
             //確保要顯示的內容有名字、描述、uploadID、縮圖
@@ -27,8 +27,8 @@ final class HttpMenegerTest: XCTestCase {
     }
     
     func testToGetPlayList() async throws {
-        let meneger = HttpMeneger<PlayList>()
-        let res = await meneger.fetchData(["playlistId":test_playListID,
+        let manager = HttpManager<PlayList>()
+        let res = await manager.fetchData(["playlistId":test_playListID,
                                            "maxResults":30], [.snippet])
         var token = ""
         switch res{
@@ -54,7 +54,7 @@ final class HttpMenegerTest: XCTestCase {
             throw error
         }
         print("--------------------------------")
-        let nextRes = await meneger.fetchData(["playlistId":test_playListID,
+        let nextRes = await manager.fetchData(["playlistId":test_playListID,
                                                "maxResults":20,
                                                "pageToken":token], [.snippet])
         switch nextRes{
@@ -81,8 +81,8 @@ final class HttpMenegerTest: XCTestCase {
     }
     
     func testToGetCommentThreadList() async throws {
-        let meneger = HttpMeneger<CommentThreadList>()
-        let res = await meneger.fetchData(["videoId":test_vidoeID,
+        let manager = HttpManager<CommentThreadList>()
+        let res = await manager.fetchData(["videoId":test_vidoeID,
                                            "maxResults":30,
                                            "order":"relevance"],
                                           [.snippet,.replies])
@@ -113,7 +113,7 @@ final class HttpMenegerTest: XCTestCase {
             throw error
         }
         print("--------------------------------")
-        let nextRes = await meneger.fetchData(["videoId":test_vidoeID,
+        let nextRes = await manager.fetchData(["videoId":test_vidoeID,
                                                "maxResults":20,
                                                "order":"relevance",
                                                "pageToken":token],

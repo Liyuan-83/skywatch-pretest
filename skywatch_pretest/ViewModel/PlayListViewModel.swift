@@ -25,7 +25,7 @@ struct PlayListViewModel: ViewModelProtocol {
     }
     
     mutating func fetchData() async -> Bool {
-        let channelRes = await HttpMeneger<ChannelInfo>().fetchData(["id":YOASOBI_Channel_ID], [.contentDetails, .snippet, .statistics])
+        let channelRes = await HttpManager<ChannelInfo>().fetchData(["id":YOASOBI_Channel_ID], [.contentDetails, .snippet, .statistics])
         
         switch channelRes{
         case .success(let info):
@@ -36,7 +36,7 @@ struct PlayListViewModel: ViewModelProtocol {
         }
         
         guard let playListID = _channelInfo?.uploadID else { return false }
-        let playListRes = await HttpMeneger<PlayList>().fetchData(["playlistId":playListID,
+        let playListRes = await HttpManager<PlayList>().fetchData(["playlistId":playListID,
                                                                    "maxResults":30], [.snippet])
         switch playListRes{
         case .success(let playList):
@@ -58,7 +58,7 @@ struct PlayListViewModel: ViewModelProtocol {
               let token = _nextPageToken else { return .noMoreData }
         
         //getPlayList(id,20,token),
-        let res = await HttpMeneger<PlayList>().fetchData(["playlistId":id,
+        let res = await HttpManager<PlayList>().fetchData(["playlistId":id,
                                                            "maxResults":20,
                                                            "pageToken":token], [.snippet])
         switch res{

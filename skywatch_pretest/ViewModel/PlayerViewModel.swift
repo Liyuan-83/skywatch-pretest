@@ -60,7 +60,7 @@ struct PlayerViewModel: ViewModelProtocol {
         guard let id = _videoInfo?.id,
               let token = _commentList?.nextPageToken else { return .noMoreData }
         
-        let res = await HttpMeneger<CommentThreadList>().fetchData(["videoId":id,
+        let res = await HttpManager<CommentThreadList>().fetchData(["videoId":id,
                                                                           "maxResults":20, "order":"relevance",
                                                                     "pageToken":token], [.snippet,.replies])
         switch res{
@@ -79,7 +79,7 @@ struct PlayerViewModel: ViewModelProtocol {
 extension PlayerViewModel{
     private mutating func loadCommentList() async -> Bool{
         guard let id = _videoInfo?.id else { return false }
-        let res = await HttpMeneger<CommentThreadList>().fetchData(["videoId":id,
+        let res = await HttpManager<CommentThreadList>().fetchData(["videoId":id,
                                                                           "maxResults":30, "order":"relevance"], [.snippet,.replies])
         switch res{
         case .success(let comments):

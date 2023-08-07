@@ -1,16 +1,16 @@
 //
-//  HttpMeneger.swift
+//  HttpManager.swift
 //  skywatch_pretest
 //
 //  Created by liyuan chang on 2023/7/22.
 //
 
 import Foundation
-enum HttpMenegerError : Error{
+enum HttpManagerError : Error{
     case httpError, decodeError
 }
 
-class HttpMeneger<ResModel: ModelProtocol> : ServiceProtocol{
+class HttpManager<ResModel: ModelProtocol> : ServiceProtocol{
     func fetchData(_ para:[String:Any],_ part:[APIPart]) async -> Result<ResModel.ModelType, Error>{
         var paraDic = para
         let partStr = part.map({$0.rawValue}).joined(separator: ",")
@@ -25,7 +25,7 @@ class HttpMeneger<ResModel: ModelProtocol> : ServiceProtocol{
     }
 }
 
-extension HttpMeneger{
+extension HttpManager{
     internal enum HttpError : Error{
         case UrlInitFail, NotFound, DecodeError
     }

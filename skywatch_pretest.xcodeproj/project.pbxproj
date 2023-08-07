@@ -16,8 +16,8 @@
 		7A7985F62A6B78AD00077E24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A7985F42A6B78AD00077E24 /* LaunchScreen.storyboard */; };
 		7A79861B2A6B79CC00077E24 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 7A79861A2A6B79CC00077E24 /* YouTubeiOSPlayerHelper */; };
 		7A79861F2A6B7E9C00077E24 /* ConstParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79861E2A6B7E9C00077E24 /* ConstParameter.swift */; };
-		7A7986242A6B7FE100077E24 /* HttpMeneger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986232A6B7FE100077E24 /* HttpMeneger.swift */; };
-		7A7986262A6BDBEC00077E24 /* HttpMenegerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986252A6BDBEC00077E24 /* HttpMenegerTest.swift */; };
+		7A7986242A6B7FE100077E24 /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986232A6B7FE100077E24 /* HttpManager.swift */; };
+		7A7986262A6BDBEC00077E24 /* HttpManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986252A6BDBEC00077E24 /* HttpManagerTest.swift */; };
 		7A7986282A6BDFBC00077E24 /* PlayListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986272A6BDFBC00077E24 /* PlayListModel.swift */; };
 		7A79862A2A6BE29300077E24 /* ChannelInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986292A6BE29300077E24 /* ChannelInfoModel.swift */; };
 		7A7986302A6BF15500077E24 /* YoutubeApiResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79862F2A6BF15500077E24 /* YoutubeApiResponseModel.swift */; };
@@ -82,8 +82,8 @@
 		7A7985FC2A6B78AE00077E24 /* skywatch_pretestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = skywatch_pretestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7986062A6B78AE00077E24 /* skywatch_pretestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = skywatch_pretestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A79861E2A6B7E9C00077E24 /* ConstParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstParameter.swift; sourceTree = "<group>"; };
-		7A7986232A6B7FE100077E24 /* HttpMeneger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMeneger.swift; sourceTree = "<group>"; };
-		7A7986252A6BDBEC00077E24 /* HttpMenegerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMenegerTest.swift; sourceTree = "<group>"; };
+		7A7986232A6B7FE100077E24 /* HttpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
+		7A7986252A6BDBEC00077E24 /* HttpManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpManagerTest.swift; sourceTree = "<group>"; };
 		7A7986272A6BDFBC00077E24 /* PlayListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListModel.swift; sourceTree = "<group>"; };
 		7A7986292A6BE29300077E24 /* ChannelInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelInfoModel.swift; sourceTree = "<group>"; };
 		7A79862F2A6BF15500077E24 /* YoutubeApiResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeApiResponseModel.swift; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 				7A7986382A6D25E500077E24 /* View */,
 				7A79861C2A6B7DC900077E24 /* Model */,
 				7A7986332A6D1BE700077E24 /* ViewModel */,
-				7A7986202A6B7FBE00077E24 /* Meneger */,
+				7A7986202A6B7FBE00077E24 /* Manager */,
 				7A79861D2A6B7E6500077E24 /* SupportFile */,
 				7A7985E92A6B78AD00077E24 /* AppDelegate.swift */,
 				7A7985EB2A6B78AD00077E24 /* SceneDelegate.swift */,
@@ -224,12 +224,12 @@
 			path = SupportFile;
 			sourceTree = "<group>";
 		};
-		7A7986202A6B7FBE00077E24 /* Meneger */ = {
+		7A7986202A6B7FBE00077E24 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				7A7986232A6B7FE100077E24 /* HttpMeneger.swift */,
+				7A7986232A6B7FE100077E24 /* HttpManager.swift */,
 			);
-			path = Meneger;
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		7A7986332A6D1BE700077E24 /* ViewModel */ = {
@@ -301,7 +301,7 @@
 		7AA966472A73C76100F02E00 /* TestCase */ = {
 			isa = PBXGroup;
 			children = (
-				7A7986252A6BDBEC00077E24 /* HttpMenegerTest.swift */,
+				7A7986252A6BDBEC00077E24 /* HttpManagerTest.swift */,
 				7AA966312A72811D00F02E00 /* PlayListViewModelTests.swift */,
 				7AA966362A728F3600F02E00 /* PlayerViewModelTests.swift */,
 			);
@@ -473,7 +473,7 @@
 				7AA9664E2A76283800F02E00 /* Interactor.swift in Sources */,
 				7AA966542A7777B200F02E00 /* CommentTableViewCell.swift in Sources */,
 				7AA966252A6FCD6100F02E00 /* DateExtension.swift in Sources */,
-				7A7986242A6B7FE100077E24 /* HttpMeneger.swift in Sources */,
+				7A7986242A6B7FE100077E24 /* HttpManager.swift in Sources */,
 				7AA9663B2A73936D00F02E00 /* CommentListModel.swift in Sources */,
 				7AA966202A6E59E200F02E00 /* UIImageExtension.swift in Sources */,
 				7A7985EE2A6B78AD00077E24 /* PlayListViewController.swift in Sources */,
@@ -502,7 +502,7 @@
 			files = (
 				7AA966322A72811D00F02E00 /* PlayListViewModelTests.swift in Sources */,
 				7AA966372A728F3600F02E00 /* PlayerViewModelTests.swift in Sources */,
-				7A7986262A6BDBEC00077E24 /* HttpMenegerTest.swift in Sources */,
+				7A7986262A6BDBEC00077E24 /* HttpManagerTest.swift in Sources */,
 				7AA966462A73C67000F02E00 /* TestParameter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
