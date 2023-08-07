@@ -17,7 +17,7 @@
 		7A79860B2A6B78AE00077E24 /* skywatch_pretestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79860A2A6B78AE00077E24 /* skywatch_pretestUITests.swift */; };
 		7A79860D2A6B78AE00077E24 /* skywatch_pretestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79860C2A6B78AE00077E24 /* skywatch_pretestUITestsLaunchTests.swift */; };
 		7A79861B2A6B79CC00077E24 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 7A79861A2A6B79CC00077E24 /* YouTubeiOSPlayerHelper */; };
-		7A79861F2A6B7E9C00077E24 /* Constent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79861E2A6B7E9C00077E24 /* Constent.swift */; };
+		7A79861F2A6B7E9C00077E24 /* ConstParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79861E2A6B7E9C00077E24 /* ConstParameter.swift */; };
 		7A7986242A6B7FE100077E24 /* HttpMeneger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986232A6B7FE100077E24 /* HttpMeneger.swift */; };
 		7A7986262A6BDBEC00077E24 /* HttpMenegerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986252A6BDBEC00077E24 /* HttpMenegerTest.swift */; };
 		7A7986282A6BDFBC00077E24 /* PlayListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986272A6BDFBC00077E24 /* PlayListModel.swift */; };
@@ -27,6 +27,7 @@
 		7A7986322A6C0E1B00077E24 /* YoutubeAPIPartEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986312A6C0E1B00077E24 /* YoutubeAPIPartEnum.swift */; };
 		7A7986372A6D1FD300077E24 /* PublishExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7986362A6D1FD300077E24 /* PublishExtension.swift */; };
 		7A79863E2A6D2AE500077E24 /* PlayListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79863D2A6D2AE500077E24 /* PlayListTableViewCell.swift */; };
+		7A993FF22A80D528003B6D3A /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = 7A993FF12A80D528003B6D3A /* Crypto */; };
 		7AA9661E2A6E562200F02E00 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA9661D2A6E562200F02E00 /* SnapKit */; };
 		7AA966202A6E59E200F02E00 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9661F2A6E59E200F02E00 /* UIImageExtension.swift */; };
 		7AA966232A6E82CB00F02E00 /* MJRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 7AA966222A6E82CB00F02E00 /* MJRefresh */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -39,7 +40,7 @@
 		7AA966372A728F3600F02E00 /* PlayerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966362A728F3600F02E00 /* PlayerViewModelTests.swift */; };
 		7AA966392A72901800F02E00 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966382A72901800F02E00 /* PlayerViewModel.swift */; };
 		7AA9663B2A73936D00F02E00 /* CommentListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9663A2A73936D00F02E00 /* CommentListModel.swift */; };
-		7AA966462A73C67000F02E00 /* TestConstent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966452A73C67000F02E00 /* TestConstent.swift */; };
+		7AA966462A73C67000F02E00 /* TestParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966452A73C67000F02E00 /* TestParameter.swift */; };
 		7AA966492A76207C00F02E00 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA966482A76207C00F02E00 /* PlayerViewController.swift */; };
 		7AA9664D2A76283800F02E00 /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9664B2A76283800F02E00 /* DismissAnimator.swift */; };
 		7AA9664E2A76283800F02E00 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA9664C2A76283800F02E00 /* Interactor.swift */; };
@@ -78,7 +79,7 @@
 		7A7986062A6B78AE00077E24 /* skywatch_pretestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = skywatch_pretestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A79860A2A6B78AE00077E24 /* skywatch_pretestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skywatch_pretestUITests.swift; sourceTree = "<group>"; };
 		7A79860C2A6B78AE00077E24 /* skywatch_pretestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skywatch_pretestUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7A79861E2A6B7E9C00077E24 /* Constent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constent.swift; sourceTree = "<group>"; };
+		7A79861E2A6B7E9C00077E24 /* ConstParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstParameter.swift; sourceTree = "<group>"; };
 		7A7986232A6B7FE100077E24 /* HttpMeneger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMeneger.swift; sourceTree = "<group>"; };
 		7A7986252A6BDBEC00077E24 /* HttpMenegerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMenegerTest.swift; sourceTree = "<group>"; };
 		7A7986272A6BDFBC00077E24 /* PlayListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListModel.swift; sourceTree = "<group>"; };
@@ -97,7 +98,7 @@
 		7AA966362A728F3600F02E00 /* PlayerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModelTests.swift; sourceTree = "<group>"; };
 		7AA966382A72901800F02E00 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		7AA9663A2A73936D00F02E00 /* CommentListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListModel.swift; sourceTree = "<group>"; };
-		7AA966452A73C67000F02E00 /* TestConstent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConstent.swift; sourceTree = "<group>"; };
+		7AA966452A73C67000F02E00 /* TestParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestParameter.swift; sourceTree = "<group>"; };
 		7AA966482A76207C00F02E00 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		7AA9664B2A76283800F02E00 /* DismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
 		7AA9664C2A76283800F02E00 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 				7A79861B2A6B79CC00077E24 /* YouTubeiOSPlayerHelper in Frameworks */,
 				7AA966232A6E82CB00F02E00 /* MJRefresh in Frameworks */,
 				7AA9661E2A6E562200F02E00 /* SnapKit in Frameworks */,
+				7A993FF22A80D528003B6D3A /* Crypto in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				7AA966472A73C76100F02E00 /* TestCase */,
-				7AA966452A73C67000F02E00 /* TestConstent.swift */,
+				7AA966452A73C67000F02E00 /* TestParameter.swift */,
 			);
 			path = skywatch_pretestTests;
 			sourceTree = "<group>";
@@ -208,7 +210,7 @@
 				7AA9664A2A76281E00F02E00 /* Dismiss */,
 				7AA9662A2A712AEE00F02E00 /* Protocol */,
 				7A7986352A6D1FC000077E24 /* Extension */,
-				7A79861E2A6B7E9C00077E24 /* Constent.swift */,
+				7A79861E2A6B7E9C00077E24 /* ConstParameter.swift */,
 				7A7986312A6C0E1B00077E24 /* YoutubeAPIPartEnum.swift */,
 			);
 			path = SupportFile;
@@ -325,6 +327,7 @@
 				7A79861A2A6B79CC00077E24 /* YouTubeiOSPlayerHelper */,
 				7AA9661D2A6E562200F02E00 /* SnapKit */,
 				7AA966222A6E82CB00F02E00 /* MJRefresh */,
+				7A993FF12A80D528003B6D3A /* Crypto */,
 			);
 			productName = skywatch_pretest;
 			productReference = 7A7985E62A6B78AD00077E24 /* skywatch_pretest.app */;
@@ -406,6 +409,7 @@
 				7A7986192A6B79CC00077E24 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 				7AA9661C2A6E562200F02E00 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				7AA966212A6E82CB00F02E00 /* XCRemoteSwiftPackageReference "MJRefresh" */,
+				7A993FF02A80D528003B6D3A /* XCRemoteSwiftPackageReference "swift-crypto" */,
 			);
 			productRefGroup = 7A7985E72A6B78AD00077E24 /* Products */;
 			projectDirPath = "";
@@ -471,7 +475,7 @@
 				7A7986372A6D1FD300077E24 /* PublishExtension.swift in Sources */,
 				7A7985EC2A6B78AD00077E24 /* SceneDelegate.swift in Sources */,
 				7A49BA9F2A781D6500A3F2E7 /* StringExtension.swift in Sources */,
-				7A79861F2A6B7E9C00077E24 /* Constent.swift in Sources */,
+				7A79861F2A6B7E9C00077E24 /* ConstParameter.swift in Sources */,
 				7AA9662C2A712B1300F02E00 /* ViewModelProtocol.swift in Sources */,
 				7A79863E2A6D2AE500077E24 /* PlayListTableViewCell.swift in Sources */,
 			);
@@ -484,7 +488,7 @@
 				7AA966322A72811D00F02E00 /* PlayListViewModelTests.swift in Sources */,
 				7AA966372A728F3600F02E00 /* PlayerViewModelTests.swift in Sources */,
 				7A7986262A6BDBEC00077E24 /* HttpMenegerTest.swift in Sources */,
-				7AA966462A73C67000F02E00 /* TestConstent.swift in Sources */,
+				7AA966462A73C67000F02E00 /* TestParameter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +834,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		7A993FF02A80D528003B6D3A /* XCRemoteSwiftPackageReference "swift-crypto" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-crypto.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		7AA9661C2A6E562200F02E00 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -853,6 +865,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7A7986192A6B79CC00077E24 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
 			productName = YouTubeiOSPlayerHelper;
+		};
+		7A993FF12A80D528003B6D3A /* Crypto */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A993FF02A80D528003B6D3A /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = Crypto;
 		};
 		7AA9661D2A6E562200F02E00 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

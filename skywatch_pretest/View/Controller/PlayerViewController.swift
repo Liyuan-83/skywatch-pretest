@@ -22,6 +22,14 @@ class PlayerViewController: UIViewController {
         return view
     }()
     
+    lazy private var tableView : UITableView = {
+        let view = UITableView(frame: .zero, style: .plain)
+        view.showsVerticalScrollIndicator = false
+        view.delegate = self
+        view.dataSource = self
+        return view
+    }()
+    
     lazy private var channelInfoView : UIView = {
        let view = UIView()
         view.backgroundColor = .systemBackground
@@ -76,14 +84,6 @@ class PlayerViewController: UIViewController {
         label.addGestureRecognizer(ges)
         label.isUserInteractionEnabled = true
         return label
-    }()
-    
-    lazy private var tableView : UITableView = {
-        let view = UITableView(frame: .zero, style: .plain)
-        view.showsVerticalScrollIndicator = false
-        view.delegate = self
-        view.dataSource = self
-        return view
     }()
     
     var interactor:Interactor? = nil

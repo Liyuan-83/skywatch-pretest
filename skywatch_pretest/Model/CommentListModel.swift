@@ -24,7 +24,8 @@ struct CommentThreadList : Codable{
     }
 }
 
-protocol CommantProtocol : Codable {
+///留言須遵守的Protocol，包含留言串(CommentThread)與回覆(SubComment)
+protocol CommentProtocol : Codable {
     var authorName : String { get set }
     var content : String { get set }
     var createDate : Date { get set }
@@ -32,7 +33,8 @@ protocol CommantProtocol : Codable {
     var likeCount : Int { get set }
 }
 
-struct CommentThread : CommantProtocol{
+///留言串(包含回覆訊息)
+struct CommentThread : CommentProtocol{
     var authorName: String
     var content: String
     var createDate: Date
@@ -40,9 +42,9 @@ struct CommentThread : CommantProtocol{
     var likeCount: Int = 0
     
     var threadID : String?
-    ///這個好像跟實際拿得到的留言數有差異
+    ///跟實際拿得到的留言數有差異，留言串最多送五筆，超過要另外在呼叫API拿
     var subCommentCount : Int = 0
-    var subComments : [CommandInfo] = []
+    var subComments : [SubComment] = []
     
     init?(with item:Item) throws{
         guard let snippet = item.snippet?.topLevelComment?.snippet else { throw DecodeError.CommentThreadFail }
@@ -60,15 +62,16 @@ struct CommentThread : CommantProtocol{
         self.threadID = item.id
         self.subCommentCount = item.snippet?.totalReplyCount ?? 0
         guard let comments = item.replies?.comments else { return }
-        var commentArr : [CommandInfo] = []
-        for commant in comments{
-            commentArr.append(CommandInfo(with: commant))
+        var commentArr : [SubComment] = []
+        for comment in comments{
+            commentArr.append(SubComment(with: comment))
         }
         subComments = commentArr
     }
 }
 
-struct CommandInfo : CommantProtocol{
+///回覆訊息
+struct SubComment : CommentProtocol{
     var authorName : String
     var content : String
     var createDate : Date

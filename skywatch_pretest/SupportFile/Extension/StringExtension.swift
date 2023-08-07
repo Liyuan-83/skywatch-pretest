@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Crypto
 
 extension String{
     ///為保護使用者的全名直接顯示
@@ -25,5 +26,18 @@ extension String{
             maskedString.append(contentsOf: self.suffix(2))
         }
         return maskedString
+    }
+
+    func decryptAPIKey() throws -> String {
+        let encryptedData = Data(base64Encoded: self)!
+        let keyData = Data(ENCRYPTION_KEY.utf8)
+        
+        // 使用AES-256解密
+        let sealedBox = try AES.GCM.SealedBox(combined: encryptedData)
+        let decryptedData = try AES.GCM.open(sealedBox, using: SymmetricKey(data: keyData))
+        
+        // 將解密後的Data轉換成字串
+        let decryptedString = String(data: decryptedData, encoding: .utf8)!
+        return decryptedString
     }
 }

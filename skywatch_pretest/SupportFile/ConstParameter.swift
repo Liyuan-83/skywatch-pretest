@@ -1,5 +1,5 @@
 //
-//  Constent.swift
+//  ConstParameter.swift
 //  skywatch_pretest
 //
 //  Created by liyuan chang on 2023/7/22.
@@ -8,9 +8,15 @@
 import Foundation
 
 let YOASOBI_Channel_ID = "UCvpredjG93ifbCP1Y77JyFA"
-var API_KEY : String{
-    return Bundle.main.infoDictionary?["Google API Key"] as! String
+var ENCRYPTION_KEY : String{
+    return Bundle.main.infoDictionary?["Encryption Key"] as! String
 }
+
+var API_KEY : String{
+    let encryptionKeyString = Bundle.main.infoDictionary?["API Key Encrypted"] as! String
+    return (try? encryptionKeyString.decryptAPIKey()) ?? ""
+}
+
 let base_url = "https://www.googleapis.com/youtube/v3/"
 
 enum DecodeError : Error{
