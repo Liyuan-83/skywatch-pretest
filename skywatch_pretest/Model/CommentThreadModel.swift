@@ -1,5 +1,5 @@
 //
-//  CommentListModel.swift
+//  CommentThreadModel.swift
 //  skywatch_pretest
 //
 //  Created by liyuan chang on 2023/7/28.
@@ -26,6 +26,10 @@ struct CommentThreadList : ModelProtocol, Codable{
     
     static var apiType: Api_type{
         return .commentThreads
+    }
+    
+    static var localResourceName: String{
+        return "CommentThreadData"
     }
 }
 

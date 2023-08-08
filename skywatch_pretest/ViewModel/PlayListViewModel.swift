@@ -11,7 +11,20 @@ struct PlayListViewModel: ViewModelProtocol {
     private var _channelInfo : ChannelInfo?
     private var _allList : [VideoInfo] = []
     private var _nextPageToken : String?
+    internal var _forTest : Bool = false
     var searchKeyword : String = ""
+    
+    init(_ isForTest:Bool = false){
+        _forTest = isForTest
+    }
+    
+    private var _channelService : any ServiceProtocol<ChannelInfo>{
+        return _forTest ? MockHttpManager<ChannelInfo>() : HttpManager<ChannelInfo>()
+    }
+    
+    private var _playListService : any ServiceProtocol<PlayList>{
+        return _forTest ? MockHttpManager<PlayList>() : HttpManager<PlayList>()
+    }
     
     var channelInfo : ChannelInfo?{
         return _channelInfo
@@ -25,7 +38,7 @@ struct PlayListViewModel: ViewModelProtocol {
     }
     
     mutating func fetchData() async -> Bool {
-        let channelRes = await HttpManager<ChannelInfo>().fetchData(["id":YOASOBI_Channel_ID], [.contentDetails, .snippet, .statistics])
+        let channelRes = await _channelService.fetchData(["id":YOASOBI_Channel_ID], [.contentDetails, .snippet, .statistics])
         
         switch channelRes{
         case .success(let info):
@@ -36,7 +49,7 @@ struct PlayListViewModel: ViewModelProtocol {
         }
         
         guard let playListID = _channelInfo?.uploadID else { return false }
-        let playListRes = await HttpManager<PlayList>().fetchData(["playlistId":playListID,
+        let playListRes = await _playListService.fetchData(["playlistId":playListID,
                                                                    "maxResults":30], [.snippet])
         switch playListRes{
         case .success(let playList):
@@ -57,10 +70,9 @@ struct PlayListViewModel: ViewModelProtocol {
         guard let id = _channelInfo?.uploadID,
               let token = _nextPageToken else { return .noMoreData }
         
-        //getPlayList(id,20,token),
-        let res = await HttpManager<PlayList>().fetchData(["playlistId":id,
-                                                           "maxResults":20,
-                                                           "pageToken":token], [.snippet])
+        let res = await _playListService.fetchData(["playlistId":id,
+                                                    "maxResults":20,
+                                                    "pageToken":token], [.snippet])
         switch res{
         case .success(let nextPageList):
             guard let list = nextPageList.list else { return .fail }

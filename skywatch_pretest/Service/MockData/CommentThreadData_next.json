@@ -1,0 +1,847 @@
+{
+  "kind": "youtube#commentThreadListResponse",
+  "etag": "k3Ql86Xt9ujVrHbeM5fa8lfkvqI",
+  "nextPageToken": "Z2V0X3JhbmtlZF9zdHJlYW1zLS1DcndDQ0lBRUZSZTMwVGdhc1FJS3JBSUkyRjhRZ0FRWUJ5S2hBbE1QU2pSZEtnWVlNR2lnVElKV0VmWk5zTU9JcldnRGd3Tk5kZXRTU090V3VCNVJwZXJ3WnduVFE0eUZYaVVpTXJ4UWdKaXljUUtxakZveHJKcEduM2RkT0g0VHpocVBOVHU3V25oQXFrQ3dhZDlGWWdXdm1XTVdtWFJ4eURlUEMzMGViVEItT2NtQkRZd0UxeXlwbnlCdFNNM1pNcGNnQjlRRWRMbFNrQnhsNkpIaEMtU0FuV05vRHFxa0stcW1LNEkyeUVIUVhxOW5TSzVqVmhQQ0pZS3llVlhIbkVScS1lYmV0S2xTa3FpWkVrY19yUnpaR1JRRVdoZjNoZ3Z0Yk05bk1KSnVtSFNPVTNPN1ltWlhNblFldmxKR1JPam9KSXNiS0NiTGxqS3RWQ29RNFlWWmluck4wTWhSMzlFWU5WN2pjTjBJVXVwQW1MbGpMckhUbG81bFFralUxaW9RQ3pwbWRZR1J5NURqUmFRbTQyTUthakhFa3lRMlVhZUx4Q1FRTWhJSENKY2dFQ2dZQVJJSENJVWdFQ2NZQVJJRkNJWWdHQUFTQlFpSUlCZ0FFZ1VJaHlBWUFCSUhDSjhnRUFBWUFCSUZDSWtnR0FBU0J3aUVJQkF2R0FFWUFB",
+  "pageInfo": {
+    "totalResults": 20,
+    "resultsPerPage": 20
+  },
+  "items": [
+    {
+      "kind": "youtube#commentThread",
+      "etag": "ARxG-UWeB0uYtvX5dxCu_Oz_o20",
+      "id": "Ugx22XnJO8NlM9KnkWF4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "V155834MwIM7spT20W5U-euYn5Q",
+          "id": "Ugx22XnJO8NlM9KnkWF4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "やっぱりLIVEは声出して、アーティストとぶつかり合って、思いの丈を叫んで一緒に作りあげて、それが楽しかったり快感だったりするなって思い出して泣けてきた。\u003cbr\u003e鳥肌立ちまくりで最高です。",
+            "textOriginal": "やっぱりLIVEは声出して、アーティストとぶつかり合って、思いの丈を叫んで一緒に作りあげて、それが楽しかったり快感だったりするなって思い出して泣けてきた。\n鳥肌立ちまくりで最高です。",
+            "authorDisplayName": "チャッシー",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaREmXg5aTDjZSiv7qsQXH5bw2DuREAFkdLMHckhag=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCifH5bUnJwr6miSHvYRFFnQ",
+            "authorChannelId": {
+              "value": "UCifH5bUnJwr6miSHvYRFFnQ"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 142,
+            "publishedAt": "2023-07-04T09:04:01Z",
+            "updatedAt": "2023-07-04T09:04:01Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "JNznLbhgFUVUfGGjwWCSFAC6Gf4",
+      "id": "UgwGbZJ7_Mt_WD9ostt4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "497TDUlffixJdxnBuDnoBGvEvXw",
+          "id": "UgwGbZJ7_Mt_WD9ostt4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "the fact that they actually release live concert version of IDOL and Shukufuku same time with Oshi no Ko and Mercury final episode is so wholesome...",
+            "textOriginal": "the fact that they actually release live concert version of IDOL and Shukufuku same time with Oshi no Ko and Mercury final episode is so wholesome...",
+            "authorDisplayName": "DZ ZD",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaSRSoljWmQptSTCjFcQvWfcSanLQGuvww2-NWuydg=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCt8VMCn3JQHggizneTqT4Cg",
+            "authorChannelId": {
+              "value": "UCt8VMCn3JQHggizneTqT4Cg"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 74,
+            "publishedAt": "2023-07-03T08:42:55Z",
+            "updatedAt": "2023-07-03T08:42:55Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "XJAGKOyus2RomNwqPSrvxWQffhk",
+      "id": "UgwvBMSCGJb2_0GjQlp4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "bhMgnRrkARzf0_R4ttd8_zoT23g",
+          "id": "UgwvBMSCGJb2_0GjQlp4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "曲入り方がめちゃくちゃ好き\u003cbr\u003eLiveをYouTube無料見れるなんて公式様のおかげです。\u003cbr\u003eもっと注目して欲しい",
+            "textOriginal": "曲入り方がめちゃくちゃ好き\nLiveをYouTube無料見れるなんて公式様のおかげです。\nもっと注目して欲しい",
+            "authorDisplayName": "ミナト",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/yggOLjnH2Z_B9jPV2jxlFXfiSZwRsqWx9aN4BYtaV-oVwvjRZE15zwfEbOAvJGEzpUY_9fyL=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UC6vt_AGSHt2w0Gu-Fg1MFRA",
+            "authorChannelId": {
+              "value": "UC6vt_AGSHt2w0Gu-Fg1MFRA"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 21,
+            "publishedAt": "2023-07-16T08:36:51Z",
+            "updatedAt": "2023-07-16T08:36:51Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 1,
+        "isPublic": true
+      },
+      "replies": {
+        "comments": [
+          {
+            "kind": "youtube#comment",
+            "etag": "WMJiNTNAbsVr_XXJTCEhopnvBsE",
+            "id": "UgwvBMSCGJb2_0GjQlp4AaABAg.9sDc9Xc5SqL9sKfw5aZ48S",
+            "snippet": {
+              "videoId": "KPK23K7ipVo",
+              "textDisplay": "IS YAOI",
+              "textOriginal": "IS YAOI",
+              "parentId": "UgwvBMSCGJb2_0GjQlp4AaABAg",
+              "authorDisplayName": "himari riku",
+              "authorProfileImageUrl": "https://yt3.ggpht.com/mE3y_1OA9vvzMvWcz8nkPRYT_cXcx18ruD76qd5W262uxEhT1rdzodKmA_f5Q6DPFPbpIitvBg=s48-c-k-c0x00ffffff-no-rj",
+              "authorChannelUrl": "http://www.youtube.com/channel/UCWLw7tJdgtT6ii5Hawz72Rg",
+              "authorChannelId": {
+                "value": "UCWLw7tJdgtT6ii5Hawz72Rg"
+              },
+              "canRate": true,
+              "viewerRating": "none",
+              "likeCount": 0,
+              "publishedAt": "2023-07-19T02:24:31Z",
+              "updatedAt": "2023-07-19T02:24:31Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "dy3Dh4ANpIU7cf2WR15jZyyKVz4",
+      "id": "UgyOEJHm3r6nbtJHsZV4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "46C6ycAEVHxcqmX-oC5ejZ25IhE",
+          "id": "UgyOEJHm3r6nbtJHsZV4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "ストレス溜まった時はこれを流しながら歌ってる、最高",
+            "textOriginal": "ストレス溜まった時はこれを流しながら歌ってる、最高",
+            "authorDisplayName": "ぞえたん",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/My1ol55Xw3sedO_1Z7VddiUoETzOPUjbvnYNTi4OyceQdrDB3khDWlBklhHLA7etWEfDSp7CVw=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCp3J8MwIMcVW--V_sUdZQUw",
+            "authorChannelId": {
+              "value": "UCp3J8MwIMcVW--V_sUdZQUw"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 101,
+            "publishedAt": "2023-07-06T20:26:11Z",
+            "updatedAt": "2023-07-06T20:26:11Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "KbK_uf_mjnfdOxxeaxPXgpleHLg",
+      "id": "UgyA_RFSMXG_HpJjTHd4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "AVuv47JNdJnCu79FSY9_-JIyTFI",
+          "id": "UgyA_RFSMXG_HpJjTHd4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "I absolutely love the vibe of japanese concerts! They are much more lively than plenty other concerts! I hope i could go to a Yoasobi concert soon :)",
+            "textOriginal": "I absolutely love the vibe of japanese concerts! They are much more lively than plenty other concerts! I hope i could go to a Yoasobi concert soon :)",
+            "authorDisplayName": "Kaoowo",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/HXNnDO_b5REmVwh-Olm6P1VJcw2HCtNCQMpFpL12GcbAI-hpdch6YVilQ9hjYsGID6yVFBZ345E=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCyn-9jsF-g0P4MOzzM4u-RQ",
+            "authorChannelId": {
+              "value": "UCyn-9jsF-g0P4MOzzM4u-RQ"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 41,
+            "publishedAt": "2023-07-02T14:16:52Z",
+            "updatedAt": "2023-07-02T14:16:52Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "qizakkEMTMxmxlfX7B9zRyad990",
+      "id": "Ugytm7LUBK-B_rLCJah4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "XgJWzIVAjFU4aPYjxCCOHoocAM8",
+          "id": "Ugytm7LUBK-B_rLCJah4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "水星の魔女最終回の余韻を残したまま祝福のLIVE映像は控えめに言って神！！ありがとうございます！！",
+            "textOriginal": "水星の魔女最終回の余韻を残したまま祝福のLIVE映像は控えめに言って神！！ありがとうございます！！",
+            "authorDisplayName": "エクレアν",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/UlSUtxcGiooDwueYrug-3_MHPlTAsQN7kM_5hIbprhRgcmw0fIIJIp37JgIvgSXPiNLAk3KB=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCEVDB0oCoF9_Cu5WxPhHiGg",
+            "authorChannelId": {
+              "value": "UCEVDB0oCoF9_Cu5WxPhHiGg"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 586,
+            "publishedAt": "2023-07-02T08:37:42Z",
+            "updatedAt": "2023-07-02T08:37:42Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 9,
+        "isPublic": true
+      },
+      "replies": {
+        "comments": [
+          {
+            "kind": "youtube#comment",
+            "etag": "F6lCAxkdtcXi8RZMqoLKzSaakO4",
+            "id": "Ugytm7LUBK-B_rLCJah4AaABAg.9re_7WTVbou9rebxITmuDr",
+            "snippet": {
+              "videoId": "KPK23K7ipVo",
+              "textDisplay": "広告収入の為よ\u003cbr\u003e広報も兼ねてるアヤセが天才よな\u003cbr\u003e歌ってるだけの金魚の糞ええよな",
+              "textOriginal": "広告収入の為よ\n広報も兼ねてるアヤセが天才よな\n歌ってるだけの金魚の糞ええよな",
+              "parentId": "Ugytm7LUBK-B_rLCJah4AaABAg",
+              "authorDisplayName": "綾小路清隆",
+              "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaQwyLDCtkqU6Oi-n0Y93VUwC_s0QKKtzJE0VA=s48-c-k-c0x00ffffff-no-rj",
+              "authorChannelUrl": "http://www.youtube.com/channel/UCNY_tQTylmsbPanopq14vCA",
+              "authorChannelId": {
+                "value": "UCNY_tQTylmsbPanopq14vCA"
+              },
+              "canRate": true,
+              "viewerRating": "none",
+              "likeCount": 3,
+              "publishedAt": "2023-07-02T09:02:22Z",
+              "updatedAt": "2023-07-02T09:02:22Z"
+            }
+          },
+          {
+            "kind": "youtube#comment",
+            "etag": "UK_rR0o3v-Ctm1C8gH9b9KTXbbc",
+            "id": "Ugytm7LUBK-B_rLCJah4AaABAg.9re_7WTVbou9red-VKVF48",
+            "snippet": {
+              "videoId": "KPK23K7ipVo",
+              "textDisplay": "@綾小路清隆イクラが歌うからいいねん",
+              "textOriginal": "@綾小路清隆イクラが歌うからいいねん",
+              "parentId": "Ugytm7LUBK-B_rLCJah4AaABAg",
+              "authorDisplayName": "T Yaman",
+              "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaSYCoFPoGf0QYCxVJo7KzXkr_oYuy88uuu9eQ=s48-c-k-c0x00ffffff-no-rj",
+              "authorChannelUrl": "http://www.youtube.com/channel/UCUrbr1E8qwTUHOygHLHfssA",
+              "authorChannelId": {
+                "value": "UCUrbr1E8qwTUHOygHLHfssA"
+              },
+              "canRate": true,
+              "viewerRating": "none",
+              "likeCount": 30,
+              "publishedAt": "2023-07-02T09:11:33Z",
+              "updatedAt": "2023-07-02T09:11:33Z"
+            }
+          },
+          {
+            "kind": "youtube#comment",
+            "etag": "xJk1GFPefnA6ZGEKm1_SbCwH9R0",
+            "id": "Ugytm7LUBK-B_rLCJah4AaABAg.9re_7WTVbou9renL2EOsHk",
+            "snippet": {
+              "videoId": "KPK23K7ipVo",
+              "textDisplay": "@綾小路清隆りらちゃんの歌声があって完成するのに嫉妬しないでおこうね♡",
+              "textOriginal": "@綾小路清隆りらちゃんの歌声があって完成するのに嫉妬しないでおこうね♡",
+              "parentId": "Ugytm7LUBK-B_rLCJah4AaABAg",
+              "authorDisplayName": "ミジンコ",
+              "authorProfileImageUrl": "https://yt3.ggpht.com/3ggjEODTCjxGNNEUKN-7gewgfLGcL2IycsZjUVIDqlnz8A8xrzAfJCiwAxScA9ZQzdmP0w0cYbU=s48-c-k-c0x00ffffff-no-rj",
+              "authorChannelUrl": "http://www.youtube.com/channel/UC9TnHD-eIg8bqH5Cz9aby3g",
+              "authorChannelId": {
+                "value": "UC9TnHD-eIg8bqH5Cz9aby3g"
+              },
+              "canRate": true,
+              "viewerRating": "none",
+              "likeCount": 15,
+              "publishedAt": "2023-07-02T10:41:52Z",
+              "updatedAt": "2023-07-02T10:41:52Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "Pqugq3LSNP5XNiF0v35MNg_pA68",
+      "id": "Ugyl49D40OsY_7s-YP14AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "7lcLc-DVbK9ef-QpPS_2RF-T8WE",
+          "id": "Ugyl49D40OsY_7s-YP14AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "水星の魔女が終わった後にすぐ祝福のライブ映像出してくれるの本当に神！！",
+            "textOriginal": "水星の魔女が終わった後にすぐ祝福のライブ映像出してくれるの本当に神！！",
+            "authorDisplayName": "いっちー",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaSru25-OMmj-v8ci9YiqWgthg1W_5R6wu2AJCtysQ=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCtu4Ow0xUzc2fOqMwcmq1BA",
+            "authorChannelId": {
+              "value": "UCtu4Ow0xUzc2fOqMwcmq1BA"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 52,
+            "publishedAt": "2023-07-02T13:05:08Z",
+            "updatedAt": "2023-07-02T13:05:08Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "HWFQxXZj7H6pmxfGQ0aBOMqp7Rw",
+      "id": "UgyVo51SOtge1kbHiol4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "pY_cZktmaKaEq-LMTKd8aTwp_9w",
+          "id": "UgyVo51SOtge1kbHiol4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "これだけ可愛くて、こんなに歌上手いなんてikura最強！！何回でも見にきちゃいます。ayaseさんもlive気合い入ってて最強！！",
+            "textOriginal": "これだけ可愛くて、こんなに歌上手いなんてikura最強！！何回でも見にきちゃいます。ayaseさんもlive気合い入ってて最強！！",
+            "authorDisplayName": "roca",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaTZShMw59FP8pKGgl2xaSNVHn1zqEnVreJBEMpkWARnDgbqCXrXxQdhw-TO0Stf=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCgAFQxvLB6oKa0-XotHFBTw",
+            "authorChannelId": {
+              "value": "UCgAFQxvLB6oKa0-XotHFBTw"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 2,
+            "publishedAt": "2023-08-01T14:36:06Z",
+            "updatedAt": "2023-08-01T15:02:34Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "PvSrFScRVdzH_fcLrcrHTEwe-RA",
+      "id": "UgyICClfjO99UKM54Ol4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "mzPBhdL1jQDE-NdMaWjcAO-7gSQ",
+          "id": "UgyICClfjO99UKM54Ol4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "アイドルもそうだけど作品にここまで寄り添ってくれるアーティストに感謝しかない",
+            "textOriginal": "アイドルもそうだけど作品にここまで寄り添ってくれるアーティストに感謝しかない",
+            "authorDisplayName": "スペランカー",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/GE7WeuSOeDo6tDRSFOHLWULVst34Oa4a26O66cNTDqajp2N843v_pLcWRKPZu5QzOjm0aBEOfg=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCIl4RNtUMpuhAMNnE1RLdOg",
+            "authorChannelId": {
+              "value": "UCIl4RNtUMpuhAMNnE1RLdOg"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 55,
+            "publishedAt": "2023-07-02T23:42:35Z",
+            "updatedAt": "2023-07-02T23:42:35Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "qHmvtJ3aUh-KT3gsysw3-_TMuBw",
+      "id": "UgyPcMtW0P7RUCSAItx4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "LsIy-cENLuzei9mH-lmM4DiKiL8",
+          "id": "UgyPcMtW0P7RUCSAItx4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "LIVEバージョン見るだけで胸に響いて泣けてくる…\u003cbr\u003e完全に水星ロスだわ。",
+            "textOriginal": "LIVEバージョン見るだけで胸に響いて泣けてくる…\n完全に水星ロスだわ。",
+            "authorDisplayName": "KEISUKE MIYAJIMA",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaSslYhKI0g4oV1CvTa4glKA6mzS4ANED417Kw=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCw7OlKCidS2I30MeIIi4i-Q",
+            "authorChannelId": {
+              "value": "UCw7OlKCidS2I30MeIIi4i-Q"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 19,
+            "publishedAt": "2023-07-12T18:37:15Z",
+            "updatedAt": "2023-07-12T18:37:15Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "SF4g1pE1X1sFB8krU0KAU94PV8k",
+      "id": "UgxOY3j_bMgfJKtCcgp4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "b4HV4Wzz_sgkrnOqlKCj57C56iQ",
+          "id": "UgxOY3j_bMgfJKtCcgp4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "不穏すぎる曲の始まりからどんどんぶち上がっていくのかっこよすぎる",
+            "textOriginal": "不穏すぎる曲の始まりからどんどんぶち上がっていくのかっこよすぎる",
+            "authorDisplayName": "腐った芽",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaSpov28f6vtw5Fjj7l0ynZzl-D4EkY75UfnI4lF2w=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCbucG7HaoBV0pzxIng8M3Zw",
+            "authorChannelId": {
+              "value": "UCbucG7HaoBV0pzxIng8M3Zw"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 46,
+            "publishedAt": "2023-07-02T22:53:43Z",
+            "updatedAt": "2023-07-02T22:53:43Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "AC_HMgRMionTJ_8yih-Y7hEr2gU",
+      "id": "UgwB3El6kCcGzygSlBR4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "9eUCm0Zc0Yiz1D-e5kLasU3CmJI",
+          "id": "UgwB3El6kCcGzygSlBR4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "ライブでここまで見事な歌唱力を魅せるとは本当に素晴らしいわ。",
+            "textOriginal": "ライブでここまで見事な歌唱力を魅せるとは本当に素晴らしいわ。",
+            "authorDisplayName": "成崎海",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaTcJ3ZAQwP-92fnNMshxccqYQfDlofoLNuuZA=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCIY1IrWg4xuHrffUUClPmbg",
+            "authorChannelId": {
+              "value": "UCIY1IrWg4xuHrffUUClPmbg"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 259,
+            "publishedAt": "2023-07-02T08:53:56Z",
+            "updatedAt": "2023-07-02T08:53:56Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 1,
+        "isPublic": true
+      },
+      "replies": {
+        "comments": [
+          {
+            "kind": "youtube#comment",
+            "etag": "VOImPPLbg6ph-bsCRxpTtS4pmnk",
+            "id": "UgwB3El6kCcGzygSlBR4AaABAg.9reazPh3YgP9sKgL8srDk2",
+            "snippet": {
+              "videoId": "KPK23K7ipVo",
+              "textDisplay": "IS YAOI",
+              "textOriginal": "IS YAOI",
+              "parentId": "UgwB3El6kCcGzygSlBR4AaABAg",
+              "authorDisplayName": "himari riku",
+              "authorProfileImageUrl": "https://yt3.ggpht.com/mE3y_1OA9vvzMvWcz8nkPRYT_cXcx18ruD76qd5W262uxEhT1rdzodKmA_f5Q6DPFPbpIitvBg=s48-c-k-c0x00ffffff-no-rj",
+              "authorChannelUrl": "http://www.youtube.com/channel/UCWLw7tJdgtT6ii5Hawz72Rg",
+              "authorChannelId": {
+                "value": "UCWLw7tJdgtT6ii5Hawz72Rg"
+              },
+              "canRate": true,
+              "viewerRating": "none",
+              "likeCount": 0,
+              "publishedAt": "2023-07-19T02:28:04Z",
+              "updatedAt": "2023-07-19T02:28:04Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "46tsw09LeUKBzkW6p7TBVs27R_g",
+      "id": "UgznE3QE4h5XFxAVur54AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "yicYXBCIyWGWcz14pYaK_eJA5fE",
+          "id": "UgznE3QE4h5XFxAVur54AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "ikuraちゃん本当に歌上手いよね\u003cbr\u003eそれもライブを行う事にどんどん進化していくのが分かる\u003cbr\u003eまじで1回はライブに行った方がいい",
+            "textOriginal": "ikuraちゃん本当に歌上手いよね\nそれもライブを行う事にどんどん進化していくのが分かる\nまじで1回はライブに行った方がいい",
+            "authorDisplayName": "ろってんえっぐ",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaTijQnPFlZinlHF_PbTF3wZW5zKHB1BcCUZkN771w=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCLyJ_DTi-Vvn4Iad44YtDbA",
+            "authorChannelId": {
+              "value": "UCLyJ_DTi-Vvn4Iad44YtDbA"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 10,
+            "publishedAt": "2023-07-02T13:32:50Z",
+            "updatedAt": "2023-07-02T13:32:50Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "u6j9TUR2x7Edd8gDa_6OXzePghU",
+      "id": "UgzV96NdehTLVx00WTh4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "krghrMdC-dB5Dy95ye4qp56sSS4",
+          "id": "UgzV96NdehTLVx00WTh4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "迫力が凄すぎてヤバイぐらい鳥肌たちました！",
+            "textOriginal": "迫力が凄すぎてヤバイぐらい鳥肌たちました！",
+            "authorDisplayName": "マッキー マウス",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaRTnbigjlK_8fCBW2zfDX7xLKu-9cz7VpBairP_RPMps7IIhcRh6o9Mkfk6DMYyaqY=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCwHRQCesX_phuT6cRQw94Vg",
+            "authorChannelId": {
+              "value": "UCwHRQCesX_phuT6cRQw94Vg"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 25,
+            "publishedAt": "2023-07-04T13:45:05Z",
+            "updatedAt": "2023-07-04T13:45:05Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "JCPZlrSKjShW8w172LBl7WLnLss",
+      "id": "UgzWQXAcCkYTx80sRc94AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "dhxeQSYNS8Pjq65mNKEHjmMUKBQ",
+          "id": "UgzWQXAcCkYTx80sRc94AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "「共に生きるから」とか、「決めつけられた運命～どんな物語にでもできる」のところとかの、声が変わるところ（伝われ）もしっかり歌ってるのが、シンプルにうれしい",
+            "textOriginal": "「共に生きるから」とか、「決めつけられた運命～どんな物語にでもできる」のところとかの、声が変わるところ（伝われ）もしっかり歌ってるのが、シンプルにうれしい",
+            "authorDisplayName": "Mr.たくあん",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/XD81YzR49Es4nBfhEV5Qwe_Iq1toswziFZxAK1ME5Kcz7aYBb293kH3nj_nS9qu0QXP57fs1=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCi_fJlhompegZTbGboShByQ",
+            "authorChannelId": {
+              "value": "UCi_fJlhompegZTbGboShByQ"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 22,
+            "publishedAt": "2023-07-07T14:25:50Z",
+            "updatedAt": "2023-07-07T14:25:50Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 1,
+        "isPublic": true
+      },
+      "replies": {
+        "comments": [
+          {
+            "kind": "youtube#comment",
+            "etag": "b3YGYuXPlyVAhr0t8zdrgCW6pRk",
+            "id": "UgzWQXAcCkYTx80sRc94AaABAg.9rs3whZxP2z9sFseaybvsU",
+            "snippet": {
+              "videoId": "KPK23K7ipVo",
+              "textDisplay": "多分Ayaseさんがタイミングよくボイチェン入れてますよね\u003cbr\u003e今までのライブとかテレビ歌唱だとそのままのマイク音声だったので色々研究したんでしょうか…すごい…",
+              "textOriginal": "多分Ayaseさんがタイミングよくボイチェン入れてますよね\n今までのライブとかテレビ歌唱だとそのままのマイク音声だったので色々研究したんでしょうか…すごい…",
+              "parentId": "UgzWQXAcCkYTx80sRc94AaABAg",
+              "authorDisplayName": "taishi",
+              "authorProfileImageUrl": "https://yt3.ggpht.com/xnsgGHlqSJKWrxAL5EEX_cy4mxvEK1W3YGJ861kByTvEN5XjDSZU3UfziiMeRSy0emUCF3hv-m4=s48-c-k-c0x00ffffff-no-rj",
+              "authorChannelUrl": "http://www.youtube.com/channel/UCKfaAWCA_SK_K5lVuUE-ENw",
+              "authorChannelId": {
+                "value": "UCKfaAWCA_SK_K5lVuUE-ENw"
+              },
+              "canRate": true,
+              "viewerRating": "none",
+              "likeCount": 1,
+              "publishedAt": "2023-07-17T05:39:31Z",
+              "updatedAt": "2023-07-17T05:39:31Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "b-QqdIZoUkhSBqoCfUN7FcIRHCM",
+      "id": "Ugz8wjC23u5NbxDGyih4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "WpSqALdpa3GD27mmBccdhQrJ9ZA",
+          "id": "Ugz8wjC23u5NbxDGyih4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "I wish I could be able to go this location and spend the entire time watching them perform on stage like that.\u003cbr\u003eThere are no words to express how fantastic it is!!!!!!!!!",
+            "textOriginal": "I wish I could be able to go this location and spend the entire time watching them perform on stage like that.\nThere are no words to express how fantastic it is!!!!!!!!!",
+            "authorDisplayName": "Lê Minh Chiến",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaRzFOnRfQjwC1C_YJQAhYHe4Kn61UvX2vRafeeGSg=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCBk0amF5bU2ESuDQJ7K8SNg",
+            "authorChannelId": {
+              "value": "UCBk0amF5bU2ESuDQJ7K8SNg"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 15,
+            "publishedAt": "2023-07-02T16:57:53Z",
+            "updatedAt": "2023-07-02T16:57:53Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "VjIkfWiP9PK65iWk4Z0JxTrW6C4",
+      "id": "Ugw5IhOTcZJytnTcdS94AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "toojNDzyuFEoYBAksUvCmsZn394",
+          "id": "Ugw5IhOTcZJytnTcdS94AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "超喜歡這個版本，她們一定會帶著滿滿的祝福一直快樂生活下去吧！",
+            "textOriginal": "超喜歡這個版本，她們一定會帶著滿滿的祝福一直快樂生活下去吧！",
+            "authorDisplayName": "JC Tsui",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaRYsx3FmilPisv24cZ75hnUuEE5d_JtP9Uy_b-BKw=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCE0Qkcg_zRBCbsBLoXc_EqA",
+            "authorChannelId": {
+              "value": "UCE0Qkcg_zRBCbsBLoXc_EqA"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 16,
+            "publishedAt": "2023-07-06T17:53:52Z",
+            "updatedAt": "2023-07-06T17:53:52Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "wZTb0K9QSO7kqzkHLh9Q0V7aklc",
+      "id": "UgzR_6L4Gx7CQoef_KF4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "3G-vp47R5_f5srYJNtWd4jlNgdk",
+          "id": "UgzR_6L4Gx7CQoef_KF4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "観客含めて会場全体の盛り上がり方が素晴らしすぎる",
+            "textOriginal": "観客含めて会場全体の盛り上がり方が素晴らしすぎる",
+            "authorDisplayName": "きょじ",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/A2wNHrU1HDLwP6V6IsQmLwiU1IwiLGJl8EjQ02c0UmS0CeQB5kSGnYONHVr_k8L2-0w36FNbwyg=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCJfwKMAain9h9T014BtafZQ",
+            "authorChannelId": {
+              "value": "UCJfwKMAain9h9T014BtafZQ"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 756,
+            "publishedAt": "2023-07-02T09:17:21Z",
+            "updatedAt": "2023-07-02T09:17:21Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 2,
+        "isPublic": true
+      },
+      "replies": {
+        "comments": [
+          {
+            "kind": "youtube#comment",
+            "etag": "eDNOzkOLtpaw8kuR1BTuVlVXc5c",
+            "id": "UgzR_6L4Gx7CQoef_KF4AaABAg.9redesHfEfQ9sKgHibzl-V",
+            "snippet": {
+              "videoId": "KPK23K7ipVo",
+              "textDisplay": "IS YAOI",
+              "textOriginal": "IS YAOI",
+              "parentId": "UgzR_6L4Gx7CQoef_KF4AaABAg",
+              "authorDisplayName": "himari riku",
+              "authorProfileImageUrl": "https://yt3.ggpht.com/mE3y_1OA9vvzMvWcz8nkPRYT_cXcx18ruD76qd5W262uxEhT1rdzodKmA_f5Q6DPFPbpIitvBg=s48-c-k-c0x00ffffff-no-rj",
+              "authorChannelUrl": "http://www.youtube.com/channel/UCWLw7tJdgtT6ii5Hawz72Rg",
+              "authorChannelId": {
+                "value": "UCWLw7tJdgtT6ii5Hawz72Rg"
+              },
+              "canRate": true,
+              "viewerRating": "none",
+              "likeCount": 0,
+              "publishedAt": "2023-07-19T02:27:36Z",
+              "updatedAt": "2023-07-19T02:27:36Z"
+            }
+          },
+          {
+            "kind": "youtube#comment",
+            "etag": "UUzXji91xbvWXeFMujJYzyw2XxY",
+            "id": "UgzR_6L4Gx7CQoef_KF4AaABAg.9redesHfEfQ9s_omNCLQii",
+            "snippet": {
+              "videoId": "KPK23K7ipVo",
+              "textDisplay": "😊😊😊😊",
+              "textOriginal": "😊😊😊😊",
+              "parentId": "UgzR_6L4Gx7CQoef_KF4AaABAg",
+              "authorDisplayName": "鄭百鈞",
+              "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaRxZts1NuG0J4I1D_R0l5Uv15TyDOSuM_vLTuRe7y0=s48-c-k-c0x00ffffff-no-rj",
+              "authorChannelUrl": "http://www.youtube.com/channel/UCi03igGTG1R4Ay5ogTvfT1g",
+              "authorChannelId": {
+                "value": "UCi03igGTG1R4Ay5ogTvfT1g"
+              },
+              "canRate": true,
+              "viewerRating": "none",
+              "likeCount": 0,
+              "publishedAt": "2023-07-25T08:49:40Z",
+              "updatedAt": "2023-07-25T08:49:40Z"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "5rZ44n1V4t-w9llKQaVBe-yBrSc",
+      "id": "UgxRE5FqCd0hzY3pvZp4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "cHrEn70IqU2_EoToGkYGOrFSssQ",
+          "id": "UgxRE5FqCd0hzY3pvZp4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "現地にいましたが、こんな一体感のあるライブは初めてでした！最高でした！",
+            "textOriginal": "現地にいましたが、こんな一体感のあるライブは初めてでした！最高でした！",
+            "authorDisplayName": "Masa Kisi",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaTDwf1PeXFl0RzljT2ErWA1nTdUrnYQO7psvQ=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCI91SCrAJtYtBqFWF05ZJuQ",
+            "authorChannelId": {
+              "value": "UCI91SCrAJtYtBqFWF05ZJuQ"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 23,
+            "publishedAt": "2023-07-11T23:19:27Z",
+            "updatedAt": "2023-07-11T23:19:27Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    },
+    {
+      "kind": "youtube#commentThread",
+      "etag": "eNhhIzGr36im18g00ILwcTYoCKs",
+      "id": "Ugxja_EfqbGnXeQqTwB4AaABAg",
+      "snippet": {
+        "videoId": "KPK23K7ipVo",
+        "topLevelComment": {
+          "kind": "youtube#comment",
+          "etag": "0LsWdAnwA9_VTBsZwigUGoGTPWU",
+          "id": "Ugxja_EfqbGnXeQqTwB4AaABAg",
+          "snippet": {
+            "videoId": "KPK23K7ipVo",
+            "textDisplay": "どんどんライブが上手になっていく感じがする！！",
+            "textOriginal": "どんどんライブが上手になっていく感じがする！！",
+            "authorDisplayName": "Dee Bywater",
+            "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AOPolaRr4UY_-ow_-5y3nnrooIN7etEFWZJKtgclSN8o=s48-c-k-c0x00ffffff-no-rj",
+            "authorChannelUrl": "http://www.youtube.com/channel/UCCI-ywgoMEAPbdGDuWp-N-w",
+            "authorChannelId": {
+              "value": "UCCI-ywgoMEAPbdGDuWp-N-w"
+            },
+            "canRate": true,
+            "viewerRating": "none",
+            "likeCount": 36,
+            "publishedAt": "2023-07-05T09:56:37Z",
+            "updatedAt": "2023-07-05T09:56:37Z"
+          }
+        },
+        "canReply": true,
+        "totalReplyCount": 0,
+        "isPublic": true
+      }
+    }
+  ]
+}

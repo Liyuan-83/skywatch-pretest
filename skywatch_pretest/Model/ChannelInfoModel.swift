@@ -35,6 +35,10 @@ struct ChannelInfo: ModelProtocol, Codable {
     static var apiType: Api_type{
         return .channals
     }
+    
+    static var localResourceName: String{
+        return "ChannelData"
+    }
 }
 
 

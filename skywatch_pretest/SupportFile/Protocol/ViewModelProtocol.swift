@@ -10,6 +10,7 @@ import Foundation
 protocol ViewModelProtocol : Codable{
     var viewModelName : String { get }
     var data : Data? { get }
+    var _forTest : Bool { get set }
     
     func saveToLocal()
     func clearFromLocal()
@@ -37,6 +38,10 @@ extension ViewModelProtocol{
     }
     
     mutating func loadFromLocal() -> Bool{
+        guard !_forTest else {
+            clearFromLocal()
+            return false
+        }
         return UserDefaults.getFromStandard(&self, viewModelName)
     }
 }

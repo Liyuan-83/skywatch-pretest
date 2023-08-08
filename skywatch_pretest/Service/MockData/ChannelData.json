@@ -1,0 +1,55 @@
+{
+  "kind": "youtube#channelListResponse",
+  "etag": "yGCBfWq-Ms3thNIiyLVpaCqaZyQ",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#channel",
+      "etag": "OCwGlKo4NZkd9dWj9_SkZTc6mN0",
+      "id": "UCvpredjG93ifbCP1Y77JyFA",
+      "snippet": {
+        "title": "Ayase / YOASOBI",
+        "description": "シンガーソングライター、ボカロPのAyase、そしてAyaseがコンポーザーを務めるユニット・YOASOBIのYouTubeチャンネルです。",
+        "customUrl": "@ayase_yoasobi",
+        "publishedAt": "2018-11-16T23:11:18Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://yt3.ggpht.com/ytc/AOPolaTVPPfAl0GeHmuw0w9F4QRgADyy-mHvlrQw_esnug=s88-c-k-c0x00ffffff-no-rj-mo",
+            "width": 88,
+            "height": 88
+          },
+          "medium": {
+            "url": "https://yt3.ggpht.com/ytc/AOPolaTVPPfAl0GeHmuw0w9F4QRgADyy-mHvlrQw_esnug=s240-c-k-c0x00ffffff-no-rj-mo",
+            "width": 240,
+            "height": 240
+          },
+          "high": {
+            "url": "https://yt3.ggpht.com/ytc/AOPolaTVPPfAl0GeHmuw0w9F4QRgADyy-mHvlrQw_esnug=s800-c-k-c0x00ffffff-no-rj-mo",
+            "width": 800,
+            "height": 800
+          }
+        },
+        "localized": {
+          "title": "Ayase / YOASOBI",
+          "description": "シンガーソングライター、ボカロPのAyase、そしてAyaseがコンポーザーを務めるユニット・YOASOBIのYouTubeチャンネルです。"
+        },
+        "country": "JP"
+      },
+      "contentDetails": {
+        "relatedPlaylists": {
+          "likes": "",
+          "uploads": "UUvpredjG93ifbCP1Y77JyFA"
+        }
+      },
+      "statistics": {
+        "viewCount": "3222093123",
+        "subscriberCount": "5640000",
+        "hiddenSubscriberCount": false,
+        "videoCount": "168"
+      }
+    }
+  ]
+}

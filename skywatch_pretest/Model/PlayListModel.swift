@@ -25,6 +25,10 @@ struct PlayList: ModelProtocol, Codable {
     static var apiType: Api_type{
         return .playListItem
     }
+    
+    static var localResourceName: String{
+        return "PlayListData"
+    }
 }
 
 // MARK: - VideoInfo

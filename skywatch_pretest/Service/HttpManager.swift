@@ -17,7 +17,7 @@ class HttpManager<ResModel: ModelProtocol> : ServiceProtocol{
         paraDic["part"] = partStr
         do{
             let data = try await sendHttpRequest(ResModel.apiType, paraDic)
-            guard let model = try ResModel(with: data) as? ResModel.ModelType else { throw DecodeError.TypeNoMatch }
+            guard let model = try ResModel(with: data) as? ResModel.ModelType else { throw HttpManagerError.decodeError }
             return .success(model)
         }catch{
             return .failure(error)

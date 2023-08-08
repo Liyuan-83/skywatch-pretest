@@ -9,7 +9,7 @@ import XCTest
 @testable import skywatch_pretest
 
 final class PlayerViewModelTests: XCTestCase {
-    var viewmodel = PlayerViewModel()
+    var viewmodel = PlayerViewModel(true)
     override func setUp() async throws {
         print("-----setUp-----")
         //本地端讀值

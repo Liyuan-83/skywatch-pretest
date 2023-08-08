@@ -1,0 +1,1416 @@
+{
+  "kind": "youtube#playlistItemListResponse",
+  "etag": "sxqxDrgu3hc8hFiXmL2f13ppHNM",
+  "nextPageToken": "EAAaBlBUOkNCNA",
+  "items": [
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "f2iJpYxHc7qumo-kTLg6VXEMe4E",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLk9STmxmdDlLdXN3",
+      "snippet": {
+        "publishedAt": "2023-08-04T20:32:06Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "Idol in LA!! #yoasobi #推しの子 #yoasobiアイドル",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ORNlft9Kusw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ORNlft9Kusw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ORNlft9Kusw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ORNlft9Kusw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ORNlft9Kusw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 0,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "ORNlft9Kusw"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "RF4zVG_WCb0TMzGNS5C9mxKknCQ",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLkd6OHFRZEdOT29v",
+      "snippet": {
+        "publishedAt": "2023-07-31T08:52:06Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "渋谷にアイドル！ #アイドル #YOASOBI #推しの子",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Gz8qQdGNOoo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Gz8qQdGNOoo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Gz8qQdGNOoo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Gz8qQdGNOoo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Gz8qQdGNOoo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 1,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "Gz8qQdGNOoo"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "xuLUzEHI4EXVvRbmyBVJxwcPmnI",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLmFZS1JoenFtSWNR",
+      "snippet": {
+        "publishedAt": "2023-07-30T08:45:28Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "#YOASOBI #アイドル #아이돌 #推しの子",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/aYKRhzqmIcQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/aYKRhzqmIcQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/aYKRhzqmIcQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/aYKRhzqmIcQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/aYKRhzqmIcQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 2,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "aYKRhzqmIcQ"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "fSxWOmtcgQhQ33Y49F3iAhjcZpM",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLl9HQ1Q5cENBTlQ4",
+      "snippet": {
+        "publishedAt": "2023-07-02T13:10:40Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "#YOASOBI祝福 #水星の魔女",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_GCT9pCANT8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_GCT9pCANT8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_GCT9pCANT8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_GCT9pCANT8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_GCT9pCANT8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 3,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "_GCT9pCANT8"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "lBEuPH54GedOI-5TcH7h1Zj5j5o",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLktQSzIzSzdpcFZv",
+      "snippet": {
+        "publishedAt": "2023-07-02T08:30:04Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "YOASOBI「祝福」(The Blessing) from 『YOASOBI ARENA TOUR 2023 \"電光石火\"』2023.6.3@さいたまスーパーアリーナ",
+        "description": "Streaming & Download : https://orcd.co/shukufuku\n映像提供：WOWOW\n7月8日(土)21時〜WOWOWにて当日の模様を全曲ノーカットで放送・配信！\nhttps://www.wowow.co.jp/detail/191830\n\n○『機動戦士ガンダム 水星の魔女』オープニング主題歌\nhttps://g-witch.net/\n\n○インスト音源はこちら\nhttps://piapro.jp/t/XUqX\n\n--\n遥か遠くに浮かぶ星を\n想い眠りにつく君の\n選ぶ未来が望む道が\n何処へ続いていても\n共に生きるから\n\nずっと昔の記憶\n連れられて来たこの星で君は\n願い続けてた\n遠くで煌めく景色に\n飛び込むことが出来たのなら\n\n一人孤独な世界で\n祈り願う\n夢を描き\n未来を見る\n逃げ出すよりも進むことを\n君が選んだのなら\n\n誰かが描いたイメージじゃなくて\n誰かが選んだステージじゃなくて\n僕たちが作っていくストーリー\n決して一人にはさせないから\nいつかその胸に秘めた\n刃が鎖を断ち切るまで\nずっと共に闘うよ\n\n決め付けられた運命\nそんなの壊して\n僕達は操り人形じゃない\n君の世界だ 君の未来だ\nどんな物語にでも出来る\n\n逃げる様に 隠れる様に\n乗り込んで来たコクピットには\n泣き虫な君はもう居ない\nいつの間にかこんなに強く\n\nこれは君の人生\n(誰のものでもない)\nそれは答えなんて無い\n(自分で選ぶ道)\nもう呪縛は解いて\n定められたフィクションから今\n飛び出すんだ\n飛び立つんだ\n\n誰にも追いつけないスピードで\n地面蹴り上げ空を舞う\n呪い呪われた未来は\n君がその手で変えていくんだ\n逃げずに進んだことできっと\n掴めるものが沢山あるよ\nもっと強くなれる\nこの星に生まれたこと\nこの世界で生き続けること\nその全てを愛せる様に\n目一杯の祝福を君に\n--\nAs you are now thinking of that star, so remote\nYou're dozing off to be sleeping through with a thought\nAnd the future you decide\nThe way you want to stride\nWherever you choose to set off, to go\nTogether, I'll be there by you\n\nYou hold old memories, asleep in you\nYou then were taken afar\nSo young, to this star\nDeep inside, the growing wish \nHeld it tight\nOver there, a scenery that's glittering\nIf you could only jump, and land in the globe you sight\n \nIt's only you, so lonely in this domain\nInvoke and desire\nDream and hope you're drawing\nAs you see the future\nAnd if you choose to keep on marching on\nInstead of running off\nAnd cleared of any doubt\n\nNot to be part of those images someone paints\nNot advancing in that show, chosen by someone else \nYou and I, ally to write our story\nWill never let you be lone and be gone from your side\nHidden out in your chest, and the day will come\nWhen your blade will be cutting all those chains\nUnbound restraints \nAt all times, together we'll be fighting on\n \nBrought up in this predetermined fate\nGo ahead and crush it\nBreaking free, we never were some puppets to start with\nSee, your realm ignites now\nYour future to shine bright\nUnbound possibilities, make it what you want to\n \nAs to scoot, holing up as you ran up to me\nSo, you climbed up in the cockpit and stayed inside\nThat kid in scenes left in the past, no more to cry\nBefore I realized, you grew to be powerful\n \nIt's your life, your story, your way\nAnd it's not owned by anybody\nAnd it has no answer that is right\nUp to you to walk the route you point at\nNow the spell is broken\nAnd as we're now about to part with that fiction, defined\nIt's time to fly out to take off right now\n  \nAt a pace no one can attain, I speed away\nKicking up the ground, soaring up the sky with you\nCovering the future, that curse to grip tight\nAs you are changing it by using your own might\nAnd by choosing not to run off, but to stride on \nYou extended the scope of all things you can reach out for\nGrow to become so powerful\nAnd on this planet, you were made to be born\nTo keep on living in this world, as time is flowing on\nAnd so, you'd love it all, so you would treasure it\nMay all blessings find their way to you, I'm wishing it\n--\n#YOASOBI #祝福 #水星の魔女",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KPK23K7ipVo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KPK23K7ipVo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KPK23K7ipVo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KPK23K7ipVo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KPK23K7ipVo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 4,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "KPK23K7ipVo"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "rmgsoU-KhUMhwgw_2MbudVzbarg",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLm80QXhNazNTR1VZ",
+      "snippet": {
+        "publishedAt": "2023-06-30T10:00:10Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "HERO / 初音ミク",
+        "description": "初音ミク「マジカルミライ 2023」テーマソング\nStreaming & Download : https://karent.jp/album/3678\n\n・Music & Lyrics\nAyase https://twitter.com/Ayase_0404\n\n・Arrangement\nAyase\nRockwell https://twitter.com/69l_rockwell\n\n▼初音ミク「マジカルミライ 2023」\nOSAKA｜インテックス大阪 4号館・5号館A・5号館B、8月11日（金・祝）～13日（日）\nTOKYO｜幕張メッセ 国際展示場 9-11ホール、9月1日（金）～3日（日）\nhttps://magicalmirai.com/2023/\n\n2023.7.26 Release\n▼初音ミク「マジカルミライ 2023」OFFICIAL ALBUM収録\nhttps://magicalmirai.com/2023/goods_cd.html\n\nインスト音源はこちら\n-piapro\nhttps://piapro.jp/my_page/?view=content&pid=Ayase_0404\n-dropbox\nhttps://www.dropbox.com/s/o8t7h8jo6s5hg6y/HERO%28inst%29.mp3?dl=0\n\n--\n姿を見せた\n凶悪なエネミー\n行き場無くした心に湧いてくる\n流れ出す\n憂鬱は餌に\nこのままじゃ呑み込まれる\n\nもう四六時中さいつでもkick off\n囲まれてんだどうしたら良いの\n逃げ場を無くした部屋の隅っこ\nエンドロールが迫る\n\nH.E.R.O\nwhere is the HERO!\nH.E.R.O\nwhere is the HERO!\n\nそんな時目の前に\nひらりと舞い降りた\n\n君は僕にとってのヒーロー\n突然現れた光\n堪え切れず零れてたSOSを\n(HERO!)\nキャッチしたみたいに\n(HERO!)\n駆け付けた途端\n飛び出したパンチに目が覚めた\nそんな夜に\n夢中で書き出した物語\n僅かに残っていた祈り\n久しぶりに明日も生きたいと思えた\n(HERO!)\n救われたんだよ\n(HERO!)\n君の声に\nさあこの先は\n僕もその手を引くよ\n\nサンキューここからは僕たちの番だ\nにわか雨じゃ全然足りないのさ\n一面に広がってきた緑に\n水を撒けここは愛の惑星\n\nめきめき育った新芽にまたがり\n秘密基地を抜けて進め進め\n救われてばかりじゃいられない\n君も知らない場所\n見つけに行くよ\n\nH.E.R.O\nYou’re the HERO!\nH.E.R.O\nYou’re the HERO!\n\nそれでも今日も\n誰かのため歌う君は\n\n紛れもない本物のヒーロー\n共に歩んできたこの日々が\n僕たちで紡いできた物語が\nいつか\n君の未来に\nもっと\n沢山の拍手に\n繋がっていきますように\n\n君は僕にとってのヒーロー\n突然現れた未来\n生きる意味をもう一度与えてくれた\n(HERO!)\nどんな時だって\n(HERO!)\n隣を見れば\n共に闘ってくれた君が居たから\nなんとかここまで来れたんだよ\nこの先は僕にも任せてよ\n君が望む未来を教えてよ\nどんな\n(HERO!)\n景色を見ようか\n(HERO!)\n夢を見ようか\nさあ改めてどうぞよろしくね\nハッピーバースデー\n親愛なるヒーローへ\n--\n◯Music Video\n\n・Director / Animator　\nAi Nina  \nhttps://twitter.com/ai_niina_\n\n・Background Painters\nKantaro\nAi Nina　\n\n・Effect artist\nZECIN\n\n・CG artist\nDaiki Miyama\n\n・In-between animation\nAika Goto\n \n・Animators / special effect\nSarasa Tsunomori\nYuki Kawahara\n\n・Coloring assistants\nHinano Suzuki\nMiki Tsukihara\nSakura Yamatsu\nSarina Hirakawa\n--\n\n#Ayase #HERO #初音ミク",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/o4AxMk3SGUY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/o4AxMk3SGUY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/o4AxMk3SGUY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/o4AxMk3SGUY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/o4AxMk3SGUY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 5,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "o4AxMk3SGUY"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "_9JPowu12eDz5AC4LRz3BdLHK-c",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLlZjUExOQTMxQm9z",
+      "snippet": {
+        "publishedAt": "2023-06-29T03:28:00Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "#YOASOBIアイドル ライブ映像公開！ #推しの子",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VcPLNA31Bos/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VcPLNA31Bos/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VcPLNA31Bos/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VcPLNA31Bos/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VcPLNA31Bos/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 6,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "VcPLNA31Bos"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "VHm2kAauQ4ETQBv8gnbe9-9-OIA",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLlJ6WFRlLVFmV1R3",
+      "snippet": {
+        "publishedAt": "2023-06-28T09:00:14Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "YOASOBI「アイドル」(Idol) from 『YOASOBI ARENA TOUR 2023 \"電光石火\"』2023.6.4@さいたまスーパーアリーナ",
+        "description": "Streaming & Download : https://orcd.co/yoasobi_idol\n映像提供：WOWOW\n7月8日(土)21時〜WOWOWにて6/3(土)公演の模様を全曲ノーカットで放送・配信！\nhttps://www.wowow.co.jp/detail/191830\n\n○TVアニメ『【推しの子】』オープニング主題歌\nhttps://ichigoproduction.com/\n○インスト音源はこちら\nhttps://piapro.jp/t/KQn0\n\n--\n無敵の笑顔で荒らすメディア\n知りたいその秘密ミステリアス\n抜けてるとこさえ彼女のエリア\n完璧で嘘つきな君は\n天才的なアイドル様\n\n今日何食べた？\n好きな本は？\n遊びに行くならどこに行くの？\n何も食べてない\nそれは内緒\n何を聞かれても\nのらりくらり\n\nそう淡々と\nだけど燦々と\n見えそうで見えない秘密は蜜の味\nあれもないないない\nこれもないないない\n好きなタイプは？\n相手は？\nさあ答えて\n\n「誰かを好きになることなんて\n私分からなくてさ」\n嘘か本当か知り得ない\nそんな言葉に\nまた一人堕ちる\nまた好きにさせる\n\n誰もが目を奪われていく\n君は完璧で究極のアイドル\n金輪際現れない\n一番星の生まれ変わり\nその笑顔で\n愛してるで\n誰も彼も虜にしていく\nその瞳が\nその言葉が\n嘘でもそれは\n完全なアイ\n\nはいはいあの子は特別です\n我々は端からおまけです\nお星様の引き立て役Bです\n全てがあの子のお陰な訳ない\nしゃらくさい\n妬み嫉妬なんてない訳がない\nこれはネタじゃない\nからこそ許せない\n完璧じゃない君じゃ許せない\n自分を許せない\n誰よりも強い君以外は認めない\n\n誰もが信じ崇めてる\nまさに最強で無敵のアイドル\n弱点なんて見当たらない\n一番星を宿している\n弱いとこなんて見せちゃ\nダメダメ\n知りたくないとこは見せずに\n唯一無二じゃなくちゃ\nイヤイヤ\nそれこそ本物のアイ\n\n得意の笑顔で沸かすメディア\n隠しきるこの秘密だけは\n愛してるって嘘で積むキャリア\nこれこそ私なりの愛だ\n\n流れる汗も綺麗なアクア\nルビーを隠したこの瞼\n歌い踊り舞う私はマリア\nそう嘘はとびきりの愛だ\n\n誰かに愛されたことも\n誰かのこと愛したこともない\nそんな私の嘘がいつか本当になること\n信じてる\n\nいつかきっと全部手に入れる\n私はそう欲張りなアイドル\n等身大でみんなのこと\nちゃんと愛したいから\n今日も嘘をつくの\nこの言葉が\nいつか本当になる日を願って\nそれでもまだ\n君と君にだけは言えずにいたけど\nやっと言えた\nこれは絶対嘘じゃない\n愛してる\n--\nCouldn't beat her smile, it stirred up all the media Secret side, I wanna know it\nSo mysterious\nEven that elusive side, part of her controlled area Complete and perfect\nAll you say is a bunch of lies\nDear miss genius idol, unmatched What did you eat today?\nWhat book do you love?\nWhenever you go out for fun, tell me, where do you go?\nHaven’t eaten anything\nIt's a secret, unknown\nAny questions you're facing, always acting so vaguely\n\nSo unconcerned, although you brightly glow\nAny seemingly unveiled secrets are as sweet as honey Confusing, why, why, why?\nEssential lie, lie, lie\nSo, what is your type of guy? Any partner?\nSo, now, answer this\n\n\"I don't have any idea how I could love anyone” “I don't seem to know what it signifies\"\nCannot find out if it's true or it's a lie\nOnce again, there's somebody who's fallen for the words and cues Made him lose his head over you\n\nThat emotion melts all hearts, all eyes on you Cause you are perfect, the most ultimate idol Unrivaled, will not appear again\nIt's the brightest star reborn, yes, indeed Using that smiling face\nThat \"I love you\" again\n\nNow, everybody is lured and captivated by you The pupil that you got\nThe words you vocalize\nEven when untrue, it’s your perfected Ai\n\nRight, right, we all know she's very special, yes\nWe had lost the fight before it started, so impressed Miss I'm such a star\nWe're serving as support to her grace\nCannot tell me everything was because of her No, it's not right\nOut of line\nHow can we not feel jealous while being around It's not a joke, you know, right?\nSo, I cannot forgive you for that\nCompletely deny Imperfect you that I sight Myself, no pardon allowed\nI won't allow anyone if it's not you, strongest of all\n\nThat emotion seized all hearts worshiping you Yes, indeed\nSo strong, it's you, unrivaled idol There cannot be weaknesses to find The brightest star is residing in you\nThe gaps and shortcomings, don't show’em Dammit, dammit\nParts nobody wants to know should remain hidden\nOne and only\nIf it's different, no way, no way Such a true love, it's the realest Ai\n\nShowing this smile, my own weapon Boiling media\nKeeping everything about my secret deep inside\n\"I'm in love with you,\" my career is built on such a lie It's the way I know to show my love, without a doubt Running down, my sweat is flowing\nCleanest aqua, right?\nRuby hidden under my eyelids where it resides I sing and dance around\n\nLook at me, I'm Maria\nSo, lying surely is the greatest kind of love\n\nI recall no one that loved me whole before And I've not been in love with anybody before Now, the lies I'm making up\nI'm hoping that a day comes when they all become true And I keep wishing they do\n\nOne day, I will hold everything that I pursue Yes, I am so greedy, true voracious idol\nSo, sincerely, what I'm wishing for is to love each of you with all my heart And so, today, I lie again\nThe words I vocalize inside of me\nI'm wishing that one day they come true Up to this day, I've not been able to let you\nAnd you hear me saying those meaningful words\nI said it at last\nI know it's not a lie as I'm voicing these words I love you\n--\n#YOASOBI #アイドル #推しの子",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RzXTe-QfWTw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RzXTe-QfWTw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RzXTe-QfWTw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RzXTe-QfWTw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/RzXTe-QfWTw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 7,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "RzXTe-QfWTw"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "dSyAk8sX3geitXME1PJ_CGulLvE",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLk9VT3FYTmRSanFR",
+      "snippet": {
+        "publishedAt": "2023-06-10T08:38:35Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "明日から見逃し配信！#YOASOBIアイドル #YOASOBI電光石火ツアー",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OUOqXNdRjqQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OUOqXNdRjqQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OUOqXNdRjqQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OUOqXNdRjqQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OUOqXNdRjqQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 8,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "OUOqXNdRjqQ"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "u-_WXwy_PQcAVmc_aO7tuOsD8Z4",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLnpnVHJsdTF6cmlB",
+      "snippet": {
+        "publishedAt": "2023-06-09T08:49:31Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "\"電光石火ツアー\" 見逃し配信チケット発売中⚡️ #YOASOBIアイドル #YOASOBIIdol #推しの子",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zgTrlu1zriA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zgTrlu1zriA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zgTrlu1zriA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zgTrlu1zriA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zgTrlu1zriA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 9,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "zgTrlu1zriA"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "N4jMxbyb0pyqvZqJqPvUsY_JD5c",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLlJralNmWjMwR000",
+      "snippet": {
+        "publishedAt": "2023-05-25T15:00:08Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "YOASOBI / Idol (「アイドル」English Ver. )",
+        "description": "Streaming & Download : https://orcd.co/yoasobi_idol_eng\nMusic : Ayase (https://twitter.com/ayase_0404)\nVocal : ikura (https://twitter.com/ikutalilas)\n\nTranslation / Background Chorus Lyrics：Konnie Aoki\nEnglish Ver. Lyrical & Vocal Rec Direction：BFNK、Konnie Aoki\nBackground Shouts：REAL AKIBA BOYZ @realakibaboyz \n\nOriginal Novel \"45510\" (Written by Aka Akasaka)\nhttps://youngjump.jp/oshinoko/novel_45510/\n\nTV anime 【OSHI NO KO】Opening Theme\nhttps://ichigoproduction.com/\n\n✦INTRODUCTION✦\n\"In show business, lies are a weapon.\"\nWhen a pregnant young starlet appears in Gorou Amemiya’s countryside medical clinic, the doctor takes it upon himself to safely (and secretly) deliver Ai Hoshino’s child so she can make a scandal-free return to the stage. But no good deed goes unpunished, and on the eve of her delivery, he finds himself slain at the hands of Ai’s deluded stalker — and subsequently reborn as Ai’s child, Aquamarine Hoshino! The glitz and glamor of showbiz hide the dark underbelly of the entertainment industry, threatening to dull the shine of his favorite star. Can he help his new mother rise to the top of the charts? And what will he do when unthinkable disaster strikes?\n\n©Aka Akasaka x Mengo Yokoyari/Shueisha, \"OSHI NO KO\" Partners\n\n○Instrumental\nhttps://piapro.jp/t/KQn0\n\n--\nCouldn't beat her smile, it stirred up all the media Secret side, I wanna know it\nSo mysterious\nEven that elusive side, part of her controlled area Complete and perfect\nAll you say is a bunch of lies\nDear miss genius idol, unmatched What did you eat today?\nWhat book do you love?\nWhenever you go out for fun, tell me, where do you go?\nHaven’t eaten anything\nIt's a secret, unknown\nAny questions you're facing, always acting so vaguely\n\nSo unconcerned, although you brightly glow\nAny seemingly unveiled secrets are as sweet as honey Confusing, why, why, why?\nEssential lie, lie, lie\nSo, what is your type of guy? Any partner?\nSo, now, answer this\n\n\"I don't have any idea how I could love anyone” “I don't seem to know what it signifies\"\nCannot find out if it's true or it's a lie\nOnce again, there's somebody who's fallen for the words and cues Made him lose his head over you\n\nThat emotion melts all hearts, all eyes on you Cause you are perfect, the most ultimate idol Unrivaled, will not appear again\nIt's the brightest star reborn, yes, indeed Using that smiling face\nThat \"I love you\" again\n\nNow, everybody is lured and captivated by you The pupil that you got\nThe words you vocalize\nEven when untrue, it’s your perfected Ai\n\nRight, right, we all know she's very special, yes\nWe had lost the fight before it started, so impressed Miss I'm such a star\nWe're serving as support to her grace\nCannot tell me everything was because of her No, it's not right\nOut of line\nHow can we not feel jealous while being around It's not a joke, you know, right?\nSo, I cannot forgive you for that\nCompletely deny Imperfect you that I sight Myself, no pardon allowed\nI won't allow anyone if it's not you, strongest of all\n\nThat emotion seized all hearts worshiping you Yes, indeed\nSo strong, it's you, unrivaled idol There cannot be weaknesses to find The brightest star is residing in you\nThe gaps and shortcomings, don't show’em Dammit, dammit\nParts nobody wants to know should remain hidden\nOne and only\nIf it's different, no way, no way Such a true love, it's the realest Ai\n\nShowing this smile, my own weapon Boiling media\nKeeping everything about my secret deep inside\n\"I'm in love with you,\" my career is built on such a lie It's the way I know to show my love, without a doubt Running down, my sweat is flowing\nCleanest aqua, right?\nRuby hidden under my eyelids where it resides I sing and dance around\n\nLook at me, I'm Maria\nSo, lying surely is the greatest kind of love\n\nI recall no one that loved me whole before And I've not been in love with anybody before Now, the lies I'm making up\nI'm hoping that a day comes when they all become true And I keep wishing they do\n\nOne day, I will hold everything that I pursue Yes, I am so greedy, true voracious idol\nSo, sincerely, what I'm wishing for is to love each of you with all my heart And so, today, I lie again\nThe words I vocalize inside of me\nI'm wishing that one day they come true Up to this day, I've not been able to let you\nAnd you hear me saying those meaningful words\nI said it at last\nI know it's not a lie as I'm voicing these words I love you\n--\n#YOASOBI #Idol #OSHINOKO",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RkjSfZ30GM4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RkjSfZ30GM4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RkjSfZ30GM4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RkjSfZ30GM4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/RkjSfZ30GM4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 10,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "RkjSfZ30GM4"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "r7ZqCMtfT8YgUBsIt83gSiC2DOk",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLjVIdkFxVFMwNnZn",
+      "snippet": {
+        "publishedAt": "2023-05-17T09:04:03Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "#YOASOBI電光石火ツアー 6月4日生配信決定！",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5HvAqTS06vg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5HvAqTS06vg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5HvAqTS06vg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5HvAqTS06vg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5HvAqTS06vg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 11,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "5HvAqTS06vg"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "OUV4V4Dfd4G3rWzb1SjZrRtytA8",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLjJnOGxTSW5IeTdV",
+      "snippet": {
+        "publishedAt": "2023-04-13T03:42:43Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "#YOASOBIアイドル #推しの子",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2g8lSInHy7U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2g8lSInHy7U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2g8lSInHy7U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/2g8lSInHy7U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/2g8lSInHy7U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 12,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "2g8lSInHy7U"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "16w8ypXJN_Z-q9YGF57bwEbLWD4",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLlpSdGRRODFqUFVR",
+      "snippet": {
+        "publishedAt": "2023-04-12T15:30:09Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "YOASOBI「アイドル」 Official Music Video",
+        "description": "Streaming & Download : https://orcd.co/yoasobi_idol\nMusic : Ayase (https://twitter.com/ayase_0404)\nVocal : ikura (https://twitter.com/ikutalilas)\n\nBackground Chorus English Lyrics：Konnie Aoki\nBackground Chorus：Ebony Bowens, Chloe Kibble, Marista Stubbs, Imani J. Dawson, Kyte, Lyle Carr, Andrew Soda\nBackground Shouts：REAL AKIBA BOYZ (https://www.youtube.com/@realakibaboyz )\n\n原作小説「45510」(赤坂アカ 著)\n4/12(水)24時30分同時公開\nhttps://youngjump.jp/oshinoko/novel_45510/\n\n○TVアニメ『【推しの子】』オープニング主題歌\n2023年4月12日(水)よりTVアニメ放送開始！\nhttps://ichigoproduction.com/\n\n＜INTRODUCTION＞ \n「この芸能界（せかい）において嘘は武器だ」\n地方都市で働く産婦人科医・ゴロー。\nある日\"推し\"のアイドル「B小町」のアイが彼の前に現れた。\n彼女はある禁断の秘密を抱えており…。\nそんな二人の\"最悪\"の出会いから、運命が動き出していく―。\n\n©赤坂アカ×横槍メンゴ／集英社・【推しの子】製作委員会\n\n○インスト音源はこちら\nhttps://piapro.jp/t/KQn0\n\n○YOASOBI初のアリーナツアー「YOASOBI ARENA TOUR 電光石火」追加公演決定！\n6月23日(金)・24日(土)＠神奈川県・ぴあアリーナMM\nhttps://www.yoasobi-music.jp/news/551184\n--\n無敵の笑顔で荒らすメディア\n知りたいその秘密ミステリアス\n抜けてるとこさえ彼女のエリア\n完璧で嘘つきな君は\n天才的なアイドル様\n\n今日何食べた？\n好きな本は？\n遊びに行くならどこに行くの？\n何も食べてない\nそれは内緒\n何を聞かれても\nのらりくらり\n\nそう淡々と\nだけど燦々と\n見えそうで見えない秘密は蜜の味\nあれもないないない\nこれもないないない\n好きなタイプは？\n相手は？\nさあ答えて\n\n「誰かを好きになることなんて\n私分からなくてさ」\n嘘か本当か知り得ない\nそんな言葉に\nまた一人堕ちる\nまた好きにさせる\n\n誰もが目を奪われていく\n君は完璧で究極のアイドル\n金輪際現れない\n一番星の生まれ変わり\nその笑顔で\n愛してるで\n誰も彼も虜にしていく\nその瞳が\nその言葉が\n嘘でもそれは\n完全なアイ\n\nはいはいあの子は特別です\n我々は端からおまけです\nお星様の引き立て役Bです\n全てがあの子のお陰な訳ない\nしゃらくさい\n妬み嫉妬なんてない訳がない\nこれはネタじゃない\nからこそ許せない\n完璧じゃない君じゃ許せない\n自分を許せない\n誰よりも強い君以外は認めない\n\n誰もが信じ崇めてる\nまさに最強で無敵のアイドル\n弱点なんて見当たらない\n一番星を宿している\n弱いとこなんて見せちゃ\nダメダメ\n知りたくないとこは見せずに\n唯一無二じゃなくちゃ\nイヤイヤ\nそれこそ本物のアイ\n\n得意の笑顔で沸かすメディア\n隠しきるこの秘密だけは\n愛してるって嘘で積むキャリア\nこれこそ私なりの愛だ\n\n流れる汗も綺麗なアクア\nルビーを隠したこの瞼\n歌い踊り舞う私はマリア\nそう嘘はとびきりの愛だ\n\n誰かに愛されたことも\n誰かのこと愛したこともない\nそんな私の嘘がいつか本当になること\n信じてる\n\nいつかきっと全部手に入れる\n私はそう欲張りなアイドル\n等身大でみんなのこと\nちゃんと愛したいから\n今日も嘘をつくの\nこの言葉が\nいつか本当になる日を願って\nそれでもまだ\n君と君にだけは言えずにいたけど\nやっと言えた\nこれは絶対嘘じゃない\n愛してる\n--\nMVディレクター・絵コンテ・演出：中山直哉\n編集：齊藤雄磨\nビジュアルデベロップメント・モーショングラフィックス：齊藤雄磨、山口駿\nロゴデザイン：lowpolydog\n作画監督：平山寛菜\n作画監督補佐：夘野智子、稲手遥香\n原画：菊地奨之、室賀彩花、山本ゆうすけ、尾辻浩晃、秦ほのか、引口奈緒子、北村由佳、水野公彰、中山薫、福家いおり、米村雅人、松井怜、夘野智子、卓子意、沢田犬二、辻彩夏、TOMATO\n動画工房作画部\n第二原画：動画工房作画部\n全後映、劉官林、中山薫、1110\n動画検査：大原真琴\n動画：大原真琴、小田道子、中山薫、米村雅人、松井怜\n寿門堂\nRadplus\n色彩設計：石黒けい\n色彩設計補佐：芦原明音\n色指定・仕上げ検査：伊藤裕香\n仕上げ：呉政宏、村田栞、真壁源太\n寿門堂\nRadplus\n撮影監督：桒野貴文\n撮影監督補佐：工藤康史\n撮影：福岡由惟、塩野修平\n美術監督：宇佐美哲也(スタジオイースター)\n美術設定：水本浩太(スタジオイースター)\n背景：スタジオイースター\n平田卓也、今井公平、廣川翔一、山口琴実、宇佐美哲也\n3DLO：渡辺悦啓、石橋涼介\nモニターワークス：前田大輔(レイ）\n制作プロデューサー：小林涼\n制作チーフ・制作進行：増田拓朗\n\nアニメーション制作 動画工房\n製作 【推しの子】製作委員会\n--\n#YOASOBI #アイドル #推しの子",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ZRtdQ81jPUQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ZRtdQ81jPUQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ZRtdQ81jPUQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ZRtdQ81jPUQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ZRtdQ81jPUQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 13,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "ZRtdQ81jPUQ"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "QTpHDKuHIeD0mDR4OM9i2tg2wzA",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLlYxNWszbUpjSlVR",
+      "snippet": {
+        "publishedAt": "2023-04-05T12:00:20Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "【CM】YOASOBI「アイドル」4月12日(水)配信リリース！",
+        "description": "2023年4月12日(水)リリース\n「アイドル」\nhttps://orcd.co/yoasobi_idol\nアニメ『【推しの子】』オープニング主題歌\n\nTVアニメ『【推しの子】』本予告\nhttps://youtu.be/BQ28u-8c-hI\n\n【アニメ『【推しの子】』 作品概要】\n＜ONAIR＞ \n2023年4月12日(水)よりTVアニメ放送開始！\nTVアニメ第1話（90分拡大版）が放送に先駆け、全国劇場で『【推しの子 Mother and Children】』上映決定。2023年3月17日(金)よりEJアニメシアター新宿ほかにて公開。\n\n＜INTRODUCTION＞ \n「この芸能界（せかい）において嘘は武器だ」\n地方都市で働く産婦人科医・ゴロー。\nある日\"推し\"のアイドル「B小町」のアイが彼の前に現れた。\n彼女はある禁断の秘密を抱えており…。\nそんな二人の\"最悪\"の出会いから、運命が動き出していく―。\n\n＜STAFF＞\n原作：『推しの子』 赤坂アカ×横槍メンゴ（集英社「週刊ヤングジャンプ」連載）\n監督：平牧大輔\n助監督：猫富ちゃお\nシリーズ構成：田中 仁\nキャラクターデザイン：平山寛菜\nアニメーション制作：動画工房\n\n＜CAST＞\nアイ：高橋李依\nアクア：大塚剛央\nルビー：伊駒ゆりえ\nゴロー：伊東健人\nさりな：高柳知葉\nアクア(幼少期)：内山夕実\n有馬かな：潘めぐみ\n\n＜公式サイト＞ https://ichigoproduction.com/\n＜公式Twitter＞ @anime_oshinoko\n＜劇場情報＞EJアニメシアター新宿ほかにて\n劇場情報詳細はこちら\nhttps://eigakan.org/theaterpage/schedule.php?t=oshinoko\n\n©赤坂アカ×横槍メンゴ／集英社・【推しの子】製作委員会\n---\n#YOASOBI #YOASOBIアイドル #推しの子",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/V15k3mJcJUQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/V15k3mJcJUQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/V15k3mJcJUQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/V15k3mJcJUQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/V15k3mJcJUQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 14,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "V15k3mJcJUQ"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "tQytnIe_o4SPd-Pzh2qtQqzF-B0",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLm55QjlyWGZxTEJN",
+      "snippet": {
+        "publishedAt": "2023-04-05T05:07:16Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "#YOASOBI電光石火ツアー #メルセデスベンツ #Aクラス #Bクラス",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/nyB9rXfqLBM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/nyB9rXfqLBM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/nyB9rXfqLBM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/nyB9rXfqLBM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/nyB9rXfqLBM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 15,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "nyB9rXfqLBM"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "-zFCvb5gMgkn-c2DXzztefwgj8k",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLjFmZjlDb09wWmhB",
+      "snippet": {
+        "publishedAt": "2023-03-29T09:51:17Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "MV公開！ #YOASOBI #セブンティーン #はじめての",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1ff9CoOpZhA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1ff9CoOpZhA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1ff9CoOpZhA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1ff9CoOpZhA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1ff9CoOpZhA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 16,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "1ff9CoOpZhA"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "RW7XB-5mCILJ4Bg-JAjSoy8JBbo",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLjB5b003RVROUElZ",
+      "snippet": {
+        "publishedAt": "2023-03-27T11:00:07Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "YOASOBI「セブンティーン」Official Music Video",
+        "description": "Streaming & Download : https://orcd.co/yoasobi_seventeen\nMusic : Ayase (https://twitter.com/ayase_0404)\nVocal : ikura (https://twitter.com/ikutalilas)\n\nGuitar : Takeruru (https://twitter.com/Takeruru_rururu)\n\n原作：宮部みゆき「色違いのトランプ」from 『はじめての』(水鈴社 刊)\nhttps://www.yoasobi-music.jp/hajimeteno/\n\n-あらすじ\n並行世界で起きたテロへの関与を疑われ、捕らわれた愛娘の夏穂。宗一は夏穂を救いに、単身、もう一つの〝鏡界〞へと向かう。\n\nインスト音源はこちら\nhttps://piapro.jp/t/m3te\n\nYOASOBI初のアリーナツアー「YOASOBI ARENA TOUR 電光石火」\n2023年4月5日からいよいよ開幕！\nチケット↓\nhttps://www.yoasobi-music.jp/news/550417\n--\n鏡写しかのような\n瓜二つの世界に\nそれぞれ生まれた二人の私\n在るべき場所が違ったか\n神様が間違ったか\n同じ姿形中身は真反対\n\n違和感はどうやら\nずっと前に育ってた\nパパもママも大事に思ってる\nだけど私はどうやら\n此処じゃ私じゃないから\n赤は赤に黒は黒に戻るの\n\n次元を隔てた向こう側の世界じゃ\n今日だって残酷な悪魔が鳴いている\nあっちの私は怖がりで泣き虫なの\n見て見ぬ振りできないから\n\nこれじゃハッピーエンドとはいかない\nそれじゃ救いに行くね世界\nこんな乱暴な私を許して\nきっとやり遂げるから\nこれはバッドエンドなんかじゃない\nどこに居たとしても私は\nそう世界で一人のオリジナル\n誇らしく思ってくれたら嬉しいな\n\n境界の線で切り分けたこちら側の世界じゃ\n今日だって呑気な天使があくびする\n気付いてしまった悪は見逃せないから\n帰り道を交換しよう\n\n私が希望になるの\nお別れは少し寂しいけれど\nいつか目尻に作った傷も\n理不尽に立ち向かった証だから\n\nいつかハッピーエンドになるまで\n世界を相手に戦うの\nこんな乱暴な私をずっと\n愛してくれてありがとう\n\nこれはバッドエンドなんかじゃない\nどこに居たとしても私は\nあなたの唯一無二のオリジナル\n誇らしく生きるよ\nさあ在るべき場所に帰ろう\nさよならを告げたセブンティーン\n--\n【Music Video Staff】\n\n●監督 / 絵コンテ / キャラクター原案 \n長添 雅嗣\n\n●演出\n篠原 ぱらこ\n\n●キャラクターデザイン / 作画監督\n小笠原 篤\n\n●美術監督\n中村 聡子\n\n●色彩設計\n佐藤 ゆう\n\n●撮影監督 / VFX\n谷口 竣亮\n\n●3DCGディレクター \n木村 謙太郎\n\n●キャスト\nアナウンサー役  宮司 愛海（フジテレビ）\n\n●作画監督\n菅原 裕幸  /  相音 光  /  田中 日香里 \n服部 憲知  /  島崎 望  /  兼子 慎哉  /  りお\n\n●原画\n小笠原 篤  /  斎藤 暖  /  竹花 健吾\n相音 光  /  菅原 裕幸  /  黄捷\n忍田 雄介  /  岩井田 夏帆  /  大田 真由\n堂 佳織  /  小琳  /  t19er  /  山名 めぐみ\n福永 なぎさ  /  堀 虎ノ介  /  大貫 巧  /  山田 伸一郎\n林 隆祥  /  鳴海 陽太  /  松本 美雪  /  菅原 美由紀\n曾品喬  /  翁靖翔  /  范言新  /  蔣平翊\n謝堯璿  /  shho  /  百藤  /  黄翔麟\n\n●第二原画\n宮崎 瞳(オレンジ)  /  小林 操穂 \n久保 大翔  /  鈴華 勇太  /  CCAT\n[サテライト]\n佐藤 優帆  /  久徳 萌乃佳\n\n●動画検査\n中野 洋平\n\n●動画監修\n北澤 康幸\n\n●動画\n[CONTRAIL]\n木村 文香  /  田中 沙樹  /  川渕 由奈\n土谷 優元  /  大田 真由  /  中村 惟杏\n牧野 ひなこ  /  丸田 萌依  /  桑原 麻利絵\n阿部 志保  /  中野 洋平\n\n増子 裕美  /  富沢 恵子  /  金原 沙耶（スタジオコロリド京都）\n尾山 景子  /  梅林 由加里\n亜細亜堂  /  すたじおかぐら  /  FELIX FILM\nスタジオたくらんけ  /  Snowdrop  /  サンライズ\n\n●色彩設計補\n若井 あゆ（コミックス・ウェーブ・フィルム）\n\n●色指定 / 検査\n鎌田 千賀子\n\n●仕上げ\n[アニタス神戸]\n西脇 洋平  /  吉木 絵理  /  本田 怜也  /  時尾 愛華  /  長谷川 拓哉\nデファー  /  スタジオエル  /  D-COLORS  /  MAPPA \n\n●デジタル動仕\nスタジオバス 　/ 　アイリスメディア\n\n●TP修正\n宮崎 瞳(オレンジ)  /  金原 沙耶（スタジオコロリド京都）\n\n●ラインテスト\n株式会社カスケード\n\n●背景美術\n[でほぎゃらりー]\n眞﨑 萌  /  山田 早紀\n美術制作管理  : 小林 毅 \n\n●3DCG\n[MAPPA]\n黒岩 あい  /  喜入 敦\n\n●2D素材テロップ翻訳\nHeri Chon  /  楊晴  /  Mariam Algammal   /   Salma Medhat\n\n●2Dワークス\n岩淵 恵\n\n●ハーモニー\nAurore Lopez\n\n●撮影\n[MAPPA]\n藤田 健太  /  礒山 わかな  /  十田 知香  /  小西 莉央\n\n●編集\n寶藏 旬也\n\n●音響\n音響効果  : 中野 勝博\n録音調整  : 星野 賢爾\n録音助手  : 川村 紗穂\n録音スタジオ  : dugout studio\n音響制作担当  : 岡田 拓郎\n音響制作  : dugout\n\n●制作宣伝\n金 暁君\n\n●制作進行\n佐藤 華子  /  川嶋 稚羽矢\n\n●制作デスク\n西 建人\n\n●アニメーションプロデューサー\nせきね あやこ\n\n●企画\n大塚 学\n\n●アニメーション制作\nCONTRAIL\nhttps://contrail.tokyo/\nhttps://twitter.com/CONTRAIL_info\n--\n#YOASOBI #セブンティーン #はじめての",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/0yoM7ETNPIY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/0yoM7ETNPIY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/0yoM7ETNPIY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/0yoM7ETNPIY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/0yoM7ETNPIY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 17,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "0yoM7ETNPIY"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "yUKxgrpaa9zKs_Hgus7BEvTwtf0",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLm1oM0hiMFVpN1pz",
+      "snippet": {
+        "publishedAt": "2023-03-22T03:22:53Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "#YOASOBI #海のまにまに",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/mh3Hb0Ui7Zs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/mh3Hb0Ui7Zs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/mh3Hb0Ui7Zs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/mh3Hb0Ui7Zs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/mh3Hb0Ui7Zs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 18,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "mh3Hb0Ui7Zs"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "QseYpOlX9w2SnZ5jy1t6glDY4lo",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLjdHMG92dFBxSG5J",
+      "snippet": {
+        "publishedAt": "2023-03-21T11:00:07Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "YOASOBI「海のまにまに」Official Music Video",
+        "description": "Streaming & Download : https://orcd.co/yoasobi_uminomanimani\nMusic : Ayase (https://twitter.com/ayase_0404)\nVocal : ikura (https://twitter.com/ikutalilas)\n\n原作：辻村深月「ユーレイ」from 『はじめての』(水鈴社 刊)\nhttps://www.yoasobi-music.jp/hajimeteno/\n\n-あらすじ\n家出をして海沿いの駅に降り立った私は、花束が手向けられた夜の広場で、突然、不思議な女の子から声をかけられた。\n\nインスト音源はこちら\nhttps://piapro.jp/t/KrLM\n\nYOASOBI初のアリーナツアー「YOASOBI ARENA TOUR 電光石火」\n2023年4月5日からいよいよ開幕！\nチケット↓\nhttps://www.yoasobi-music.jp/news/550417\n--\n夜の合間を縫うように\n走る電車の中ゆらり\n後ろ向きに流れる景色をひとり\n座って　見ていた　見ていた\n\n昼下がりの陽射しは\n夕陽のオレンジ色に染まって\n藍色の空に押し潰されていく\nその最後の光を惜しむように\n目で追いかけたのは\n今日で　バイバイ　だから\n\n明日を捨てる為に飛び出した逃避行\n片道分の切符で行けるとこまで行くの\nどこにも居場所なんて無い私をこのまま\n夜に置いてって　置いてって\n\n不意に窓から見えた景色が暗闇に\n気付いたあれはそうだきっと夜の海\n出来心に手を引かれて降りた海辺の町\n波の音にただ導かれるように歩く\n誰かに呼ばれるように\n近付いた海のほとり\nここにはひとり\nもうこのままいっそ体をここに\n\nなんて考えていた私の前に\n突然現れた君は\n月明かりの下\n青白い肌\n白のワンピース\n「こんなとこで何しているの？」\nなんて急に尋ねるから\n言葉に詰まりながら\n「海を、見に」\n\n君は何かを取り出した\nそれは少し古い花火セット\nそこで気付いた\n彼女はコンクリートの上\n裸足だった\n\n今日で全部終わりにすると決めたから\nきっと私があの世界に近付いたから\n視えてしまった出会ってしまった\nそんな君と二人で\n花火の封を切った\n\nなかなか点かない花火に火を近付けながら\n私がここに来た理由を君は当ててみせた\nそして何度もやめなよって\n真剣な眼差しで言った\nだけど…\n\nその瞬間この手の先で光が弾けた\n思わず「点いた！」と二人で揃えて叫んでた\nこれでもかと輝く火花の\n鋭い音が響いた　響いた\n\nゆっくり眺める暇もなく消えていく輝きを\nもったいなくて最後の一瞬まで追いかけた\n電車の窓から見えた\n最後の太陽を惜しんだように\n追いかけた\nやっぱり　私\n\nねえ夜が明けたら君は\nどこかへ消えてしまうのかな\n\n夜の帳を抜け出して\n朝の光で目が覚めた\n隣を見ると当たり前のように眠る\n君の姿\n--\n○Music Video\n監督　土海明日香 https://twitter.com/dokai_asuka\n副監督　史耕 https://twitter.com/osato_9g\n作画監督　成瀬藍\n仕上監督　さくらっちょ\n美術監督　みちのく\n撮影監督　tyao\nアニメーション制作　騎虎\n--\n#YOASOBI #海のまにまに #はじめての",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7G0ovtPqHnI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7G0ovtPqHnI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7G0ovtPqHnI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/7G0ovtPqHnI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/7G0ovtPqHnI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 19,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "7G0ovtPqHnI"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "p-0SsHj-toBtNP8c--jCAvBwZU4",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLk9lcUxfRFdwU0ZZ",
+      "snippet": {
+        "publishedAt": "2023-03-14T11:00:29Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "YOASOBI「海のまにまに」Music Video Teaser",
+        "description": "2023.3.21(Tue) 20:00 Music Video プレミア公開！\nhttps://youtu.be/7G0ovtPqHnI\n\n○Streaming & Download is now avairable!\nhttps://orcd.co/yoasobi_uminomanimani\n\n原作：辻村深月「ユーレイ」from 『はじめての』(水鈴社 刊)\nhttps://www.yoasobi-music.jp/hajimeteno/\n\n-あらすじ\n家出をして海沿いの駅に降り立った私は、花束が手向けられた夜の広場で、突然、不思議な女の子から声をかけられた。\n--\n#YOASOBI #ユーレイ #辻村深月",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OeqL_DWpSFY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OeqL_DWpSFY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OeqL_DWpSFY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OeqL_DWpSFY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 20,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "OeqL_DWpSFY"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "9ZJVrlm2ZMd85kYKH2T1nmGZpQY",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLmwxY0thT3pGVUFN",
+      "snippet": {
+        "publishedAt": "2023-03-13T09:21:25Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "#YOASOBIアドベンチャー MV公開！",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/l1cKaOzFUAM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/l1cKaOzFUAM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/l1cKaOzFUAM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/l1cKaOzFUAM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/l1cKaOzFUAM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 21,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "l1cKaOzFUAM"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "KtHOfMmWoxR1Ofu3Or0ZQJsg1g4",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLjM2T3pYVU5vUUZV",
+      "snippet": {
+        "publishedAt": "2023-03-11T08:26:44Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "MV公開しました！#YOASOBIアドベンチャー #ユニ春 #USJ #ユニバ #ハリドリ",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/36OzXUNoQFU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/36OzXUNoQFU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/36OzXUNoQFU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/36OzXUNoQFU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/36OzXUNoQFU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 22,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "36OzXUNoQFU"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "rme1tgy5nUutoqXcCTP23p3iTXE",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLkF2M3hhWmtWcEpz",
+      "snippet": {
+        "publishedAt": "2023-03-11T01:00:11Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "YOASOBI「アドベンチャー」Official Music Video",
+        "description": "Streaming & Download : https://orcd.co/adventure\nMusic : Ayase (https://twitter.com/ayase_0404)\nVocal : ikura (https://twitter.com/ikutalilas)\n\nGuitar : AssH (https://twitter.com/AssH_Guitarist)\n\n原作：「レンズ越しの煌めきを」(著 菜葵)\nhttps://www.usj.co.jp/web/ja/jp/news/2022/1012\n-あらすじ\nユニバーサル・スタジオ・ジャパン－－。15歳の私にとってそこは遥か遠くにある「夢」の空間だった。\nさまざまなことが制限された世の中で、待ち焦がれた瞬間を仲間と分かち合う歓びがエモーショナルに描かれた瑞々しいエピソード。\n\n2023年2月1日(水)より、新曲「アドベンチャー」がお気に入りのBGMを選んで、乗車中に聴きながら目の覚めるようなスリルと開放感を体験できる大人気のライド・アトラクション「ハリウッド・ドリーム・ザ・ライド」に期間限定搭載中！\nhttps://www.usj.co.jp/web/ja/jp/attractions/hollywood-dream-the-ride\n\n2022年10月に実施した「YOASOBI×ユニ春 学生応援！エピソード募集キャンペーン」に寄せられた中から、楽曲の原作としてAyase＆ikuraが選出させていただいたエピソードです。応募者の皆さま、本当にありがとうございました！\n\n2023年3月11日ユニバーサル・スタジオ・ジャパンでおこなわれたユニ春！ライブ2023、現地レポートはこちら！\nhttps://note.com/yoasobi_staff/n/n645dacb84020\n\nインスト音源はこちら：https://piapro.jp/t/_Uyj\n\n○ユニバーサル･スタジオ･ジャパン『ユニ春』 新CM\nhttps://www.youtube.com/watch?v=O2kZ5OFwiCg&t=0s\n--\nいつもの一日から抜け出して\n目が覚めるような冒険の舞台へ\n回る地球儀を目印に\nさあ今会いに行こう\n特別な一日に\n\n緑萌ゆる新しい季節に\n一人見つめたブルーライト\n顔も知らない友達にも満たないクラスメイト\n想定外の暮らし\n\nこんなんじゃない\n妄想した理想と真反対に\n淡々と過ぎる毎日\nでもやっと会えるね\n想像と現実が交わって\n高鳴る胸押さえられない\n\n約束の場所は\n夢見ていた場所\n忘れられない一日が\n今始まる\n\n待ちに待った今日は特別な日\n日常から少しはみ出して\nほらシャッターを切って写し出せば\nどうしたって\n零れるような笑顔ばかり\n\n誰かが言い出して飛び乗ったコースターも\nお揃いのカチューシャも\nかけがえの無い瞬間で溢れてる\n待ち時間さえも愛しく思える\n\n次はどこに行こうか\n軽やかに歩く\n不思議なほどに\n気が付けば過ぎている時間 \n\n太陽が沈んだ街を飾る\n光が織りなすパレードに\n心奪われ噛み締める\n本当にここに来れて良かったな\n\n待ちに待った今日は特別な日\nいつも通りから飛び出して\nほらシャッターを切っても写せない\n思い出がいつでも待っている\n春も夏も秋も冬も\nこの場所で見つけた笑顔が\nひらひらと幾つも積もっていく\nさあ次はいつ会いに行けるかな\n\n当たり前から抜け出して\n限界の無い冒険の舞台へ\n回る地球儀を目印に\nさあ今会いに行こう\n特別な一日に \n--\nCreative Producer：Yasuaki Nakagawa\nCreative Director：Rei Hanada\nBusiness Producer : Shunsuke Kimura\n\nDirector：Jun Tamukai (CONNECTION)\n\nCinematographer：Masatoshi Toyonou (SPICE)\n1st Camera Assistant：Shinnosuke Mizuno (SPICE)\n2nd Camera Assistant：Ryo Kawasaki (SPICE)\n3rd Camera Assistant：Kouyou Morita (SPICE)\n\nLighting Director：Tomoyuki Ikeda\n1st Lighting Assistant：Takaori Kidokoro \n2nd Lighting Assistant：Masahiro Inoue/ Yoshikazu Hirose / Shu Yositake / Tatsuya Yamazaki / Tomokazu Sato\nLighting Support Staff：Yosuke Nuka (ARC SYSTEM)\n\nChoreographer：Seishiro (P.I.C.S. management)\nDancer：YUKINA\nCharacter Designer：imid\nProduction Designer：Katsuaki Goto\nStylist：Kenshi Kaneda\nMotion Capture System：XSENS MVN (Zero C Seven)\n\nVFX Supervisor：Takahiro Ota (KASSEN)\nVFX Lead Designer：Kai Inoue (KASSEN)\nVFX Designer：Akiko Aoyama (KASSEN) / Tomoyo Akiyama (KASSEN)\nVFX Producer：Yusuke Makita (KASSEN)\nOnset Supervisor：Ryuji Yagami (KASSEN) \nColorist：Hisashi Nemoto (KASSEN)\nColorist Manager：Heun Lee (KASSEN)\n\nCG Director：Satoshi Takeno (MontBlanc Pictures)\nCG Producer：Taiyo Sato (KASSEN) / Kouhei Miki (KASSEN / HASH)\nCG Production Maneger：Saori Yamagami (HASH) / SHIKO (KASSEN)\n\nCG Producer：Futoshi Nagata (AnimationCafe / CELAVIE)\nCG Production Maneger：Yoshihiro Tanabe (AnimationCafe / CELAVIE)\nCG Animation SV：Shuto Fujisawa (AnimationCafe/CELAVIE)\nCG Animator：Shota Ogura (AnimationCafe / CELAVIE) / Ellie Shimogori (AnimationCafe / CELAVIE) / Ko Yasuda (AnimationCafe / CELAVIE)\n\nTechnical Artist：Hiroyuki Okada (Modeling Cafe) / Takafumi Nakayama (Modeling Cafe)\nRigger：Masashi Mukai (Modeling Cafe) / Ayano Usuda (Modeling Cafe)\n\nCG Animator：Leonie-Marie Lei Arimura (MontBlanc Pictures) / Fuuka Kawaguchi (MontBlanc Pictures)\n\nCG Modeler：Kei Kidera (HASH)\nCG Animator：Kotaro Azuma (HASH)\n\nCG Modeler：Tsukasa Osawa (Alchemy)\nCG Designer：Sanghye Oh \n\nCG Producer：Kosuke Kurokawa (Welz Animation Studios)\nCG Production Maneger：Ryouta Ishi (Welz Animation Studios)\nCG Designer：Shoichi Enomoto (Welz Animation Studios)\nCompositor：Kana Hashimoto (Welz Animation Studios) / Tenna Inami (Welz Animation Studios)\n\nCG Producer：Kito Ogihara (Kilika Collection)\nCG Designer：Takahiro Saito (Kilika Collection) / Hiromi Matsushige (Kilika Collection) / Leo Ogihara (Kilika Collection)\n\nModeling Artist：Takehiko Hoashi (studio picapixels)\nMatch Move Artist ：Naoki Korematsu (CGSLAB)\nCG Animator：Hideki Kojo / Ryo Fujimoto\n\n2D Effects Production：mimoid\nAnimator：Takuto Kawakami (mimoid) / Kana Fukudome (mimoid)\n\nProducer：Mao Suzuki (P.I.C.S.)\nProduction Manager：Koichi Iwamoto (P.I.C.S.)\nProduction Assistant：Yuki Adachi (P.I.C.S.)/ Shogo Honda (P.I.C.S.) / Masakuni Tsujimoto (P.I.C.S.)/ Masakuni Sato (P.I.C.S.)/ Naoki Matsubara (P.I.C.S.)/ Ruka Sakuragi / Hironari Kimura\nProduction：P.I.C.S.\n\nSpecial Thanks：UNIVERSAL STUDIOS JAPAN\n\nTM & © 2023 Sesame Workshop\n© 2023 MARVEL\nTM & © Universal Studios. All rights reserved.\n--\n#YOASOBI #アドベンチャー #ユニ春",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Av3xaZkVpJs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Av3xaZkVpJs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Av3xaZkVpJs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Av3xaZkVpJs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Av3xaZkVpJs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 23,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "Av3xaZkVpJs"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "OddwwwoRl1YUmW8YjshEIztCCYY",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLjFjUlVLUzVuLWh3",
+      "snippet": {
+        "publishedAt": "2023-02-12T03:00:02Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "YOASOBI「アドベンチャー」teaser",
+        "description": "ユニバーサル･スタジオ･ジャパン『ユニ春』テーマソング「アドベンチャー」\nストリーミング＆ダウンロード配信中 https://orcd.co/adventure \nインスト音源はこちら：https://piapro.jp/t/_Uyj\n\n○原作：「レンズ越しの煌めきを」(著 菜葵)\nhttps://www.usj.co.jp/web/ja/jp/news/2022/1012 \n-あらすじ\nユニバーサル・スタジオ・ジャパン－－。15歳の私にとってそこは遥か遠くにある「夢」の空間だった。\nさまざまなことが制限された世の中で、待ち焦がれた瞬間を仲間と分かち合う歓びがエモーショナルに描かれた瑞々しいエピソード。\n\n2022年10月に実施した「YOASOBI×ユニ春 学生応援！エピソード募集キャンペーン」に寄せられた中から、楽曲の原作としてAyase＆ikuraが選出させていただいたエピソードです。応募者の皆さま、本当にありがとうございました！\n\n○ユニバーサル･スタジオ･ジャパン『ユニ春』 新CM\nhttps://youtu.be/O2kZ5OFwiCg\n\n○ユニ春！ ライブ 2023\n“絶対に忘れられない春の思い出作り”に豪華アーティストがパークでスペシャルライブを開催！\nYOASOBIは2023年3月11日に出演します！詳細は下記をご参照ください。\nhttps://www.usj.co.jp/web/ja/jp/campaign/students/spring-2023\n--\n#YOASOBI #アドベンチャー #ユニ春",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1cRUKS5n-hw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1cRUKS5n-hw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1cRUKS5n-hw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1cRUKS5n-hw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1cRUKS5n-hw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 24,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "1cRUKS5n-hw"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "snv4Mu2iLcwEXagDxpbNwHGCK1A",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLjVQaUxpMUxvaWZn",
+      "snippet": {
+        "publishedAt": "2023-02-04T03:33:29Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "Ayase「 SHOCK!」MV公開！ #AyaseSHOCK #バディダディ #shorts",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5PiLi1Loifg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5PiLi1Loifg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5PiLi1Loifg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5PiLi1Loifg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5PiLi1Loifg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 25,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "5PiLi1Loifg"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "w-e_LC4ji8pcfj-90_n0iRxTjrU",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLll4ak1WUjd0MzZF",
+      "snippet": {
+        "publishedAt": "2023-02-03T11:00:10Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "Ayase「SHOCK!」Official Music Video",
+        "description": "ストリーミング＆ダウンロード配信中！\nhttps://orcd.co/ayase_shock\n作詞・作曲・編曲：Ayase\n\nGuitar : AssH (https://twitter.com/AssH_Guitarist)\n\nTVアニメ『Buddy Daddies』オープニングテーマ \nhttps://buddy-animeproject.com/\n\n◯Twitter\nAyase (@Ayase_0404) https://twitter.com/Ayase_0404\nAyase Staff (@Ayase_Staff) https://twitter.com/Ayase_staff\n\n◯Instagram\n(@ayase_0404) http://instagram.com/ayase_0404\n--\nねえ愛したいこれは真実？\nただ愛されたいのは不誠実？\nもうどうすればいい\nどうすればいいのか\n\n街はいつも通り今日も\n惚れた腫れたで色めきたつ\nエキストラは家に帰るだけ\n不貞腐れてやしないさ\n\nそんな日々を切り裂くように\n突然現れた君は\n痺れるような笑顔で僕の\n心を砕いて見せた\n\nねえ愛したいこれは真実？\nただ愛されたいのは不誠実？\nもうどうすればいい\nどうすればいいのか\nって分からないよ\nその頭の中が分かんない\nでも愛想は良いとかずるいよ\nこうやってまた君のペースに飲まれてく\nそうやってまたほら振り回されてる\n\n傷付かないように鍵をかけた\n扉にもたれて眠りにつく\n変われないのは変わらないから\nそんなことは分かってるけど\n\nもう何も失いたくなくて\n大切なものが増えることに\n怯えていた\n情けない僕を\n笑い飛ばしてくれよ\n\nさあ愛し愛されていこうぜ\nもう馬鹿なフリしていようぜ\nまあどうにかなるさ\nどうにでもなるだろ\n思うがままに\n今夜会いに行くけれどいいかい？\nいや大した話じゃないよ\nこれが愛なのか確かめさせてくれ\nこれからも好きに振り回してくれ\n\nいつまでも好きに振り回してくれ\n--\n○Music Video\nDirector: Margt (PERIMETRON)\nDigital Artist: mesoism (PERIMETRON\n--\n#Ayase #SHOCK! #バディダディ",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YxjMVR7t36E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YxjMVR7t36E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YxjMVR7t36E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YxjMVR7t36E/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YxjMVR7t36E/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 26,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "YxjMVR7t36E"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "RSDW1kctix3WieLTULr4_S8z43A",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLnJlSU5zYkZRZnJN",
+      "snippet": {
+        "publishedAt": "2022-12-10T16:00:32Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "YOASOBI / Romance (「大正浪漫」English Ver.)",
+        "description": "YOASOBI English Ver. 2nd EP『E-SIDE 2』In Stores\nhttps://orcd.co/yoasobi_e-side2\n--\nMusic : Ayase (https://twitter.com/ayase_0404)\nVocal : ikura (https://twitter.com/ikutalilas)\nTranslation：Konnie Aoki(https://twitter.com/koniaoki) \n\nOff Vocal\nhttps://piapro.jp/t/RigK\n\n--\nHappening so suddenly, there it was \nAn incident that caught me off guard\nWhat started out with a note sent to me\nThough out of reach, back in distant generations \nCame from you to me\nSo hard to conceive this type of meeting\n\nNow you can find in my era, convenient new items\nHere's the way we live, unknown to you\nPouring in characters while interchanging these feelings\nUnaware, a blossom of romance grew\n\nIn no way can we ever meet up in real life\nYou and I evolve, away, in domains apart\nSewing up rows and lines, stacks of hues of feelings\nProfile not even known, indefinite for now\n\nDon't mind conditions, expecting all of your words\nWaiting goes on, I can't stand that\nIt is true, our times differ \nBut we go far beyond all limitations on our way\nMe and you, me and you, are sending out our feelings\nIf my wish is coming true, I vow\nOne glance is all I need \nI want to meet you now \nI love you, that's why\n\nUnforeseen thought\nI was reminded of what's in your time\nIn history recorded to befall\nOccurs tomorrow, cause of all tears to fall\nTo let you know it now\nSomehow, I'm in need of a miracle\n\nSo, time went on as it flowed\nPassing through all seasons\nAll your letters, no longer reaching me\nThose words that can't come to me, but only hurt inside\nPressure onto my chest ensues\n\nWhat is found down the line, from a hundred years ago\n\"See it with my own two eyes\"\nAs you hoped, imagining the future\nRoad that I'm now taking, and still walking on\nThe sore feeling, still holding on\nI keep it locked inside my heart\n\nSo, at last, holding it, your letter that came to me\nRecognizing, I'm reminded of those long-awaited conveying’s\nThat I have, in my hands, for you went beyond that day\nThoughts you printed\nDesigned the last note of your love to me\nYou lived in your era, it's sure\nThe evidence of it all\nCrossing all generations, grasping it in my hands\nI gather all truth I can see, it's written onto this epoch\nIn time, I'll walk that way to let you know\n--\n●Music Video Staff\n\n■Director  :  Yusuke Takase\n■Character Design  :  Eisaku Kubonouchi\n■ Animation Directo  :  Yasuhiro Nakura\n■ Art Director  :  Shinji Kimura\n■ CG Director  :  Yuki Hirakawa\n■Character CG Director  :  Kohta Morie\n■ Animation Producer  :  Ryusuke Suzuki\n■CG Producer  :  Toshihiko Sakata\n■  Animation Production  :  SHAFT\n■ Key Animator\n  Shinya Nishizawa　\n  Kumiko Kawashima　\n  Yugo Ohashi　\n  Riku Honda　\n  Yuri Ichinose\n  Yasuhiro Nakura\n■2nd Key Animator\n  Asami Ueno　\n  Yoichiro Otani　\n  Ryo Shimura　\n■In=Between Animator\nPadilla Barquero Daniela　\nShino Yamada　\nJingyuan Xu　\nYujin Huh　\nMomoka Uchida　\nSakura Funayama　\nZhikai Yang\nYumena Tokudome　\nShintaro Kawakami　\nMoemi Sakurai　\nYukika Mori\nMinchun Huang \nHidehira Furukawa \nTomoko Murakami\nMiki Matsudo\nRina Takenawa\n■In=Between Supervisor\nKaho Katsuya\n■Color Planning/Color Stylist/Color Checker\nYasuko Watanabe\n■Paint\nAyami Hattori　\nYuko Kawakami　\nEn Yu Lin\nMichiko Kado\n■Animation Compositor\nTakayuki Aizu\n■CG Production\n(+Ring)\nKenta Katsuno \nAyaka Yamaguchi \nIwaki Tsukasa　\nMiura Daiki\nAkiho Yamada\n(LiPOGRAM)\nMiyu Kimura　Takuya Higashi Natsumi Kato\n(Modeling Bros)　\nShunsuke Imaizumi　Tasuku Minoura　Shunsuke Nakajo\n Fuka Kurotsuchi　Kaho Nariu\n（Freelance）\nYasuhito Matsuura　Satoshi Mitobe\n■Character CG Production\n(MORIE Inc.)\nTakahiro Shibano\nNaoto Tomita　Marie Shirai　Masato Tajima　\nKei Kidera　Koetsu Ogawa　Shuya Sugawara　Ayuko Kitaoka　\nKento Sakai　Ryo Nihara  Kotaro Azuma  Yousuke Ohno\n(Transistor Studio) \nHayato Kanayama\n■Online Editor\n Kenichi Sasaki   Takumi Kudo\n■Producer \n Ryoichiro Homma  Seifu Kuroda  Tatsuya Maekawa\n■Text Design\nSadanori Maeda\n■Production Manager\n Hao Feng  Tokiwa Harada\n■Specail Thanks\n(Graphinica)\nNao Hirasawa \nMiyu Otsuka\n■Previs \nLUDENS\nsankaku\n■Production\nSTARBASE\nHATCH Inc.\n--\n#YOASOBI #Romance #ESIDE2",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/reINsbFQfrM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/reINsbFQfrM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/reINsbFQfrM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/reINsbFQfrM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/reINsbFQfrM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 27,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "reINsbFQfrM"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "eIj1v-C5Uqz1lxNtbQlHk6TLgXQ",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLms0ZTdHbUluU3h3",
+      "snippet": {
+        "publishedAt": "2022-12-10T16:00:17Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "YOASOBI / Love Letter (「ラブレター」English Ver.)",
+        "description": "YOASOBI English Ver. 2nd EP『E-SIDE 2』In Stores\nhttps://orcd.co/yoasobi_e-side2\n--\nMusic : Ayase (https://twitter.com/ayase_0404)\nVocal : ikura (https://twitter.com/ikutalilas)\nBrass Arrangements : Mikio Gohma\nConductor : Takashi Umeda\nBrass Band : OSAKA TOIN Symphonic Band\nTranslation：Konnie Aoki(https://twitter.com/koniaoki) \n--\nOff Vocal\nhttps://piapro.jp/t/7HhM\n--\nI feel delighted, to music I adore\nI say true thoughts I've always had in mind of you\nSomehow, I need you to receive it\nIt's something that I needed to express\nThough I'm a little shy \nI can't let go of thoughts I'm holding inside, I know\nCan I write every meaning to convey\nHoping this letter is in your reach\nIn spite of any situation\nEvery line of your voice reaching into my head\nProvides a power needed inside\n\nHey…\nI want to smile at all and every moment \nBut sometimes I hurt inside, I'm out of fuel\nBut, again, all I would have to do is stretch my hand\nTo you, reach out\nThe world would be so bright\nAnd every shade of it colorful\nLike all flowers bloom beauty\n\nWhen laughing, crying, no matter what happens\nSelection's up to me, whenever, tune in\nSo, today, I'm wondering what type of you I'll find\nUntil this world is gone, over, and coming to an end\nI'm wishing you resound, always\n\nIt's only you I think of, I always need you to be around\nWhen feeling like I gotta move it with your flow\nWhen feeling like the body is about to blow\nYou always did have my back \nAnd know that you truly saved my life\nInside my heart, it's moving, I cannot resist\nInside my heart, it's filling with a lot of bliss\n\nI want to be there and be by you\nEver surrounding me, staying close\nFrom now, evermore\nFor you are the one that I treasure\nHope you'll always be echoing\n\nCan I communicate every feeling\nPacked up into a letter you can read?\nDon't know if you’re understanding what I write\nThough I'm afraid you haven't\nI can hope that you received all I wanted to say\nSent you what it is that I have been trying to get out of my heart\nSo, you know, I cannot stand the thought of us not being acquainted\nConception of it scares me because I love you that much\n\nEvery thought I wrote, accept it right now\n\nSo, when laughing, crying, on and on, for so long\nI'll walk ahead again, do so forevermore\nSo harsh and dark, and painful things would pile up, but as you know\nThis world is huge and wide, it overflows\nNo matter the hour, the place, music’s pouring through\nAll I stand in front of and everything I’m waiting for\nIf I'm afraid, then what should be my next move\nDon't know what to say or do, I get so lost, and even though\nWhen I'm not feeling stable, as long as you are there by my side\nI'll keep on moving forward\n\nCalls out emotions hiding in my heart\nRolls out the motion deep in every thought\nIt’s true, only you, music I love\nAnd nothing comes even close to take its place\nSomehow, for centuries to yet come\nSomehow, keep on resonating\nEvermore, oh, truly, I am grateful\n--\n○Music Video Staff\nDirector : Satoru Ohno(THINKR)\nCharacter Design / Chief Animation Director : Yumi Nakamura\nAnimation Director : Kaori Fukui\nKey Animation : Fumio Matsumoto / Yoshito Narimatsu / Yu Fukuoka / Naoko Hayashi / Haruna Hashimoto / Mitsutaka Echigo\nIn-Between Animation : Xenron\nSenior Background Designer : banishment(FLAT STUDIO)\nDirector of 3DCGI : Shusaku Takayanagi\n3DCGI : banishment(FLAT STUDIO)\nDirector of Photography : Shusaku Takayanagi\nPhotography : Acca effe / Chiemi Irisa / Lucas Cisterne\nGraphic Design : Haruka Wakai\nProduction Manager : Shogo Saito\nProducer : Kohei Matsumoto(THINKR)\nAnimation Producer : Ryu Ishii(FLAT STUDIO)\nDirector : Satoru Ohno(THINKR)\nCharacter Design / Chief Animation Director : Yumi Nakamura\nAnimation Director : Kaori Fukui\nKey Animation : Fumio Matsumoto / Yoshito Narimatsu / Yu Fukuoka / Naoko Hayashi / Haruna Hashimoto / Mitsutaka Echigo\nIn-Between Animation : Xenron\nSenior Background Designer : banishment(FLAT STUDIO)\nDirector of 3DCGI : Shusaku Takayanagi\n3DCGI : banishment(FLAT STUDIO)\nDirector of Photography : Shusaku Takayanagi\nPhotography : Acca effe / Chiemi Irisa / Lucas Cisterne\nGraphic Design : Haruka Wakai\nProduction Manager : Shogo Saito\nProducer : Kohei Matsumoto(THINKR)\nAnimation Producer : Ryu Ishii(FLAT STUDIO)\n--\n#YOASOBI #LoveLetter #ESIDE2",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/k4e7GmInSxw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/k4e7GmInSxw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/k4e7GmInSxw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/k4e7GmInSxw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/k4e7GmInSxw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 28,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "k4e7GmInSxw"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    },
+    {
+      "kind": "youtube#playlistItem",
+      "etag": "0F6GTIugEzmUA_t6Hd501vJutwo",
+      "id": "VVV2cHJlZGpHOTNpZmJDUDFZNzdKeUZBLmdEUzVUM01hYXBR",
+      "snippet": {
+        "publishedAt": "2022-12-09T12:42:48Z",
+        "channelId": "UCvpredjG93ifbCP1Y77JyFA",
+        "title": "#Shorts #YOASOBI #たぶん #Tabun #HITCMANILA",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gDS5T3MaapQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gDS5T3MaapQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gDS5T3MaapQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gDS5T3MaapQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gDS5T3MaapQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ayase / YOASOBI",
+        "playlistId": "UUvpredjG93ifbCP1Y77JyFA",
+        "position": 29,
+        "resourceId": {
+          "kind": "youtube#video",
+          "videoId": "gDS5T3MaapQ"
+        },
+        "videoOwnerChannelTitle": "Ayase / YOASOBI",
+        "videoOwnerChannelId": "UCvpredjG93ifbCP1Y77JyFA"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 169,
+    "resultsPerPage": 30
+  }
+}

@@ -9,7 +9,7 @@ import XCTest
 @testable import skywatch_pretest
 
 final class PlayListViewModelTests: XCTestCase {
-    var viewmodel = PlayListViewModel()
+    var viewmodel = PlayListViewModel(true)
     override func setUp() async throws {
         print("-----setUp-----")
         //本地端讀值
