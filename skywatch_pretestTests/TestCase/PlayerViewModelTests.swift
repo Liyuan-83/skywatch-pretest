@@ -14,13 +14,13 @@ final class PlayerViewModelTests: XCTestCase {
         print("-----setUp-----")
         //本地端讀值
         guard !viewmodel.loadFromLocal() else { return }
-        var playListVM = PlayListViewModel()
+        var playListVM = PlayListViewModel(true)
         guard await playListVM.fetchData(),
               let channelInfo = playListVM.channelInfo,
               let videoInfo = playListVM.showList.first(where: {$0.id == test_vidoeID})
         else { throw TestError.InitFail }
         
-        viewmodel = PlayerViewModel(channelInfo: channelInfo, videoInfo: videoInfo)
+        viewmodel = PlayerViewModel(channelInfo: channelInfo, videoInfo: videoInfo, true)
         guard await viewmodel.fetchData() else { throw TestError.InitFail }
     }
     

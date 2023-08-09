@@ -55,10 +55,6 @@ struct VideoInfo: Codable {
             self.thumbnails = thumbnails
         }
     }
-    
-    init(with res:YoutubeApiResponse){
-        
-    }
 }
 
 

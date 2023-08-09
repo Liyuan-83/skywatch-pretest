@@ -25,9 +25,10 @@ struct PlayerViewModel: ViewModelProtocol {
         return _forTest ? MockHttpManager<CommentThreadList>() : HttpManager<CommentThreadList>()
     }
     
-    init(channelInfo: ChannelInfo, videoInfo: VideoInfo) {
+    init(channelInfo: ChannelInfo, videoInfo: VideoInfo, _ isForTest:Bool = false) {
         _channelInfo = channelInfo
         _videoInfo = videoInfo
+        _forTest = isForTest
     }
     
     mutating func fetchData() async -> Bool {

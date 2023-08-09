@@ -9,7 +9,6 @@ import Foundation
 
 protocol ViewModelProtocol : Codable{
     var viewModelName : String { get }
-    var data : Data? { get }
     var _forTest : Bool { get set }
     
     func saveToLocal()
@@ -23,17 +22,12 @@ extension ViewModelProtocol{
         return String(describing: Self.self)
     }
     
-    var data : Data? {
-        let encoder = JSONEncoder()
-        guard let data = try? encoder.encode(self) else { return nil }
-        return data
-    }
-    
     func clearFromLocal(){
         UserDefaults.removeFromStandard(viewModelName)
     }
     
     func saveToLocal(){
+        guard !_forTest else { return }
         _ = UserDefaults.saveToStandard(self, viewModelName)
     }
     
