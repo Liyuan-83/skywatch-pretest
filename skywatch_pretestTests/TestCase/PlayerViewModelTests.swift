@@ -13,7 +13,6 @@ final class PlayerViewModelTests: XCTestCase {
     override func setUp() async throws {
         print("-----setUp-----")
         //本地端讀值
-        guard !viewmodel.loadFromLocal() else { return }
         var playListVM = PlayListViewModel(true)
         guard await playListVM.fetchData(),
               let channelInfo = playListVM.channelInfo,
@@ -22,6 +21,14 @@ final class PlayerViewModelTests: XCTestCase {
         
         viewmodel = PlayerViewModel(channelInfo: channelInfo, videoInfo: videoInfo, true)
         guard await viewmodel.fetchData() else { throw TestError.InitFail }
+        //確保每次fetch data都有保存到本地端
+        XCTAssertTrue(viewmodel.loadFromLocal())
+    }
+    
+    override func tearDown() async throws {
+        //測試結束要把測試用數據清除
+        viewmodel.clearFromLocal()
+        XCTAssertFalse(viewmodel.loadFromLocal())
     }
     
     func testInitViewModel() async throws {
@@ -48,10 +55,5 @@ final class PlayerViewModelTests: XCTestCase {
         for comment in list{
             XCTAssertNotNil(comment.thumbnail)
         }
-    }
-    
-    func testClearViewModelFromLocal() async throws {
-        viewmodel.clearFromLocal()
-        XCTAssertFalse(viewmodel.loadFromLocal())
     }
 }

@@ -13,8 +13,13 @@ final class PlayListViewModelTests: XCTestCase {
     override func setUp() async throws {
         print("-----setUp-----")
         //本地端讀值
-        guard !viewmodel.loadFromLocal() else { return }
         guard await viewmodel.fetchData() else { throw TestError.InitFail }
+        XCTAssertTrue(viewmodel.loadFromLocal())
+    }
+    
+    override func tearDown() async throws {
+        viewmodel.clearFromLocal()
+        XCTAssertFalse(viewmodel.loadFromLocal())
     }
     
     func testInitViewModel() async throws {
@@ -54,10 +59,5 @@ final class PlayListViewModelTests: XCTestCase {
             XCTAssertNotNil(videoInfo.thumbnails)
             XCTAssertNotNil(videoInfo.createDate)
         }
-    }
-    
-    func testClearViewModelFromLocal() async throws {
-        viewmodel.clearFromLocal()
-        XCTAssertFalse(viewmodel.loadFromLocal())
     }
 }

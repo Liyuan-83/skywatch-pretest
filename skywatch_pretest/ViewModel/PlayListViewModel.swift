@@ -59,6 +59,8 @@ struct PlayListViewModel: ViewModelProtocol {
               let list = nextPageList.list else { return .fail }
         _nextPageToken = nextPageList.nextPageToken
         _allList += list
+        //儲存至本地
+        saveToLocal()
         return .success
     }
 }

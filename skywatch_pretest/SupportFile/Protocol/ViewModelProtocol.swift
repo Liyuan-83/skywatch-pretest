@@ -27,15 +27,10 @@ extension ViewModelProtocol{
     }
     
     func saveToLocal(){
-        guard !_forTest else { return }
         _ = UserDefaults.saveToStandard(self, viewModelName)
     }
     
     mutating func loadFromLocal() -> Bool{
-        guard !_forTest else {
-            clearFromLocal()
-            return false
-        }
         return UserDefaults.getFromStandard(&self, viewModelName)
     }
 }

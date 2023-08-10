@@ -31,13 +31,6 @@ struct PlayerViewModel: ViewModelProtocol {
         _forTest = isForTest
     }
     
-    mutating func fetchData() async -> Bool {
-        guard await loadCommentList() else { return false }
-        //儲存至本地
-        saveToLocal()
-        return true
-    }
-    
     var channelInfo : ChannelInfo? {
         return _channelInfo
     }
@@ -62,6 +55,15 @@ struct PlayerViewModel: ViewModelProtocol {
         return _commentList?.list
     }
     
+    mutating func fetchData() async -> Bool {
+        guard let id = _videoInfo?.id else { return false }
+        guard let comments = await CommentThreadList.fetchDataFrom(_commentService, .firstPage(id: id)) else { return false }
+        _commentList = comments
+        //儲存至本地
+        saveToLocal()
+        return true
+    }
+    
     mutating func loadMoreComment() async -> NextPageStatus{
         guard let id = _videoInfo?.id,
               let token = _commentList?.nextPageToken else { return .noMoreData }
@@ -69,16 +71,9 @@ struct PlayerViewModel: ViewModelProtocol {
               let list = nextPagecomments.list else { return .fail }
         _commentList?.nextPageToken = nextPagecomments.nextPageToken
         _commentList?.list! += list
+        //儲存至本地
+        saveToLocal()
         return .success
-    }
-}
-
-extension PlayerViewModel{
-    private mutating func loadCommentList() async -> Bool{
-        guard let id = _videoInfo?.id else { return false }
-        guard let comments = await CommentThreadList.fetchDataFrom(_commentService, .firstPage(id: id)) else { return false }
-        _commentList = comments
-        return true
     }
 }
 

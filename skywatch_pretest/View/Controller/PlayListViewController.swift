@@ -85,7 +85,6 @@ class PlayListViewController: UIViewController {
                     }
                     if status == .success{
                         viewmodel = vm
-                        viewmodel.saveToLocal()
                     }
                     tableView.mj_footer?.endRefreshing()
                 }

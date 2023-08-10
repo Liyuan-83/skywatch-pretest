@@ -161,7 +161,6 @@ class PlayerViewController: UIViewController {
             descriptionLabel.text = model?.videoDescription
             channelImg.layer.cornerRadius = channelImg.bounds.midX
             tableView.reloadData()
-            viewmodel.saveToLocal()
         }.store(in: &cancelables)
     }
 }
@@ -186,6 +185,7 @@ extension PlayerViewController : YTPlayerViewDelegate{
         print(playTime)
         guard viewmodel != nil else { return }
         viewmodel.currentTime = playTime
+        viewmodel.saveToLocal()
     }
 }
 
