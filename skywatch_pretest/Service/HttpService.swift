@@ -1,23 +1,23 @@
 //
-//  HttpManager.swift
+//  HttpService.swift
 //  skywatch_pretest
 //
 //  Created by liyuan chang on 2023/7/22.
 //
 
 import Foundation
-enum HttpManagerError : Error{
+enum HttpServiceError : Error{
     case httpError, decodeError
 }
 
-class HttpManager<ResModel: ModelProtocol> : ServiceProtocol{
+class HttpService<ResModel: ModelProtocol> : ServiceProtocol{
     func fetchData(_ para:[String:Any],_ part:[APIPart]) async -> Result<ResModel.ModelType, Error>{
         var paraDic = para
         let partStr = part.map({$0.rawValue}).joined(separator: ",")
         paraDic["part"] = partStr
         do{
             let data = try await sendHttpRequest(ResModel.apiType, paraDic)
-            guard let model = try ResModel(with: data) as? ResModel.ModelType else { throw HttpManagerError.decodeError }
+            guard let model = try ResModel(with: data) as? ResModel.ModelType else { throw HttpServiceError.decodeError }
             return .success(model)
         }catch{
             return .failure(error)
@@ -25,7 +25,7 @@ class HttpManager<ResModel: ModelProtocol> : ServiceProtocol{
     }
 }
 
-extension HttpManager{
+extension HttpService{
     internal enum HttpError : Error{
         case UrlInitFail, NotFound, DecodeError
     }

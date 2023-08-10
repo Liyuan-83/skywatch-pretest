@@ -8,15 +8,15 @@
 import Foundation
 
 // MARK: - ChannelInfo
-struct ChannelInfo: ModelProtocol, Codable {
+struct ChannelInfo: ModelProtocol {
     typealias ModelType = ChannelInfo
     var name : String?
     var description : String?
     var thumbnails : URL?
     var uploadID : String?
-    var videoCount : Int
-    var subscriberCount : Int
-    var viewCount : Int
+    var videoCount : Int = 0
+    var subscriberCount : Int = 0
+    var viewCount : Int = 0
     
     init(with res: YoutubeApiResponse) throws {
         guard res.kind == .channel else { throw DecodeError.KindNotMatch }
@@ -32,12 +32,21 @@ struct ChannelInfo: ModelProtocol, Codable {
         self.viewCount = Int(res.items.first?.statistics?.viewCount ?? "") ?? 0
     }
     
+    static var paraDic: [String : Any]?
+}
+
+//MARK: 固定數值
+extension ChannelInfo{
     static var apiType: Api_type{
         return .channals
     }
     
     static var localResourceName: String{
         return "ChannelData"
+    }
+    
+    static var partArr: [APIPart] {
+        return [.snippet, .contentDetails]
     }
 }
 

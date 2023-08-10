@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MockHttpManager<ResModel: ModelProtocol> : ServiceProtocol{
+class MockHttpService<ResModel: ModelProtocol> : ServiceProtocol{
     func fetchData(_ para: [String : Any], _ part: [APIPart]) async -> Result<ResModel.ModelType, Error> {
         let fileName = ResModel.localResourceName + (para["pageToken"] == nil ? "" : "_next")
         //讀取本地端資訊
@@ -16,7 +16,7 @@ class MockHttpManager<ResModel: ModelProtocol> : ServiceProtocol{
               let data = try? Data(contentsOf: url),
               let res = try? decoder.decode(YoutubeApiResponse.self, from: data),
               let model = try? ResModel(with: res) as? ResModel.ModelType
-        else { return .failure(HttpManagerError.decodeError) }
+        else { return .failure(HttpServiceError.decodeError) }
         return .success(model)
     }
 }

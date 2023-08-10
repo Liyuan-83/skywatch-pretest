@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CommentThreadList : ModelProtocol, Codable{
+struct CommentThreadList : ModelProtocol{
     typealias ModelType = CommentThreadList
     var videoID : String?
     var list : [CommentThread]?
@@ -23,13 +23,21 @@ struct CommentThreadList : ModelProtocol, Codable{
         }
         self.list = arr
     }
-    
+    static var paraDic: [String : Any]?
+}
+
+//MARK: 固定數值
+extension CommentThreadList{
     static var apiType: Api_type{
         return .commentThreads
     }
     
     static var localResourceName: String{
         return "CommentThreadData"
+    }
+    
+    static var partArr: [APIPart] {
+        return [.snippet]
     }
 }
 

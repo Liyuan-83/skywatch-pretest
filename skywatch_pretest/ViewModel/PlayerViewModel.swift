@@ -22,7 +22,7 @@ struct PlayerViewModel: ViewModelProtocol {
     }
     
     private var _commentService : any ServiceProtocol<CommentThreadList>{
-        return _forTest ? MockHttpManager<CommentThreadList>() : HttpManager<CommentThreadList>()
+        return _forTest ? MockHttpService<CommentThreadList>() : HttpService<CommentThreadList>()
     }
     
     init(channelInfo: ChannelInfo, videoInfo: VideoInfo, _ isForTest:Bool = false) {
@@ -66,19 +66,14 @@ struct PlayerViewModel: ViewModelProtocol {
         guard let id = _videoInfo?.id,
               let token = _commentList?.nextPageToken else { return .noMoreData }
         
-        let res = await _commentService.fetchData(["videoId":id,
-                                                   "maxResults":20, "order":"relevance",
-                                                   "pageToken":token],
-                                                  [.snippet,.replies])
-        switch res{
-        case .success(let nextPagecomments):
-            guard let list = nextPagecomments.list else { return .fail }
-            _commentList?.nextPageToken = nextPagecomments.nextPageToken
-            _commentList?.list! += list
-            break
-        case .failure(_):
-            return .fail
-        }
+        CommentThreadList.paraDic = ["videoId":id,
+                                     "maxResults":20,
+                                     "order":"relevance",
+                                     "pageToken":token]
+        guard let nextPagecomments = await CommentThreadList.fetchDataFrom(_commentService),
+              let list = nextPagecomments.list else { return .fail }
+        _commentList?.nextPageToken = nextPagecomments.nextPageToken
+        _commentList?.list! += list
         return .success
     }
 }
@@ -86,16 +81,11 @@ struct PlayerViewModel: ViewModelProtocol {
 extension PlayerViewModel{
     private mutating func loadCommentList() async -> Bool{
         guard let id = _videoInfo?.id else { return false }
-        let res = await _commentService.fetchData(["videoId":id,
-                                                   "maxResults":30, "order":"relevance"],
-                                                  [.snippet,.replies])
-        switch res{
-        case .success(let comments):
-            _commentList = comments
-            break
-        case .failure(_):
-            return false
-        }
+        CommentThreadList.paraDic = ["videoId":id,
+                                     "maxResults":30,
+                                     "order":"relevance"]
+        guard let comments = await CommentThreadList.fetchDataFrom(_commentService) else { return false }
+        _commentList = comments
         return true
     }
 }

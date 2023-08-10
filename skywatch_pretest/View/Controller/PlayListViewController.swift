@@ -16,7 +16,6 @@ class PlayListViewController: UIViewController {
     let interactor = Interactor()
     var cancelables : Set<AnyCancellable> = []
     @Published var viewmodel : PlayListViewModel = PlayListViewModel()
-//    @IBOutlet weak var player: YTPlayerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

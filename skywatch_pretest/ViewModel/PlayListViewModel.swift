@@ -19,11 +19,11 @@ struct PlayListViewModel: ViewModelProtocol {
     }
     
     private var _channelService : any ServiceProtocol<ChannelInfo>{
-        return _forTest ? MockHttpManager<ChannelInfo>() : HttpManager<ChannelInfo>()
+        return _forTest ? MockHttpService<ChannelInfo>() : HttpService<ChannelInfo>()
     }
     
     private var _playListService : any ServiceProtocol<PlayList>{
-        return _forTest ? MockHttpManager<PlayList>() : HttpManager<PlayList>()
+        return _forTest ? MockHttpService<PlayList>() : HttpService<PlayList>()
     }
     
     var channelInfo : ChannelInfo?{
@@ -38,28 +38,17 @@ struct PlayListViewModel: ViewModelProtocol {
     }
     
     mutating func fetchData() async -> Bool {
-        let channelRes = await _channelService.fetchData(["id":YOASOBI_Channel_ID], [.contentDetails, .snippet, .statistics])
-        
-        switch channelRes{
-        case .success(let info):
-            _channelInfo = info
-            break
-        case .failure(_):
-            return false
-        }
-        
+        ChannelInfo.paraDic = ["id":YOASOBI_Channel_ID]
+        guard let info = await ChannelInfo.fetchDataFrom(_channelService) else { return false }
+        _channelInfo = info
         guard let playListID = _channelInfo?.uploadID else { return false }
-        let playListRes = await _playListService.fetchData(["playlistId":playListID,
-                                                                   "maxResults":30], [.snippet])
-        switch playListRes{
-        case .success(let playList):
-            guard let list = playList.list else { return false }
-            _allList = list
-            _nextPageToken = playList.nextPageToken
-            break
-        case .failure(_):
-            return false
-        }
+        PlayList.paraDic = ["playlistId":playListID,
+                            "maxResults":30]
+        guard let playList = await PlayList.fetchDataFrom(_playListService),
+              let list = playList.list else { return false }
+        
+        _allList = list
+        _nextPageToken = playList.nextPageToken
         //儲存至本地
         saveToLocal()
         return true
@@ -70,17 +59,13 @@ struct PlayListViewModel: ViewModelProtocol {
         guard let id = _channelInfo?.uploadID,
               let token = _nextPageToken else { return .noMoreData }
         
-        let res = await _playListService.fetchData(["playlistId":id,
-                                                    "maxResults":20,
-                                                    "pageToken":token], [.snippet])
-        switch res{
-        case .success(let nextPageList):
-            guard let list = nextPageList.list else { return .fail }
-            _nextPageToken = nextPageList.nextPageToken
-            _allList += list
-            return .success
-        case .failure(_):
-            return .fail
-        }
+        PlayList.paraDic = ["playlistId":id,
+                            "maxResults":20,
+                            "pageToken":token]
+        guard let nextPageList = await PlayList.fetchDataFrom(_playListService),
+              let list = nextPageList.list else { return .fail }
+        _nextPageToken = nextPageList.nextPageToken
+        _allList += list
+        return .success
     }
 }

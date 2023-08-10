@@ -106,7 +106,7 @@ class CommentTableViewCell: UITableViewCell {
             make.right.equalTo(contentLabel)
         }
         
-        var separatorLine = UIView()
+        let separatorLine = UIView()
         separatorLine.backgroundColor = .darkGray
         separatorLine.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(separatorLine)

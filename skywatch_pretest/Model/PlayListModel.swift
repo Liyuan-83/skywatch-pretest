@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - PlayList
-struct PlayList: ModelProtocol, Codable {
+struct PlayList: ModelProtocol {
     typealias ModelType = PlayList
     var list : [VideoInfo]?
     var nextPageToken : String?
@@ -21,13 +21,21 @@ struct PlayList: ModelProtocol, Codable {
         }
         self.list = arr
     }
-    
+    static var paraDic: [String : Any]?
+}
+
+//MARK: 固定數值
+extension PlayList{
     static var apiType: Api_type{
         return .playListItem
     }
     
     static var localResourceName: String{
         return "PlayListData"
+    }
+    
+    static var partArr: [APIPart] {
+        return [.snippet]
     }
 }
 
