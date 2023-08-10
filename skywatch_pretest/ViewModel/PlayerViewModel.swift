@@ -65,12 +65,7 @@ struct PlayerViewModel: ViewModelProtocol {
     mutating func loadMoreComment() async -> NextPageStatus{
         guard let id = _videoInfo?.id,
               let token = _commentList?.nextPageToken else { return .noMoreData }
-        
-        CommentThreadList.paraDic = ["videoId":id,
-                                     "maxResults":20,
-                                     "order":"relevance",
-                                     "pageToken":token]
-        guard let nextPagecomments = await CommentThreadList.fetchDataFrom(_commentService),
+        guard let nextPagecomments = await CommentThreadList.fetchDataFrom(_commentService, .nextPage(id: id, token: token)),
               let list = nextPagecomments.list else { return .fail }
         _commentList?.nextPageToken = nextPagecomments.nextPageToken
         _commentList?.list! += list
@@ -81,10 +76,7 @@ struct PlayerViewModel: ViewModelProtocol {
 extension PlayerViewModel{
     private mutating func loadCommentList() async -> Bool{
         guard let id = _videoInfo?.id else { return false }
-        CommentThreadList.paraDic = ["videoId":id,
-                                     "maxResults":30,
-                                     "order":"relevance"]
-        guard let comments = await CommentThreadList.fetchDataFrom(_commentService) else { return false }
+        guard let comments = await CommentThreadList.fetchDataFrom(_commentService, .firstPage(id: id)) else { return false }
         _commentList = comments
         return true
     }

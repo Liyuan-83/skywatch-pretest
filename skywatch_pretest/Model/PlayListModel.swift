@@ -9,6 +9,12 @@ import Foundation
 
 // MARK: - PlayList
 struct PlayList: ModelProtocol {
+    enum PlayListRequest : RequestType {
+        case firstPage(id:String),
+             nextPage(id:String, token:String)
+    }
+    
+    typealias ReqType = PlayListRequest
     typealias ModelType = PlayList
     var list : [VideoInfo]?
     var nextPageToken : String?
@@ -21,7 +27,6 @@ struct PlayList: ModelProtocol {
         }
         self.list = arr
     }
-    static var paraDic: [String : Any]?
 }
 
 //MARK: 固定數值
@@ -36,6 +41,18 @@ extension PlayList{
     
     static var partArr: [APIPart] {
         return [.snippet]
+    }
+    
+    static func getRequestParameter(type: PlayListRequest) -> [String : Any] {
+        switch type{
+        case .firstPage(let id):
+            return ["playlistId":id,
+                    "maxResults":30]
+        case .nextPage(let id, let token):
+            return ["playlistId":id,
+                    "maxResults":20,
+                    "pageToken":token]
+        }
     }
 }
 

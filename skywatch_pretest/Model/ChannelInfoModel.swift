@@ -9,6 +9,10 @@ import Foundation
 
 // MARK: - ChannelInfo
 struct ChannelInfo: ModelProtocol {
+    enum ChannelInfoRequest : RequestType{
+        case info
+    }
+    typealias ReqType = ChannelInfoRequest
     typealias ModelType = ChannelInfo
     var name : String?
     var description : String?
@@ -31,8 +35,6 @@ struct ChannelInfo: ModelProtocol {
         self.subscriberCount = Int(res.items.first?.statistics?.subscriberCount ?? "") ?? 0
         self.viewCount = Int(res.items.first?.statistics?.viewCount ?? "") ?? 0
     }
-    
-    static var paraDic: [String : Any]?
 }
 
 //MARK: 固定數值
@@ -47,6 +49,10 @@ extension ChannelInfo{
     
     static var partArr: [APIPart] {
         return [.snippet, .contentDetails]
+    }
+    
+    static func getRequestParameter(type: ChannelInfoRequest) -> [String : Any] {
+        return ["id":YOASOBI_Channel_ID]
     }
 }
 

@@ -38,13 +38,10 @@ struct PlayListViewModel: ViewModelProtocol {
     }
     
     mutating func fetchData() async -> Bool {
-        ChannelInfo.paraDic = ["id":YOASOBI_Channel_ID]
-        guard let info = await ChannelInfo.fetchDataFrom(_channelService) else { return false }
+        guard let info = await ChannelInfo.fetchDataFrom(_channelService, .info) else { return false }
         _channelInfo = info
         guard let playListID = _channelInfo?.uploadID else { return false }
-        PlayList.paraDic = ["playlistId":playListID,
-                            "maxResults":30]
-        guard let playList = await PlayList.fetchDataFrom(_playListService),
+        guard let playList = await PlayList.fetchDataFrom(_playListService, .firstPage(id: playListID)),
               let list = playList.list else { return false }
         
         _allList = list
@@ -58,11 +55,7 @@ struct PlayListViewModel: ViewModelProtocol {
     mutating func loadNextPage() async -> NextPageStatus {
         guard let id = _channelInfo?.uploadID,
               let token = _nextPageToken else { return .noMoreData }
-        
-        PlayList.paraDic = ["playlistId":id,
-                            "maxResults":20,
-                            "pageToken":token]
-        guard let nextPageList = await PlayList.fetchDataFrom(_playListService),
+        guard let nextPageList = await PlayList.fetchDataFrom(_playListService, .nextPage(id: id, token: token)),
               let list = nextPageList.list else { return .fail }
         _nextPageToken = nextPageList.nextPageToken
         _allList += list

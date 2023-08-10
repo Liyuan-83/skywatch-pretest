@@ -7,25 +7,31 @@
 
 import Foundation
 
+protocol RequestType {
+}
+
 protocol ModelProtocol : Codable {
+    ///目標解碼類型
     associatedtype ModelType: ModelProtocol
+    ///列舉http request事件
+    associatedtype ReqType: RequestType
     init(with res: YoutubeApiResponse) throws
     ///呼叫Youtube API的類型(主要有Channel, Playlist, CommentThead)
     static var apiType : Api_type { get }
     ///讀取本地端測試用Json資料的檔名
     static var localResourceName : String { get }
-    ///依照
-    static func fetchDataFrom<Service: ServiceProtocol>(_ service: Service) async ->  ModelType?
-    static var paraDic: [String:Any]? { get set }
+    ///YT回應需含有的部分，詳情請參考Youtube API文件
     static var partArr: [APIPart] { get }
+    ///取得傳參
+    static func getRequestParameter(type: ReqType) -> [String:Any]
+    ///透過指定的服務(Http / Mock Http)取得指定要求(request)的數據，並解碼成指定Model
+    static func fetchDataFrom<Service: ServiceProtocol>(_ service: Service, _ type: ReqType) async -> ModelType?
 }
 
 extension ModelProtocol{
-    static func fetchDataFrom<Service: ServiceProtocol>(_ service: Service) async -> ModelType? {
-        assert(paraDic != nil, "需設定傳參")
-        guard let para = paraDic else { return nil }
+    static func fetchDataFrom<Service: ServiceProtocol>(_ service: Service, _ type: ReqType) async -> ModelType? {
+        let para = getRequestParameter(type: type)
         let status = await service.fetchData(para, partArr)
-        paraDic = nil
         switch status{
         case .success(let res):
             return res as? ModelType

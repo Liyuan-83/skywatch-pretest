@@ -8,7 +8,12 @@
 import Foundation
 
 struct CommentThreadList : ModelProtocol{
+    enum CommentThreadRequest : RequestType{
+        case firstPage(id:String),
+             nextPage(id:String, token:String)
+    }
     typealias ModelType = CommentThreadList
+    typealias ReqType = CommentThreadRequest
     var videoID : String?
     var list : [CommentThread]?
     var nextPageToken : String?
@@ -23,7 +28,6 @@ struct CommentThreadList : ModelProtocol{
         }
         self.list = arr
     }
-    static var paraDic: [String : Any]?
 }
 
 //MARK: 固定數值
@@ -38,6 +42,20 @@ extension CommentThreadList{
     
     static var partArr: [APIPart] {
         return [.snippet]
+    }
+    
+    static func getRequestParameter(type: CommentThreadRequest) -> [String : Any] {
+        switch type{
+        case .firstPage(let id):
+            return ["videoId":id,
+                    "maxResults":30,
+                    "order":"relevance"]
+        case .nextPage(let id, let token):
+            return ["videoId":id,
+                    "maxResults":20,
+                    "order":"relevance",
+                    "pageToken":token]
+        }
     }
 }
 

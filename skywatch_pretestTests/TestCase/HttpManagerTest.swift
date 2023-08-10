@@ -12,8 +12,7 @@ final class HttpServiceTest: XCTestCase {
 
     func testToGetChannelInfo() async throws {
         let service = HttpService<ChannelInfo>()
-        ChannelInfo.paraDic = ["id":YOASOBI_Channel_ID]
-        let channelInfo = await ChannelInfo.fetchDataFrom(service)
+        let channelInfo = await ChannelInfo.fetchDataFrom(service, .info)
         XCTAssertNotNil(channelInfo)
         guard let channelInfo = channelInfo else { return }
         //確保要顯示的內容有名字、描述、uploadID、縮圖
@@ -25,9 +24,7 @@ final class HttpServiceTest: XCTestCase {
     
     func testToGetPlayList() async throws {
         let service = HttpService<PlayList>()
-        PlayList.paraDic = ["playlistId":test_playListID,
-                               "maxResults":30]
-        let playList = await PlayList.fetchDataFrom(service)
+        let playList = await PlayList.fetchDataFrom(service, .firstPage(id: test_playListID))
         XCTAssertNotNil(playList)
         guard let playList = playList else { return }
         
@@ -48,10 +45,7 @@ final class HttpServiceTest: XCTestCase {
             print(item.name!)
         }
         print("--------------------------------")
-        PlayList.paraDic = ["playlistId":test_playListID,
-                            "maxResults":20,
-                            "pageToken":nextPageToken]
-        let nextList = await PlayList.fetchDataFrom(service)
+        let nextList = await PlayList.fetchDataFrom(service, .nextPage(id: test_playListID, token: nextPageToken))
         XCTAssertNotNil(nextList)
         guard let nextList = nextList else { return }
         //確保列表有值且數量為20
@@ -74,10 +68,7 @@ final class HttpServiceTest: XCTestCase {
     
     func testToGetCommentThreadList() async throws {
         let service = HttpService<CommentThreadList>()
-        CommentThreadList.paraDic = ["videoId":test_vidoeID,
-                                     "maxResults":30,
-                                     "order":"relevance"]
-        let commentList = await CommentThreadList.fetchDataFrom(service)
+        let commentList = await CommentThreadList.fetchDataFrom(service, .firstPage(id: test_vidoeID))
         XCTAssertNotNil(commentList)
         guard let commentList = commentList else { return }
         //確保列表有值且數量為30
@@ -100,11 +91,7 @@ final class HttpServiceTest: XCTestCase {
             }
         }
         print("--------------------------------")
-        CommentThreadList.paraDic = ["videoId":test_vidoeID,
-                                     "maxResults":20,
-                                     "order":"relevance",
-                                     "pageToken":nextPageToken]
-        let nextList = await CommentThreadList.fetchDataFrom(service)
+        let nextList = await CommentThreadList.fetchDataFrom(service, .nextPage(id: test_vidoeID, token: nextPageToken))
         XCTAssertNotNil(nextList)
         guard let nextList = nextList else { return }
         //確保列表有值且數量為30
