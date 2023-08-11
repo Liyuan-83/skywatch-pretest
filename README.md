@@ -40,6 +40,8 @@
     
     由於題目要求要有Unit Test，因此嘗試使用測試驅動開發(TDD)的方式實作，優先撰寫針對API資料的Unit Test，在撰寫ViewModel的Unit Test，最後才做畫面的Layout，此做法的好處是可以優先知道後端的資料是否符合需求，若是與後端協作可快速與後端溝通，且在實作畫面時，可確保所需要的資料沒有缺漏。
 
+    後續有新增Mock Data，在測試View Model時，可以不需要網路連線，此外調整設計思路，於View Model決定使用Http Data還是Mock Data，Model只需專注於收發資料與解碼。
+
 1. 本地端暫存
 
     可節省API的呼叫次數，與儲存畫面當前的狀態，因此本地端暫存基本實作在View Model上，可儲存使用者上次使用的狀況，下次開啟App時，可將App復原至最後關閉App的畫面。
