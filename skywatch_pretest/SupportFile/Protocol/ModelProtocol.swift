@@ -24,17 +24,17 @@ protocol ModelProtocol : Codable {
     static var partArr: [APIPart] { get }
     ///取得傳參
     static func getRequestParameter(type: ReqType) -> [String:Any]
-    ///透過指定的服務(Http / Mock Http)取得指定要求(request)的數據，並解碼成指定Model
+    ///透過指定的服務(Http / Mock)取得指定要求(request)的數據，並解碼成指定Model
     static func fetchDataFrom<Service: ServiceProtocol>(_ service: Service, _ type: ReqType) async -> ModelType?
 }
 
 extension ModelProtocol{
     static func fetchDataFrom<Service: ServiceProtocol>(_ service: Service, _ type: ReqType) async -> ModelType? {
         let para = getRequestParameter(type: type)
-        let status = await service.fetchData(para, partArr)
+        let status = await service.fetchData(para, partArr, Self.self)
         switch status{
         case .success(let res):
-            return res as? ModelType
+            return res
         case .failure(_):
             return nil
         }

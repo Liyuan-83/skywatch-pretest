@@ -10,8 +10,12 @@ enum HttpServiceError : Error{
     case httpError, decodeError
 }
 
-class HttpService<ResModel: ModelProtocol> : ServiceProtocol{
-    func fetchData(_ para:[String:Any],_ part:[APIPart]) async -> Result<ResModel.ModelType, Error>{
+class HttpService : ServiceProtocol{
+    static var shared: ServiceProtocol{
+        return HttpService()
+    }
+    
+    func fetchData<ResModel: ModelProtocol>(_ para:[String:Any],_ part:[APIPart], _ type: ResModel.Type) async -> Result<ResModel.ModelType, Error> {
         var paraDic = para
         let partStr = part.map({$0.rawValue}).joined(separator: ",")
         paraDic["part"] = partStr

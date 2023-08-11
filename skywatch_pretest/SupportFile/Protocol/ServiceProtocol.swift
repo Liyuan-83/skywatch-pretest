@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ServiceProtocol<ResModel>{
-    associatedtype ResModel: ModelProtocol
-    func fetchData(_ para:[String:Any],_ part:[APIPart]) async -> Result<ResModel.ModelType, Error>
+protocol ServiceProtocol{
+    static var shared : ServiceProtocol { get }
+    func fetchData<ResModel: ModelProtocol>(_ para:[String:Any],_ part:[APIPart], _ type: ResModel.Type) async -> Result<ResModel.ModelType, Error>
 }

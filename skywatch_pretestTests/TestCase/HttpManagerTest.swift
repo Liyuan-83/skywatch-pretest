@@ -9,9 +9,8 @@ import XCTest
 @testable import skywatch_pretest
 
 final class HttpServiceTest: XCTestCase {
-
+    var service = HttpService()
     func testToGetChannelInfo() async throws {
-        let service = HttpService<ChannelInfo>()
         let channelInfo = await ChannelInfo.fetchDataFrom(service, .info)
         XCTAssertNotNil(channelInfo)
         guard let channelInfo = channelInfo else { return }
@@ -23,7 +22,6 @@ final class HttpServiceTest: XCTestCase {
     }
     
     func testToGetPlayList() async throws {
-        let service = HttpService<PlayList>()
         let playList = await PlayList.fetchDataFrom(service, .firstPage(id: test_playListID))
         XCTAssertNotNil(playList)
         guard let playList = playList else { return }
@@ -67,7 +65,6 @@ final class HttpServiceTest: XCTestCase {
     }
     
     func testToGetCommentThreadList() async throws {
-        let service = HttpService<CommentThreadList>()
         let commentList = await CommentThreadList.fetchDataFrom(service, .firstPage(id: test_vidoeID))
         XCTAssertNotNil(commentList)
         guard let commentList = commentList else { return }

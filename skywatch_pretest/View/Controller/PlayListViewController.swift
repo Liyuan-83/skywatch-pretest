@@ -15,7 +15,7 @@ class PlayListViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     let interactor = Interactor()
     var cancelables : Set<AnyCancellable> = []
-    @Published var viewmodel : PlayListViewModel = PlayListViewModel()
+    @Published internal var viewmodel = PlayListViewModel<HttpService>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class PlayListViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //判斷是否有在播放器的緩存，若有則跳至播放器頁面
-        var playerViewModel = PlayerViewModel()
+        var playerViewModel = PlayerViewModel<HttpService>()
         guard playerViewModel.loadFromLocal() else { return }
         showPlayerView(playerViewModel)
     }
@@ -134,7 +134,7 @@ extension PlayListViewController : UITableViewDelegate, UITableViewDataSource{
         cell?.setVideoInfo(viewmodel.showList[indexPath.row])
         cell?.clickThumbnail = { channel, video in
             DispatchQueue.main.async { [unowned self] in
-                showPlayerView(PlayerViewModel(channelInfo:channel, videoInfo: video))
+                showPlayerView(PlayerViewModel<HttpService>(channelInfo:channel, videoInfo: video))
             }
         }
         return cell ?? PlayListTableViewCell()
@@ -160,7 +160,7 @@ extension PlayListViewController: UIViewControllerTransitioningDelegate {
 }
 
 extension PlayListViewController{
-    func showPlayerView(_ viewModel:PlayerViewModel){
+    func showPlayerView(_ viewModel:PlayerViewModel<HttpService>){
         let vc = PlayerViewController()
         vc.viewmodel = viewModel
         vc.interactor = interactor

@@ -9,11 +9,11 @@ import XCTest
 @testable import skywatch_pretest
 
 final class PlayerViewModelTests: XCTestCase {
-    var viewmodel = PlayerViewModel(true)
+    var viewmodel = PlayerViewModel<MockHttpService>()
     override func setUp() async throws {
         print("-----setUp-----")
         //本地端讀值
-        var playListVM = PlayListViewModel(true)
+        var playListVM = PlayListViewModel<MockHttpService>()
         guard await playListVM.fetchData(),
               let channelInfo = playListVM.channelInfo,
               let videoInfo = playListVM.showList.first(where: {$0.id == test_vidoeID})

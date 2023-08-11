@@ -8,7 +8,7 @@
 import Foundation
 import YouTubeiOSPlayerHelper
 
-struct PlayerViewModel: ViewModelProtocol {
+struct PlayerViewModel<ServiceType: ServiceProtocol>: ViewModelProtocol {
     private var _channelInfo : ChannelInfo?
     private var _videoInfo : VideoInfo?
     private var _commentList : CommentThreadList?
@@ -17,13 +17,11 @@ struct PlayerViewModel: ViewModelProtocol {
     var playstatus : YTPlayerState = .unknown
     var currentTime : Float = 0
     
-    init(_ isForTest:Bool = false){
-        _forTest = isForTest
+    internal var _service : ServiceType{
+        return ServiceType.shared as! ServiceType
     }
     
-    private var _commentService : any ServiceProtocol<CommentThreadList>{
-        return _forTest ? MockHttpService<CommentThreadList>() : HttpService<CommentThreadList>()
-    }
+    init(){ }
     
     init(channelInfo: ChannelInfo, videoInfo: VideoInfo, _ isForTest:Bool = false) {
         _channelInfo = channelInfo
@@ -57,7 +55,7 @@ struct PlayerViewModel: ViewModelProtocol {
     
     mutating func fetchData() async -> Bool {
         guard let id = _videoInfo?.id else { return false }
-        guard let comments = await CommentThreadList.fetchDataFrom(_commentService, .firstPage(id: id)) else { return false }
+        guard let comments = await CommentThreadList.fetchDataFrom(_service, .firstPage(id: id)) else { return false }
         _commentList = comments
         //儲存至本地
         saveToLocal()
@@ -67,7 +65,7 @@ struct PlayerViewModel: ViewModelProtocol {
     mutating func loadMoreComment() async -> NextPageStatus{
         guard let id = _videoInfo?.id,
               let token = _commentList?.nextPageToken else { return .noMoreData }
-        guard let nextPagecomments = await CommentThreadList.fetchDataFrom(_commentService, .nextPage(id: id, token: token)),
+        guard let nextPagecomments = await CommentThreadList.fetchDataFrom(_service, .nextPage(id: id, token: token)),
               let list = nextPagecomments.list else { return .fail }
         _commentList?.nextPageToken = nextPagecomments.nextPageToken
         _commentList?.list! += list

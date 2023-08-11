@@ -88,7 +88,7 @@ class PlayerViewController: UIViewController {
     
     var interactor:Interactor? = nil
     var cancelables : Set<AnyCancellable> = []
-    @Published var viewmodel : PlayerViewModel!
+    @Published internal var viewmodel : PlayerViewModel<HttpService>!
     
     override func viewDidLoad() {
         super.viewDidLoad()

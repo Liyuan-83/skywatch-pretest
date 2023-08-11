@@ -9,7 +9,7 @@ import XCTest
 @testable import skywatch_pretest
 
 final class PlayListViewModelTests: XCTestCase {
-    var viewmodel = PlayListViewModel(true)
+    var viewmodel = PlayListViewModel<MockHttpService>()
     override func setUp() async throws {
         print("-----setUp-----")
         //本地端讀值
