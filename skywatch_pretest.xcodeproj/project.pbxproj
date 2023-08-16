@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1E196B2A8C74F9001BC124 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7A1E19692A8C74F9001BC124 /* README.md */; };
 		7A49BA9F2A781D6500A3F2E7 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A49BA9E2A781D6500A3F2E7 /* StringExtension.swift */; };
 		7A7985EA2A6B78AD00077E24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7985E92A6B78AD00077E24 /* AppDelegate.swift */; };
 		7A7985EC2A6B78AD00077E24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7985EB2A6B78AD00077E24 /* SceneDelegate.swift */; };
@@ -76,6 +77,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A1E19692A8C74F9001BC124 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7A1E196E2A8C7570001BC124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A49BA9E2A781D6500A3F2E7 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7A7985E62A6B78AD00077E24 /* skywatch_pretest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skywatch_pretest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7985E92A6B78AD00077E24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +87,6 @@
 		7A7985F02A6B78AD00077E24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A7985F22A6B78AD00077E24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A7985F52A6B78AD00077E24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7A7985F72A6B78AD00077E24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A7985FC2A6B78AE00077E24 /* skywatch_pretestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = skywatch_pretestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7986062A6B78AE00077E24 /* skywatch_pretestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = skywatch_pretestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A79861E2A6B7E9C00077E24 /* ConstParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstParameter.swift; sourceTree = "<group>"; };
@@ -156,6 +158,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A1E19682A8C74F9001BC124 /* SecurityFileSave */ = {
+			isa = PBXGroup;
+			children = (
+				7A1E196E2A8C7570001BC124 /* Info.plist */,
+				7A1E19692A8C74F9001BC124 /* README.md */,
+			);
+			path = SecurityFileSave;
+			sourceTree = "<group>";
+		};
 		7A7985DD2A6B78AD00077E24 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +192,7 @@
 		7A7985E82A6B78AD00077E24 /* skywatch_pretest */ = {
 			isa = PBXGroup;
 			children = (
+				7A1E19682A8C74F9001BC124 /* SecurityFileSave */,
 				7A7986382A6D25E500077E24 /* View */,
 				7A79861C2A6B7DC900077E24 /* Model */,
 				7A7986332A6D1BE700077E24 /* ViewModel */,
@@ -190,7 +202,6 @@
 				7A7985EB2A6B78AD00077E24 /* SceneDelegate.swift */,
 				7A7985F22A6B78AD00077E24 /* Assets.xcassets */,
 				7A7985F42A6B78AD00077E24 /* LaunchScreen.storyboard */,
-				7A7985F72A6B78AD00077E24 /* Info.plist */,
 			);
 			path = skywatch_pretest;
 			sourceTree = "<group>";
@@ -473,6 +484,7 @@
 				7ABD63582A81FE230093691E /* PlayListData.json in Resources */,
 				7ABD63592A81FE230093691E /* ChannelData.json in Resources */,
 				7A7985F32A6B78AD00077E24 /* Assets.xcassets in Resources */,
+				7A1E196B2A8C74F9001BC124 /* README.md in Resources */,
 				7A7985F12A6B78AD00077E24 /* Main.storyboard in Resources */,
 				7ABD635B2A81FF3B0093691E /* CommentThreadData.json in Resources */,
 			);
