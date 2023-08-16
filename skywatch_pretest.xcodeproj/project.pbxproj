@@ -158,13 +158,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7A1E19682A8C74F9001BC124 /* SecurityFileSave */ = {
+		7A1E19682A8C74F9001BC124 /* SecurityFile */ = {
 			isa = PBXGroup;
 			children = (
 				7A1E196E2A8C7570001BC124 /* Info.plist */,
 				7A1E19692A8C74F9001BC124 /* README.md */,
 			);
-			path = SecurityFileSave;
+			path = SecurityFile;
 			sourceTree = "<group>";
 		};
 		7A7985DD2A6B78AD00077E24 = {
@@ -192,7 +192,7 @@
 		7A7985E82A6B78AD00077E24 /* skywatch_pretest */ = {
 			isa = PBXGroup;
 			children = (
-				7A1E19682A8C74F9001BC124 /* SecurityFileSave */,
+				7A1E19682A8C74F9001BC124 /* SecurityFile */,
 				7A7986382A6D25E500077E24 /* View */,
 				7A79861C2A6B7DC900077E24 /* Model */,
 				7A7986332A6D1BE700077E24 /* ViewModel */,
