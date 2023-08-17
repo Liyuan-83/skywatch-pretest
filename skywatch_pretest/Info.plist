@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Encryption Key</key>
-	<string>goDyo9W2bOADCnpNR/OSKCJ43o2dcmS7</string>
 	<key>API Key Encrypted</key>
 	<string>hi07Gnv5+3MW9AE4DSkzoApbJ3/AVa5TLVE7GJyO9Ccux1jm5+zGmM/PIuIsKpDGZC1zyda/2CBQk52+Ygot+TYU6A==</string>
+	<key>Encryption Key</key>
+	<string>goDyo9W2bOADCnpNR/OSKCJ43o2dcmS7</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
