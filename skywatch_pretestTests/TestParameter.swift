@@ -7,11 +7,11 @@
 
 import Foundation
 
-///YOASOBI的播放列表
+/// YOASOBI的播放列表
 let test_playListID = "UUvpredjG93ifbCP1Y77JyFA"
-///アイドル MV
+/// アイドル MV
 let test_vidoeID = "ZRtdQ81jPUQ"
 let test_videoName = "「アイドル」"
-enum TestError : Error{
-    case InitFail
+enum TestError: Error {
+    case initFail
 }

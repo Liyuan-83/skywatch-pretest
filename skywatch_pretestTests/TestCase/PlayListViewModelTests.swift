@@ -12,8 +12,8 @@ final class PlayListViewModelTests: XCTestCase {
     var viewmodel = PlayListViewModel<MockHttpService>()
     override func setUp() async throws {
         print("-----setUp-----")
-        //本地端讀值
-        guard await viewmodel.fetchData() else { throw TestError.InitFail }
+        // 本地端讀值
+        guard await viewmodel.fetchData() else { throw TestError.initFail }
         XCTAssertTrue(viewmodel.loadFromLocal())
     }
     
@@ -23,14 +23,14 @@ final class PlayListViewModelTests: XCTestCase {
     }
     
     func testInitViewModel() async throws {
-        //確認必要的頻道資訊
+        // 確認必要的頻道資訊
         XCTAssertNotEqual(viewmodel.channelInfo.name, "")
         XCTAssertNotEqual(viewmodel.channelInfo.uploadID, "")
         XCTAssertNotNil(viewmodel.channelInfo.thumbnails.thumbnailsDefault)
         
-        //確認必要的列表資訊
+        // 確認必要的列表資訊
         XCTAssertTrue(viewmodel.showList.count >= 30)
-        for videoInfo in viewmodel.showList{
+        for videoInfo in viewmodel.showList {
             XCTAssertNotEqual(videoInfo.id, "")
             XCTAssertNotEqual(videoInfo.name, "")
             XCTAssertNotNil(videoInfo.thumbnails.thumbnailsDefault)
@@ -40,7 +40,7 @@ final class PlayListViewModelTests: XCTestCase {
     func testSearchKeyword() async throws {
         let keyword = "Music Video"
         viewmodel.searchKeyword = keyword
-        for videoInfo in viewmodel.showList{
+        for videoInfo in viewmodel.showList {
             XCTAssertNotEqual(videoInfo.name, "")
             XCTAssertTrue(videoInfo.name.contains(keyword))
         }
@@ -51,7 +51,7 @@ final class PlayListViewModelTests: XCTestCase {
         let status = await viewmodel.loadNextPage()
         XCTAssertTrue(status == .success)
         XCTAssertTrue(viewmodel.showList.count > listCount)
-        for videoInfo in viewmodel.showList{
+        for videoInfo in viewmodel.showList {
             XCTAssertNotEqual(videoInfo.id, "")
             XCTAssertNotEqual(videoInfo.name, "")
             XCTAssertNotNil(videoInfo.thumbnails.thumbnailsDefault)

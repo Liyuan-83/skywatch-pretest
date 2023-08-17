@@ -12,32 +12,32 @@ final class PlayerViewModelTests: XCTestCase {
     var viewmodel = PlayerViewModel<MockHttpService>()
     override func setUp() async throws {
         print("-----setUp-----")
-        //本地端讀值
+        // 本地端讀值
         var playListVM = PlayListViewModel<MockHttpService>()
         guard await playListVM.fetchData(),
-              let videoInfo = playListVM.showList.first(where: {$0.id == test_vidoeID})
-        else { throw TestError.InitFail }
+              let videoInfo = playListVM.showList.first(where: { $0.id == test_vidoeID })
+        else { throw TestError.initFail }
         
         viewmodel = PlayerViewModel(channelInfo: playListVM.channelInfo, videoInfo: videoInfo, true)
-        guard await viewmodel.fetchData() else { throw TestError.InitFail }
-        //確保每次fetch data都有保存到本地端
+        guard await viewmodel.fetchData() else { throw TestError.initFail }
+        // 確保每次fetch data都有保存到本地端
         XCTAssertTrue(viewmodel.loadFromLocal())
     }
     
     override func tearDown() async throws {
-        //測試結束要把測試用數據清除
+        // 測試結束要把測試用數據清除
         viewmodel.clearFromLocal()
         XCTAssertFalse(viewmodel.loadFromLocal())
     }
     
     func testInitViewModel() async throws {
-        //確認必要資訊
+        // 確認必要資訊
         XCTAssertNotEqual(viewmodel.channelInfo.name, "")
         XCTAssertNotNil(viewmodel.channelInfo.thumbnails.thumbnailsDefault)
         XCTAssertNotEqual(viewmodel.videoID, "")
         XCTAssertNotEqual(viewmodel.videoName, "")
         XCTAssertNotEqual(viewmodel.videoDescription, "")
-        for comment in viewmodel.comments{
+        for comment in viewmodel.comments {
             XCTAssertNotEqual(comment.authorName, "")
             XCTAssertNotEqual(comment.content, "")
         }
@@ -48,7 +48,7 @@ final class PlayerViewModelTests: XCTestCase {
         let status = await viewmodel.loadMoreComment()
         XCTAssertTrue(status == .success)
         XCTAssertTrue(viewmodel.comments.count > count)
-        for comment in viewmodel.comments{
+        for comment in viewmodel.comments {
             XCTAssertNotEqual(comment.authorName, "")
             XCTAssertNotEqual(comment.content, "")
         }

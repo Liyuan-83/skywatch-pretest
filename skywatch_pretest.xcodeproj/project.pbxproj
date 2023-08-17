@@ -392,6 +392,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7AC653EB2A8E104000EC09CC /* PBXTargetDependency */,
 				7A7985FE2A6B78AE00077E24 /* PBXTargetDependency */,
 			);
 			name = skywatch_pretestTests;
@@ -579,6 +580,10 @@
 		7AC653E92A8DB9B100EC09CC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			productRef = 7AC653E82A8DB9B100EC09CC /* SwiftLintPlugin */;
+		};
+		7AC653EB2A8E104000EC09CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 7AC653EA2A8E104000EC09CC /* SwiftLintPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -978,6 +983,11 @@
 			productName = YouTubeiOSPlayerHelper;
 		};
 		7AC653E82A8DB9B100EC09CC /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AC653E72A8DB99A00EC09CC /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
+		};
+		7AC653EA2A8E104000EC09CC /* SwiftLintPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7AC653E72A8DB99A00EC09CC /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintPlugin";
