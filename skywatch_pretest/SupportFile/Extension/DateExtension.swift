@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension Date{
-    func stringWith(_ format:String) -> String{
+extension Date {
+    func stringWith(_ format: String) -> String {
         let formater = DateFormatter()
         formater.dateFormat = format
         return formater.string(from: self)

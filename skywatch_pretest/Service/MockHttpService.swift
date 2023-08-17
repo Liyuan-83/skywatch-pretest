@@ -7,14 +7,14 @@
 
 import Foundation
 
-class MockHttpService : ServiceProtocol{
-    static var shared: ServiceProtocol{
+class MockHttpService: ServiceProtocol {
+    static var shared: ServiceProtocol {
         return MockHttpService()
     }
     
-    func fetchData<ResModel: ModelProtocol>(_ para: [String : Any], _ part: [APIPart], _ type: ResModel.Type) async -> Result<ResModel.ModelType, Error> {
+    func fetchData<ResModel: ModelProtocol>(_ para: [String: Any], _ type: ResModel.Type) async -> Result<ResModel.ModelType, Error> {
         let fileName = ResModel.localResourceName + (para["pageToken"] == nil ? "" : "_next")
-        //讀取本地端資訊
+        // 讀取本地端資訊
         let decoder = JSONDecoder()
         guard let url = Bundle.main.url(forResource: fileName, withExtension: "json"),
               let data = try? Data(contentsOf: url),

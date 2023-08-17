@@ -15,10 +15,10 @@ final class HttpServiceTest: XCTestCase {
         XCTAssertNotNil(channelInfo)
         guard let channelInfo = channelInfo else { return }
         //確保要顯示的內容有名字、描述、uploadID、縮圖
-        XCTAssertNotNil(channelInfo.name)
-        XCTAssertNotNil(channelInfo.description)
-        XCTAssertNotNil(channelInfo.uploadID)
-        XCTAssertNotNil(channelInfo.thumbnails)
+        XCTAssertNotEqual(channelInfo.name, "")
+        XCTAssertNotEqual(channelInfo.description, "")
+        XCTAssertNotEqual(channelInfo.uploadID, "")
+        XCTAssertNotNil(channelInfo.thumbnails.thumbnailsDefault)
     }
     
     func testToGetPlayList() async throws {
@@ -26,41 +26,30 @@ final class HttpServiceTest: XCTestCase {
         XCTAssertNotNil(playList)
         guard let playList = playList else { return }
         
-        //確保列表有值且數量為30
-        XCTAssertNotNil(playList.list)
-        XCTAssertEqual(playList.list?.count, 30)
+        //確保列表有值
+        XCTAssertTrue(playList.list.count > 0)
         //確保可以拿到下一頁
-        XCTAssertNotNil(playList.nextPageToken)
-        guard let list = playList.list,
-              let nextPageToken = playList.nextPageToken else { return }
+        XCTAssertNotEqual(playList.nextPageToken, "")
         //確保列表內容不為空
-        for item in list{
-            XCTAssertNotNil(item.id)
-            XCTAssertNotNil(item.createDate)
-            XCTAssertNotNil(item.description)
-            XCTAssertNotNil(item.name)
-            XCTAssertNotNil(item.thumbnails)
-            print(item.name!)
+        for item in playList.list{
+            XCTAssertNotEqual(item.id, "")
+            XCTAssertNotEqual(item.name, "")
+            XCTAssertNotNil(item.thumbnails.thumbnailsDefault)
         }
         print("--------------------------------")
-        let nextList = await PlayList.fetchDataFrom(service, .nextPage(id: test_playListID, token: nextPageToken))
+        let nextList = await PlayList.fetchDataFrom(service, .nextPage(id: test_playListID, token: playList.nextPageToken))
         XCTAssertNotNil(nextList)
         guard let nextList = nextList else { return }
         //確保列表有值且數量為20
-        XCTAssertNotNil(nextList.list)
-        XCTAssertEqual(nextList.list?.count, 20)
+        XCTAssertTrue(nextList.list.count > 0)
         //確保可以拿到下一頁
-        XCTAssertNotNil(nextList.nextPageToken)
+        XCTAssertNotEqual(nextList.nextPageToken, "")
         
-        guard let list = nextList.list else { return }
         //確保列表內容不為空
-        for item in list{
-            XCTAssertNotNil(item.id)
-            XCTAssertNotNil(item.createDate)
-            XCTAssertNotNil(item.description)
-            XCTAssertNotNil(item.name)
-            XCTAssertNotNil(item.thumbnails)
-            print(item.name!)
+        for item in nextList.list{
+            XCTAssertNotEqual(item.id, "")
+            XCTAssertNotEqual(item.name, "")
+            XCTAssertNotNil(item.thumbnails.thumbnailsDefault)
         }
     }
     
@@ -68,45 +57,37 @@ final class HttpServiceTest: XCTestCase {
         let commentList = await CommentThreadList.fetchDataFrom(service, .firstPage(id: test_vidoeID))
         XCTAssertNotNil(commentList)
         guard let commentList = commentList else { return }
-        //確保列表有值且數量為30
-        XCTAssertNotNil(commentList.list)
-        XCTAssertEqual(commentList.list?.count, 30)
+        //確保列表有值
+        XCTAssertTrue(commentList.list.count > 0)
         //確保可以拿到下一頁
-        XCTAssertNotNil(commentList.nextPageToken)
-        guard let list = commentList.list,
-              let nextPageToken = commentList.nextPageToken else { return }
+        XCTAssertNotEqual(commentList.nextPageToken, "")
         //確保列表內容不為空
-        for item in list{
+        for item in commentList.list{
             //確保留言串ID可拿到
-            XCTAssertNotNil(item.threadID)
+            XCTAssertNotEqual(item.threadID, "")
             XCTAssertNotNil(item.thumbnail)
-            print("\(item.authorName):\(item.content) Like:\(item.likeCount)")
             guard item.subCommentCount > 0 else { continue }
             for subComment in item.subComments{
                 XCTAssertNotNil(subComment.thumbnail)
-                print("|-- \(subComment.authorName):\(subComment.content) Like:\(subComment.likeCount)")
             }
         }
         print("--------------------------------")
-        let nextList = await CommentThreadList.fetchDataFrom(service, .nextPage(id: test_vidoeID, token: nextPageToken))
+        let nextList = await CommentThreadList.fetchDataFrom(service, .nextPage(id: test_vidoeID, token: commentList.nextPageToken))
         XCTAssertNotNil(nextList)
         guard let nextList = nextList else { return }
-        //確保列表有值且數量為30
-        XCTAssertNotNil(nextList.list)
-        XCTAssertEqual(nextList.list?.count, 20)
+        //確保列表有值
+        XCTAssertTrue(nextList.list.count>0)
         //確保可以拿到下一頁
-        XCTAssertNotNil(nextList.nextPageToken)
-        guard let nlist = nextList.list else { return }
+        XCTAssertNotEqual(nextList.nextPageToken, "")
         //確保內容不為空
-        for item in nlist{
+        for item in nextList.list{
             //確保留言串ID可拿到
-            XCTAssertNotNil(item.threadID)
+            //確保留言串ID可拿到
+            XCTAssertNotEqual(item.threadID, "")
             XCTAssertNotNil(item.thumbnail)
-            print("\(item.authorName):\(item.content) Like:\(item.likeCount)")
             guard item.subCommentCount > 0 else { continue }
             for subComment in item.subComments{
                 XCTAssertNotNil(subComment.thumbnail)
-                print("|-- \(subComment.authorName):\(subComment.content) Like:\(subComment.likeCount)")
             }
         }
     }

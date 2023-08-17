@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol ViewModelProtocol : Codable{
-    ///用於決定View Model要使用那個服務(Http Data/Mock Data)來呼叫API
-    associatedtype ServiceType : ServiceProtocol
-    ///取得服務
-    var _service : ServiceType { get }
-    var viewModelName : String { get }
+protocol ViewModelProtocol: Codable {
+    /// 用於決定View Model要使用那個服務(Http Data/Mock Data)來呼叫API
+    associatedtype ServiceType: ServiceProtocol
+    /// 取得服務
+    var _service: ServiceType { get }
+    var viewModelName: String { get }
     
     func saveToLocal()
     func clearFromLocal()
@@ -20,20 +20,20 @@ protocol ViewModelProtocol : Codable{
     mutating func loadFromLocal() -> Bool
 }
 
-extension ViewModelProtocol{
-    var viewModelName : String {
+extension ViewModelProtocol {
+    var viewModelName: String {
         return String(describing: Self.self)
     }
     
-    func clearFromLocal(){
+    func clearFromLocal() {
         UserDefaults.removeFromStandard(viewModelName)
     }
     
-    func saveToLocal(){
+    func saveToLocal() {
         _ = UserDefaults.saveToStandard(self, viewModelName)
     }
     
-    mutating func loadFromLocal() -> Bool{
+    mutating func loadFromLocal() -> Bool {
         return UserDefaults.getFromStandard(&self, viewModelName)
     }
 }

@@ -7,8 +7,8 @@
 
 import Foundation
 
-extension UserDefaults{
-    static func saveToStandard(_ obj:Codable, _ key:String) -> Bool{
+extension UserDefaults {
+    static func saveToStandard(_ obj: Codable, _ key: String) -> Bool {
         let encoder = JSONEncoder()
         guard let data = try? encoder.encode(obj) else { return false }
         UserDefaults.standard.set(data, forKey: key)
@@ -16,15 +16,15 @@ extension UserDefaults{
         return true
     }
     
-    static func getFromStandard<T:Codable>( _ obj:inout T, _ key:String) -> Bool{
+    static func getFromStandard<T: Codable>( _ obj: inout T, _ key: String) -> Bool {
         let decoder = JSONDecoder()
-        guard let data = UserDefaults.standard.data(forKey: key) ,
+        guard let data = UserDefaults.standard.data(forKey: key),
               let readObj = try? decoder.decode(T.self, from: data) else { return false }
         obj = readObj
         return true
     }
     
-    static func removeFromStandard(_ key:String) {
+    static func removeFromStandard(_ key: String) {
         UserDefaults.standard.removeObject(forKey: key)
     }
 }

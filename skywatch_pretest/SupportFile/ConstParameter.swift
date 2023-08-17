@@ -7,27 +7,27 @@
 
 import Foundation
 
-let YOASOBI_Channel_ID = "UCvpredjG93ifbCP1Y77JyFA"
-var ENCRYPTION_KEY : String{
+let YOASOBI_CHANNEL_ID = "UCvpredjG93ifbCP1Y77JyFA"
+var ENCRYPTION_KEY: String {
     return Bundle.main.infoDictionary?["Encryption Key"] as! String
 }
 
-var API_KEY : String{
+var API_KEY: String {
     let encryptionKeyString = Bundle.main.infoDictionary?["API Key Encrypted"] as! String
     return (try? encryptionKeyString.decryptAPIKey()) ?? ""
 }
 
 let base_url = "https://www.googleapis.com/youtube/v3/"
 
-enum DecodeError : Error{
-    case KindNotMatch, TypeNoMatch, CommentThreadFail, CommentFail
+enum DecodeError: Error {
+    case kindNotMatch, typeNoMatch, commentThreadFail, commentFail
 }
 
 enum NextPageStatus {
-    case success,fail,noMoreData
+    case success, fail, noMoreData
 }
 
-enum Api_type: String{
+enum ApiType: String {
     case playListItem = "playlistItems"
     case channals = "channels"
     case videos = "videos"
@@ -41,10 +41,9 @@ enum Kind: String, Codable {
     case youtubeCommentThread = "youtube#commentThread"
 }
 
-enum ResposeKind: String, Codable{
+enum ResposeKind: String, Codable {
     case channel = "youtube#channelListResponse"
     case playItem = "youtube#playlistItemListResponse"
     case videoList = "youtube#videoListResponse"
     case commentThread = "youtube#commentThreadListResponse"
 }
-

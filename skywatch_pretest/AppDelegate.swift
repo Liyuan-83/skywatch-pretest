@@ -9,8 +9,7 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    static var isLockScreenPortrait = true
-
+    static var isScreenPortrait = true
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -35,8 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UIDevice.current.userInterfaceIdiom == .pad {
             return .allButUpsideDown
         }
-        return AppDelegate.isLockScreenPortrait ? .portrait : .allButUpsideDown
+        return AppDelegate.isScreenPortrait ? .portrait : .allButUpsideDown
     }
-
 }
-

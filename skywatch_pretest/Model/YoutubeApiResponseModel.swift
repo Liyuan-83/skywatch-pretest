@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - YoutubeApiResponseModel
-///Youtube API回傳的固定格式/
+/// Youtube API回傳的固定格式/
 struct YoutubeApiResponse: Codable {
     var kind: ResposeKind
     var etag: String
@@ -99,8 +99,7 @@ struct ResourceID: Codable {
 
 // MARK: - Thumbnails
 struct Thumbnails: Codable {
-    var thumbnailsDefault, medium, high : Default
-    var standard, maxres: Default?
+    var thumbnailsDefault, medium, high, standard, maxres: Default?
     enum CodingKeys: String, CodingKey {
         case thumbnailsDefault = "default"
         case medium, high, standard, maxres

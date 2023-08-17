@@ -11,10 +11,10 @@ import MJRefresh
 
 class PlayListViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var searchBar: UISearchBar!
     let interactor = Interactor()
-    var cancelables : Set<AnyCancellable> = []
+    var cancelables: Set<AnyCancellable> = []
     @Published internal var viewmodel = PlayListViewModel<HttpService>()
     
     override func viewDidLoad() {
@@ -26,21 +26,20 @@ class PlayListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        AppDelegate.isLockScreenPortrait = true
+        AppDelegate.isScreenPortrait = true
         UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        //判斷是否有在播放器的緩存，若有則跳至播放器頁面
+        // 判斷是否有在播放器的緩存，若有則跳至播放器頁面
         var playerViewModel = PlayerViewModel<HttpService>()
         guard playerViewModel.loadFromLocal() else { return }
         showPlayerView(playerViewModel)
     }
     
     func initPara() {
-        //讀取看看是否有本地資料，沒有才需要去要Api
-        guard !viewmodel.loadFromLocal() else { return }
+        _ = viewmodel.loadFromLocal()
         Task {
             var vm = viewmodel
             guard await vm.fetchData() else { return }
@@ -51,39 +50,39 @@ class PlayListViewController: UIViewController {
         }
     }
     
-    func setupUI(){
+    func setupUI() {
         setupNavigation()
         setupTableView()
         searchBar.delegate = self
     }
     
-    func setupNavigation(){
+    func setupNavigation() {
         navigationItem.title = "YOASOBI Channel"
         let btn = UIBarButtonItem(image: UIImage(named: "search"), style: .plain, target: self, action: #selector(searchClick))
         btn.accessibilityIdentifier = "searchBtn"
         navigationItem.rightBarButtonItem =  btn
     }
     
-    func setupTableView(){
+    func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(PlayListTableViewCell.self, forCellReuseIdentifier: "playListCell")
-        //下拉刷新，清除本地資料重新讀取線上資料
-        tableView.mj_header = MJRefreshNormalHeader{ [unowned self] in
+        // 下拉刷新，清除本地資料重新讀取線上資料
+        tableView.mj_header = MJRefreshNormalHeader { [unowned self] in
             viewmodel.clearFromLocal()
             initPara()
         }
-        //滑到底自動加載
-        tableView.mj_footer = MJRefreshAutoNormalFooter{ [unowned self] in
+        // 滑到底自動加載
+        tableView.mj_footer = MJRefreshAutoNormalFooter {  [unowned self] in
             Task {
                 var vm = viewmodel
                 let status = await vm.loadNextPage()
                 DispatchQueue.main.async { [unowned self] in
-                    if status == .noMoreData{
+                    if status == .noMoreData {
                         tableView.mj_footer?.endRefreshingWithNoMoreData()
                         return
                     }
-                    if status == .success{
+                    if status == .success {
                         viewmodel = vm
                     }
                     tableView.mj_footer?.endRefreshing()
@@ -92,8 +91,8 @@ class PlayListViewController: UIViewController {
         }
     }
     
-    func setDataBinding(){
-        $viewmodel.receive(on: DispatchQueue.main).sink{ [unowned self] model in
+    func setDataBinding() {
+        $viewmodel.receive(on: DispatchQueue.main).sink { [unowned self] model in
             searchBar.text = model.searchKeyword
             searchBar.isHidden = !searchBar.isFirstResponder && model.searchKeyword.isEmpty
             tableView.reloadData()
@@ -103,13 +102,13 @@ class PlayListViewController: UIViewController {
 }
 
 extension PlayListViewController {
-    @objc func searchClick(_ btn: UIButton){
+    @objc func searchClick(_ btn: UIButton) {
         searchBar.isHidden = !searchBar.isHidden
     }
 }
 
-extension PlayListViewController : UISearchBarDelegate{
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+extension PlayListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewmodel.searchKeyword = searchText
         viewmodel.saveToLocal()
     }
@@ -119,8 +118,7 @@ extension PlayListViewController : UISearchBarDelegate{
     }
 }
 
-
-extension PlayListViewController : UITableViewDelegate, UITableViewDataSource{
+extension PlayListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewmodel.showList.count
     }
@@ -128,13 +126,11 @@ extension PlayListViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playListCell", for: indexPath) as? PlayListTableViewCell
         
-        if let channelInfo = viewmodel.channelInfo {
-            cell?.setChannelInfo(channelInfo)
-        }
+        cell?.setChannelInfo(viewmodel.channelInfo)
         cell?.setVideoInfo(viewmodel.showList[indexPath.row])
         cell?.clickThumbnail = { channel, video in
             DispatchQueue.main.async { [unowned self] in
-                showPlayerView(PlayerViewModel<HttpService>(channelInfo:channel, videoInfo: video))
+                showPlayerView(PlayerViewModel<HttpService>(channelInfo: channel, videoInfo: video))
             }
         }
         return cell ?? PlayListTableViewCell()
@@ -159,8 +155,8 @@ extension PlayListViewController: UIViewControllerTransitioningDelegate {
     }
 }
 
-extension PlayListViewController{
-    func showPlayerView(_ viewModel:PlayerViewModel<HttpService>){
+extension PlayListViewController {
+    func showPlayerView(_ viewModel: PlayerViewModel<HttpService>) {
         let vc = PlayerViewController()
         vc.viewmodel = viewModel
         vc.interactor = interactor

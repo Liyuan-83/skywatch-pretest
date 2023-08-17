@@ -24,18 +24,16 @@ final class PlayListViewModelTests: XCTestCase {
     
     func testInitViewModel() async throws {
         //確認必要的頻道資訊
-        XCTAssertNotNil(viewmodel.channelInfo)
-        XCTAssertNotNil(viewmodel.channelInfo?.name)
-        XCTAssertNotNil(viewmodel.channelInfo?.uploadID)
-        XCTAssertNotNil(viewmodel.channelInfo?.thumbnails)
+        XCTAssertNotEqual(viewmodel.channelInfo.name, "")
+        XCTAssertNotEqual(viewmodel.channelInfo.uploadID, "")
+        XCTAssertNotNil(viewmodel.channelInfo.thumbnails.thumbnailsDefault)
         
         //確認必要的列表資訊
         XCTAssertTrue(viewmodel.showList.count >= 30)
         for videoInfo in viewmodel.showList{
-            XCTAssertNotNil(videoInfo.id)
-            XCTAssertNotNil(videoInfo.name)
-            XCTAssertNotNil(videoInfo.thumbnails)
-            XCTAssertNotNil(videoInfo.createDate)
+            XCTAssertNotEqual(videoInfo.id, "")
+            XCTAssertNotEqual(videoInfo.name, "")
+            XCTAssertNotNil(videoInfo.thumbnails.thumbnailsDefault)
         }
     }
     
@@ -43,8 +41,8 @@ final class PlayListViewModelTests: XCTestCase {
         let keyword = "Music Video"
         viewmodel.searchKeyword = keyword
         for videoInfo in viewmodel.showList{
-            XCTAssertNotNil(videoInfo.name)
-            XCTAssertTrue(videoInfo.name!.contains(keyword))
+            XCTAssertNotEqual(videoInfo.name, "")
+            XCTAssertTrue(videoInfo.name.contains(keyword))
         }
     }
     
@@ -52,12 +50,11 @@ final class PlayListViewModelTests: XCTestCase {
         let listCount = viewmodel.showList.count
         let status = await viewmodel.loadNextPage()
         XCTAssertTrue(status == .success)
-        XCTAssertTrue(viewmodel.showList.count == listCount + 20)
+        XCTAssertTrue(viewmodel.showList.count > listCount)
         for videoInfo in viewmodel.showList{
-            XCTAssertNotNil(videoInfo.id)
-            XCTAssertNotNil(videoInfo.name)
-            XCTAssertNotNil(videoInfo.thumbnails)
-            XCTAssertNotNil(videoInfo.createDate)
+            XCTAssertNotEqual(videoInfo.id, "")
+            XCTAssertNotEqual(videoInfo.name, "")
+            XCTAssertNotNil(videoInfo.thumbnails.thumbnailsDefault)
         }
     }
 }

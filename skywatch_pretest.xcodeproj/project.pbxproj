@@ -368,6 +368,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7AC653E92A8DB9B100EC09CC /* PBXTargetDependency */,
 			);
 			name = skywatch_pretest;
 			packageProductDependencies = (
@@ -461,6 +462,7 @@
 				7AA9661C2A6E562200F02E00 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				7AA966212A6E82CB00F02E00 /* XCRemoteSwiftPackageReference "MJRefresh" */,
 				7A993FF02A80D528003B6D3A /* XCRemoteSwiftPackageReference "swift-crypto" */,
+				7AC653E72A8DB99A00EC09CC /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 7A7985E72A6B78AD00077E24 /* Products */;
 			projectDirPath = "";
@@ -573,6 +575,10 @@
 			isa = PBXTargetDependency;
 			target = 7A7985E52A6B78AD00077E24 /* skywatch_pretest */;
 			targetProxy = 7A7986072A6B78AE00077E24 /* PBXContainerItemProxy */;
+		};
+		7AC653E92A8DB9B100EC09CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 7AC653E82A8DB9B100EC09CC /* SwiftLintPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -920,6 +926,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		7AC653E72A8DB99A00EC09CC /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.52.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -962,6 +976,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7A7986192A6B79CC00077E24 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
 			productName = YouTubeiOSPlayerHelper;
+		};
+		7AC653E82A8DB9B100EC09CC /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7AC653E72A8DB99A00EC09CC /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintPlugin";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

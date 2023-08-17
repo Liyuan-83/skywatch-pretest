@@ -21,17 +21,23 @@ extension UIImageView {
         }
     }
     
-    func loadThumbnails(_ thumbnail: Thumbnails){
-        let width = UIScreen.main.bounds.width
-        var urlStr = thumbnail.thumbnailsDefault.url
-        //依照解析度判定，螢幕寬度越寬，使用解析度越高的圖片，若最高解析度無圖片，則用次高解析度的
-        if width > thumbnail.thumbnailsDefault.width {
-            urlStr = thumbnail.medium.url
+    func loadThumbnails(_ thumbnail: Thumbnails) {
+        let cons = constraints.first(where: { $0.firstAttribute == .width })
+        let width = cons?.constant ?? UIScreen.main.bounds.width
+        var urlStr = thumbnail.thumbnailsDefault?.url
+        // 依照解析度判定，螢幕寬度越寬，使用解析度越高的圖片，若最高解析度無圖片，則用次高解析度的
+        if let def = thumbnail.thumbnailsDefault,
+           width > def.width,
+           let medium = thumbnail.medium {
+            urlStr = medium.url
         }
-        if width > thumbnail.medium.width {
-            urlStr = thumbnail.high.url
+        if let medium = thumbnail.medium,
+           width > medium.width,
+           let high = thumbnail.high {
+            urlStr = high.url
         }
-        if width > thumbnail.high.width,
+        if let high = thumbnail.high,
+           width > high.width,
            let standard = thumbnail.standard {
             urlStr = standard.url
         }
@@ -40,7 +46,8 @@ extension UIImageView {
            let maxres = thumbnail.maxres {
             urlStr = maxres.url
         }
-        guard let url = URL(string: urlStr) else { return }
+        guard let urlStr = urlStr,
+              let url = URL(string: urlStr) else { return }
         print(urlStr)
         load(url: url)
     }

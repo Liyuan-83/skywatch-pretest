@@ -48,7 +48,7 @@ class CommentTableViewCell: UITableViewCell {
         return label
     }()
     
-    private var commentInfo : CommentThread?
+    private var commentInfo: CommentThread?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -72,21 +72,21 @@ class CommentTableViewCell: UITableViewCell {
         userImg.layer.cornerRadius = userImg.bounds.midX
     }
     
-    private func setupUI(){
+    private func setupUI() {
         contentView.addSubview(userImg)
-        userImg.snp.makeConstraints{ make in
+        userImg.snp.makeConstraints { make in
             make.width.height.equalTo(30)
             make.top.left.equalTo(contentView).offset(5)
         }
         
         contentView.addSubview(nameLabel)
-        nameLabel.snp.makeConstraints{ make in
+        nameLabel.snp.makeConstraints { make in
             make.top.equalTo(userImg)
             make.left.equalTo(userImg.snp.right).offset(10)
         }
         
         contentView.addSubview(uploadDateLabel)
-        uploadDateLabel.snp.makeConstraints{ make in
+        uploadDateLabel.snp.makeConstraints { make in
             make.top.equalTo(userImg)
             make.left.equalTo(nameLabel.snp.right).offset(5)
             make.centerY.equalTo(nameLabel)
@@ -94,14 +94,14 @@ class CommentTableViewCell: UITableViewCell {
         }
         
         contentView.addSubview(contentLabel)
-        contentLabel.snp.makeConstraints{ make in
+        contentLabel.snp.makeConstraints { make in
             make.top.equalTo(nameLabel.snp.bottom).offset(5)
             make.left.equalTo(nameLabel)
             make.right.equalTo(uploadDateLabel)
         }
         
         contentView.addSubview(likeLabel)
-        likeLabel.snp.makeConstraints{ make in
+        likeLabel.snp.makeConstraints { make in
             make.top.equalTo(contentLabel.snp.bottom).offset(5)
             make.right.equalTo(contentLabel)
         }
@@ -110,16 +110,16 @@ class CommentTableViewCell: UITableViewCell {
         separatorLine.backgroundColor = .darkGray
         separatorLine.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(separatorLine)
-        separatorLine.snp.makeConstraints{ make in
+        separatorLine.snp.makeConstraints { make in
             make.top.equalTo(likeLabel.snp.bottom).offset(5)
             make.right.left.equalTo(contentView)
             make.bottom.equalTo(contentView).offset(-5)
         }
     }
     
-    func setCommentInfo(_ info:CommentThread){
+    func setCommentInfo(_ info: CommentThread) {
         commentInfo = info
-        if let url = info.thumbnail{
+        if let url = info.thumbnail {
             userImg.load(url: url)
         }
         nameLabel.text = info.authorName.toProtectPersonalName()
